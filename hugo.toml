@@ -54,7 +54,7 @@ canonifyURLs = true
       width = 256
   
   [params.social]
-    github = "John-Jkar"
+    github = "https://github.com/John-Jkar"
     twitter = "J0n4n1"
     email = "kagimujkar@gmail.com"
     rss = true
