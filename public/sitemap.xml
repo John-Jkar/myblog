@@ -14,13 +14,34 @@
     <loc>https://john-jkar.github.io/myblog/categories/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://john-jkar.github.io/myblog/tags/chr-bypass/</loc>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://john-jkar.github.io/myblog/categories/ctf/</loc>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://john-jkar.github.io/myblog/tags/hugo/</loc>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://john-jkar.github.io/myblog/tags/jailbreak/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://john-jkar.github.io/myblog/tags/linux/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://john-jkar.github.io/myblog/posts/</loc>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://john-jkar.github.io/myblog/categories/pyjail/</loc>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://john-jkar.github.io/myblog/tags/python/</loc>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://john-jkar.github.io/myblog/tags/sigpwny/</loc>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://john-jkar.github.io/myblog/posts/pwnyctf-pyjail2/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://john-jkar.github.io/myblog/tags/struggle/</loc>
@@ -30,6 +51,9 @@
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://john-jkar.github.io/myblog/posts/the-pain-of-building-this-blog/</loc>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://john-jkar.github.io/myblog/tags/waf-bypass/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://john-jkar.github.io/myblog/categories/web-dev/</loc>

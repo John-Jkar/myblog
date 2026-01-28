@@ -9,10 +9,24 @@
     <lastBuildDate>Wed, 28 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://john-jkar.github.io/myblog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Chr-Bypass</title>
+      <link>https://john-jkar.github.io/myblog/tags/chr-bypass/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://john-jkar.github.io/myblog/tags/chr-bypass/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Hugo</title>
       <link>https://john-jkar.github.io/myblog/tags/hugo/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://john-jkar.github.io/myblog/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jailbreak</title>
+      <link>https://john-jkar.github.io/myblog/tags/jailbreak/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://john-jkar.github.io/myblog/tags/jailbreak/</guid>
       <description></description>
     </item>
     <item>
@@ -23,10 +37,31 @@
       <description></description>
     </item>
     <item>
+      <title>Python</title>
+      <link>https://john-jkar.github.io/myblog/tags/python/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://john-jkar.github.io/myblog/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sigpwny</title>
+      <link>https://john-jkar.github.io/myblog/tags/sigpwny/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://john-jkar.github.io/myblog/tags/sigpwny/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Struggle</title>
       <link>https://john-jkar.github.io/myblog/tags/struggle/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://john-jkar.github.io/myblog/tags/struggle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Waf-Bypass</title>
+      <link>https://john-jkar.github.io/myblog/tags/waf-bypass/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://john-jkar.github.io/myblog/tags/waf-bypass/</guid>
       <description></description>
     </item>
   </channel>
