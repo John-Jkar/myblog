@@ -1,4 +1,4 @@
-baseURL = 'https://john-jkar.github.io/'
+baseURL = 'https://john-jkar.github.io/myblog/'
 languageCode = 'en-us'
 title = '4mN3s14 | CTF Player & Student'
 theme = 'hugo-mana-theme'
