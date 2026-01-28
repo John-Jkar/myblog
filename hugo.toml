@@ -1,0 +1,70 @@
+baseURL = 'https://john-jkar.github.io/'
+languageCode = 'en-us'
+title = '4mN3s14 | CTF Player & Student'
+theme = 'hugo-mana-theme'
+description = 'A student cybersecurity enthusiast and CTF player with Dead Pirate Society'
+
+enableEmoji = true
+enableRobotsTXT = true
+relativeURLs = false
+canonifyURLs = true
+
+[pagination]
+  pagerSize = 6
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[markup]
+  [markup.highlight]
+    style = 'monokai'
+    lineNumbers = true
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 3
+
+[author]
+  name = "Jonan (4mN3s14)"
+  email = "kagimujkar@gmail.com"
+
+[params]
+  description = "CTF player with Dead Pirate Society | Student learning cybersecurity"
+  heroTitleLine1 = "Welcome to"
+  heroTitleLine2 = "4mN3s14's Blog"
+  
+  [params.avatar]
+    url = "/images/logo.png"
+    enableResize = true
+    
+    [params.avatar.home]
+      enableResize = true
+      width = 256
+  
+  [params.social]
+    github = "John-Jkar"
+    twitter = "J0n4n1"
+    email = "kagimujkar@gmail.com"
+    rss = true
+  
+  [params.footer]
+    since = 2026
+    customText = "🏴‍☠️ Dead Pirate Society | Learning in public"
+  
+  [params.post]
+    showReadingTime = true
+    showWordCount = true
+    showDate = true
+    showTags = true
