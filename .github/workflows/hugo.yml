@@ -2,7 +2,7 @@ name: Deploy Hugo site to Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
   workflow_dispatch:
 
 permissions:
@@ -27,7 +27,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.152.2'
           extended: true
 
       - name: Build
