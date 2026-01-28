@@ -23,17 +23,17 @@ canonifyURLs = true
 
 [[menu.main]]
   name = "Home"
-  url = "/"
+  url = "/myblog/"
   weight = 1
 
 [[menu.main]]
   name = "Posts"
-  url = "/posts/"
+  url = "/myblog/posts/"
   weight = 2
 
 [[menu.main]]
   name = "About"
-  url = "/about/"
+  url = "/myblog/about/"
   weight = 3
 
 [author]
@@ -46,7 +46,7 @@ canonifyURLs = true
   heroTitleLine2 = "4mN3s14's Blog"
   
   [params.avatar]
-    url = "/images/logo.png"
+    url = "/myblog/images/logo.png"
     enableResize = true
     
     [params.avatar.home]
