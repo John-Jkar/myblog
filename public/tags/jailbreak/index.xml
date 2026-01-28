@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jailbreak on 4mN3s14 | CTF Player &amp; Student</title>
-    <link>https://john-jkar.github.io/myblog/tags/jailbreak/</link>
+    <link>http://localhost:1313/myblog/tags/jailbreak/</link>
     <description>Recent content in Jailbreak on 4mN3s14 | CTF Player &amp; Student</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://john-jkar.github.io/myblog/tags/jailbreak/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/myblog/tags/jailbreak/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>sigpwny CTF: Pyjail 2 Writeup — Bypassing Python Restrictions</title>
-      <link>https://john-jkar.github.io/myblog/posts/pwnyctf-pyjail2/</link>
+      <link>http://localhost:1313/myblog/posts/pwnyctf-pyjail2/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://john-jkar.github.io/myblog/posts/pwnyctf-pyjail2/</guid>
+      <guid>http://localhost:1313/myblog/posts/pwnyctf-pyjail2/</guid>
       <description>&lt;h1 id=&#34;sigpwny-ctf-pyjail-2-writeup--bypassing-python-restrictions-&#34;&gt;sigpwny CTF: Pyjail 2 Writeup — Bypassing Python Restrictions 🔒🐍&lt;/h1&gt;&#xA;&lt;h2 id=&#34;challenge-overview&#34;&gt;Challenge Overview&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;URL&lt;/strong&gt;: &lt;a href=&#34;https://ctf.sigpwny.com/challenges#Meetings/Pyjail%202-633&#34;&gt;https://ctf.sigpwny.com/challenges#Meetings/Pyjail%202-633&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;A Python jail challenge restricting the &lt;code&gt;exec&lt;/code&gt; function with multiple filters:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;No quotes (&lt;code&gt;&#39;&lt;/code&gt;, &lt;code&gt;&amp;quot;&lt;/code&gt;)&lt;/li&gt;&#xA;&lt;li&gt;No &lt;code&gt;x&lt;/code&gt; character (blocks &lt;code&gt;exec&lt;/code&gt;, &lt;code&gt;eval&lt;/code&gt;, hex strings)&lt;/li&gt;&#xA;&lt;li&gt;Limited character set for code execution&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;exploitation-strategy&#34;&gt;Exploitation Strategy&lt;/h2&gt;&#xA;&lt;h3 id=&#34;bypassing-restrictions&#34;&gt;Bypassing Restrictions&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Restriction&lt;/th&gt;&#xA;          &lt;th&gt;Bypass Technique&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;No quotes&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Build strings using &lt;code&gt;chr()&lt;/code&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;No &lt;code&gt;x&lt;/code&gt; character&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Use &lt;code&gt;chr(88).lower()&lt;/code&gt; → &lt;code&gt;&#39;X&#39;.lower()&lt;/code&gt; → &lt;code&gt;&#39;x&#39;&lt;/code&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Blocked functions&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Use &lt;code&gt;__import__()&lt;/code&gt; instead of &lt;code&gt;import&lt;/code&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h3 id=&#34;payload-construction&#34;&gt;Payload Construction&lt;/h3&gt;&#xA;&lt;p&gt;Build &lt;code&gt;/flag.txt&lt;/code&gt; path without quotes or literal &lt;code&gt;x&lt;/code&gt;:&lt;/p&gt;</description>
     </item>
   </channel>
