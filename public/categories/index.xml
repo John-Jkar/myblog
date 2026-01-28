@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 4mN3s14 | CTF Player &amp; Student</title>
-    <link>http://localhost:1313/myblog/categories/</link>
+    <link>https://john-jkar.github.io/myblog/categories/</link>
     <description>Recent content in Categories on 4mN3s14 | CTF Player &amp; Student</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/myblog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://john-jkar.github.io/myblog/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blogging</title>
-      <link>http://localhost:1313/myblog/categories/blogging/</link>
+      <link>https://john-jkar.github.io/myblog/categories/blogging/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/categories/blogging/</guid>
+      <guid>https://john-jkar.github.io/myblog/categories/blogging/</guid>
       <description></description>
     </item>
     <item>
       <title>CTF</title>
-      <link>http://localhost:1313/myblog/categories/ctf/</link>
+      <link>https://john-jkar.github.io/myblog/categories/ctf/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/categories/ctf/</guid>
+      <guid>https://john-jkar.github.io/myblog/categories/ctf/</guid>
       <description></description>
     </item>
     <item>
       <title>Pyjail</title>
-      <link>http://localhost:1313/myblog/categories/pyjail/</link>
+      <link>https://john-jkar.github.io/myblog/categories/pyjail/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/categories/pyjail/</guid>
+      <guid>https://john-jkar.github.io/myblog/categories/pyjail/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Dev</title>
-      <link>http://localhost:1313/myblog/categories/web-dev/</link>
+      <link>https://john-jkar.github.io/myblog/categories/web-dev/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/categories/web-dev/</guid>
+      <guid>https://john-jkar.github.io/myblog/categories/web-dev/</guid>
       <description></description>
     </item>
   </channel>

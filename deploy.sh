@@ -4,10 +4,10 @@ set -e
 echo "=== 🚀 Hugo Deployment Script ==="
 echo ""
 
-# Step 1: Verify we're on main branch
+# Step 1: Verify we're on master branch
 CURRENT_BRANCH=$(git branch --show-current)
-if [ "$CURRENT_BRANCH" != "main" ]; then
-    echo "❌ ERROR: Must be on 'main' branch"
+if [ "$CURRENT_BRANCH" != "master" ]; then
+    echo "❌ ERROR: Must be on 'master' branch"
     echo "   Current branch: $CURRENT_BRANCH"
     exit 1
 fi
@@ -30,9 +30,13 @@ if [ ! -f "public/index.html" ]; then
 fi
 echo "✓ Build verified"
 
-# Step 5: Switch to gh-pages branch
+# Step 5: Switch to gh-pages branch (create if doesn't exist)
 echo "SetBranch: gh-pages..."
-git checkout gh-pages 2>/dev/null || git checkout -b gh-pages
+if git show-ref --verify --quiet refs/heads/gh-pages; then
+    git checkout gh-pages
+else
+    git checkout -b gh-pages
+fi
 
 # Step 6: Clean old deployment files
 echo "🧹 Cleaning old files..."
@@ -45,7 +49,7 @@ cp -r ../public/* .
 # Step 8: Verify deployment structure
 if [ ! -f "index.html" ]; then
     echo "❌ ERROR: index.html not found at root"
-    git checkout main
+    git checkout master
     exit 1
 fi
 echo "✓ Deployment structure verified"
@@ -61,9 +65,9 @@ echo "📤 Pushing to GitHub..."
 git push -f origin gh-pages
 echo "✓ Pushed successfully"
 
-# Step 10: Return to main
-echo "SetBranch: main..."
-git checkout main
+# Step 10: Return to master
+echo "SetBranch: master..."
+git checkout master
 
 echo ""
 echo "✅✅✅ Deployment successful! ✅✅✅"
