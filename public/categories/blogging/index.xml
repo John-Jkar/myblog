@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogging on 4mN3s14 | CTF Player &amp; Student</title>
-    <link>http://localhost:1313/categories/blogging/</link>
+    <link>https://john-jkar.github.io/myblog/categories/blogging/</link>
     <description>Recent content in Blogging on 4mN3s14 | CTF Player &amp; Student</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/blogging/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://john-jkar.github.io/myblog/categories/blogging/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Pain of Building This Blog</title>
-      <link>http://localhost:1313/posts/the-pain-of-building-this-blog/</link>
+      <link>https://john-jkar.github.io/myblog/posts/the-pain-of-building-this-blog/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/the-pain-of-building-this-blog/</guid>
+      <guid>https://john-jkar.github.io/myblog/posts/the-pain-of-building-this-blog/</guid>
       <description>&lt;h1 id=&#34;the-pain-of-building-this-blog-&#34;&gt;The Pain of Building This Blog 💀&lt;/h1&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s be real: setting up this blog was torture.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-struggle&#34;&gt;The Struggle&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;TOML errors&lt;/strong&gt;: Spent hours fixing config syntax&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Template hell&lt;/strong&gt;: Theme had broken syntax&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;About page mystery&lt;/strong&gt;: &lt;code&gt;about/_index.md&lt;/code&gt; vs &lt;code&gt;about.md&lt;/code&gt; confusion&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cache demons&lt;/strong&gt;: Hugo cached everything&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Avatar saga&lt;/strong&gt;: 4 hours to get transparent PNG working&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;why-bother&#34;&gt;Why Bother?&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Learning&lt;/strong&gt;: Debugging Hugo taught me systems&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Control&lt;/strong&gt;: No WordPress bloat, no Medium restrictions&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;CTF practice&lt;/strong&gt;: Finding syntax errors = RE practice&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;the-win&#34;&gt;The Win&lt;/h2&gt;&#xA;&lt;p&gt;After days of frustration:&lt;/p&gt;</description>
     </item>
   </channel>
