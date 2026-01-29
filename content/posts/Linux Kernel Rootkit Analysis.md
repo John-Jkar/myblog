@@ -8,7 +8,7 @@ tags: [LKM, kernel, forensics, reverse engineering]
 # 🔍 Linux Kernel Rootkit Analysis – Singularity Rootkit easy malops practice challenge
 
 ## Overview
-Today I kicked off will some malware analysis from malops.io. It was my first time to analyse a rootkit and i twas very insightful.
+Today I kicked off will some malware analysis from malops.io. It was my first time to analyse a rootkit and it was very insightful.
 In this blog Iam going to talk about my experience while analysing the rootkit
 In this analysis, we examine a **Linux kernel rootkit** recovered during a DFIR investigation.  
 The malicious kernel module demonstrates advanced stealth capabilities, including:
