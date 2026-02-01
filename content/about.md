@@ -1,16 +1,11 @@
-+++
-title = "About"
-date = 2026-01-28
-+++
+## About Me
 
-# About Jonan (4mN3s14)
+Hi, I’m **4mN3s14** — a computer security and forensics student, content writer, and curious mind obsessed with how things work (and how they break).
 
-Hey there! 👋 I'm **Jonan** (handle: `4mN3s14`), a passionate student and cybersecurity enthusiast sharpening my skills through CTFs and hands-on challenges.
+I’ve spent the past few years writing content across different niches, including tech and faith-based blogs, while sharpening my skills in cybersecurity, CTF challenges, and digital forensics. I enjoy digging into topics like reverse engineering, OSINT, Linux, and real-world security problems, then breaking them down into clear, readable ideas that actually make sense.
 
-## 🏴‍☠️ CTF Player | Dead Pirate Society
+This blog is where I share what I’m learning — from cybersecurity concepts and CTF write-ups to thoughts on tech, gaming culture, and the intersections between technology and real life. I believe good writing should be honest, practical, and useful, not filled with fluff or buzzwords.
 
-I compete with **[Dead Pirate Society](https://deadpiratesociety.club/)** — a crew of curious minds solving puzzles, breaking binaries, and capturing flags.
+When I’m not writing or studying, you’ll probably find me experimenting in Kali Linux, analyzing challenges, or following esports and gaming trends with a nostalgic soft spot for handheld consoles.
 
-## 🎓 Still Learning
-
-I'm a **student** learning cybersecurity, Linux, and ethical hacking. Every day brings new challenges and opportunities to grow.
+If you’re here to learn, explore, or just think a little deeper about tech and security, you’re in the right place.
