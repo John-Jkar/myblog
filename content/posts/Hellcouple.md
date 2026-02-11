@@ -26,14 +26,14 @@ The challenge implements a standard Diffie-Hellman key exchange using the 1536-b
 
 - AES in CTR mode
 
-##### Vulnerability
+### Vulnerability
 
-##### Alice’s private key is generated as:
+#### Alice’s private key is generated as:
 **alice_private = random value < p**
-##### But the challenge leaks:
+#### But the challenge leaks:
 **leak = alice_private mod 2^1500**
 
-##### Since p is 1536 bits, this means:
+#### Since p is 1536 bits, this means:
 
 - 1500 lower bits are known
 
