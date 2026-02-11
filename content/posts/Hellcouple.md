@@ -1,8 +1,8 @@
 
-# HellCouple Aplacahack challenge writeup
+# Hell Couple Aplacahack challenge writeup
 
 ## Topic: Discrete Logarithm
-The challenge implements a standard Diffie-Hellman key exchange using the 1536-bit MODP group from RFC 3526.
+The challenge implements a standard Diffie-Hellman key exchange using the 1536-bit MODP group from RFC 3526. This was my first time doing a challenge like this and I learned alot from it.
 
 ### Relevant parameters:
 
