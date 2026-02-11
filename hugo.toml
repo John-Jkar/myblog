@@ -68,3 +68,15 @@ canonifyURLs = true
     showWordCount = true
     showDate = true
     showTags = true
+
+      [params.post]
+    showReadingTime = true
+    showWordCount = true
+    showDate = true
+    showTags = true
+
+[frontmatter]
+  date = ["date"]
+  publishDate = ["date"]
+  lastmod = ["date"]
+
