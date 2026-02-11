@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 4mN3s14 | CTF Player &amp; Student</title>
-    <link>http://localhost:45131/myblog/categories/</link>
+    <link>http://localhost:42399/myblog/categories/</link>
     <description>Recent content in Categories on 4mN3s14 | CTF Player &amp; Student</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 29 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:45131/myblog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:42399/myblog/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DFIR</title>
-      <link>http://localhost:45131/myblog/categories/dfir/</link>
+      <link>http://localhost:42399/myblog/categories/dfir/</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45131/myblog/categories/dfir/</guid>
+      <guid>http://localhost:42399/myblog/categories/dfir/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:45131/myblog/categories/linux/</link>
+      <link>http://localhost:42399/myblog/categories/linux/</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45131/myblog/categories/linux/</guid>
+      <guid>http://localhost:42399/myblog/categories/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Malware Analysis</title>
-      <link>http://localhost:45131/myblog/categories/malware-analysis/</link>
+      <link>http://localhost:42399/myblog/categories/malware-analysis/</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45131/myblog/categories/malware-analysis/</guid>
+      <guid>http://localhost:42399/myblog/categories/malware-analysis/</guid>
       <description></description>
     </item>
     <item>
       <title>Rootkits</title>
-      <link>http://localhost:45131/myblog/categories/rootkits/</link>
+      <link>http://localhost:42399/myblog/categories/rootkits/</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45131/myblog/categories/rootkits/</guid>
+      <guid>http://localhost:42399/myblog/categories/rootkits/</guid>
       <description></description>
     </item>
     <item>
       <title>Blogging</title>
-      <link>http://localhost:45131/myblog/categories/blogging/</link>
+      <link>http://localhost:42399/myblog/categories/blogging/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45131/myblog/categories/blogging/</guid>
+      <guid>http://localhost:42399/myblog/categories/blogging/</guid>
       <description></description>
     </item>
     <item>
       <title>CTF</title>
-      <link>http://localhost:45131/myblog/categories/ctf/</link>
+      <link>http://localhost:42399/myblog/categories/ctf/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45131/myblog/categories/ctf/</guid>
+      <guid>http://localhost:42399/myblog/categories/ctf/</guid>
       <description></description>
     </item>
     <item>
       <title>Pyjail</title>
-      <link>http://localhost:45131/myblog/categories/pyjail/</link>
+      <link>http://localhost:42399/myblog/categories/pyjail/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45131/myblog/categories/pyjail/</guid>
+      <guid>http://localhost:42399/myblog/categories/pyjail/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Dev</title>
-      <link>http://localhost:45131/myblog/categories/web-dev/</link>
+      <link>http://localhost:42399/myblog/categories/web-dev/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:45131/myblog/categories/web-dev/</guid>
+      <guid>http://localhost:42399/myblog/categories/web-dev/</guid>
       <description></description>
     </item>
   </channel>
