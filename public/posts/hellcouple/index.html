@@ -1,0 +1,761 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="h-full">
+  <head><script src="/myblog/livereload.js?mindelay=10&amp;v=2&amp;port=37931&amp;path=myblog/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="en-us">
+<script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<title> | 4mN3s14 | CTF Player &amp; Student</title>
+<meta
+  name="description"
+  content="
+    Hell Couple Aplacahack challenge writeup Topic: Discrete Logarithm The challenge implements a standard Diffie-Hellman key exchange using the 1536-bit MODP group …
+  
+  ">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:37931/myblog/posts/hellcouple/">
+
+<meta name="robots" content="index, follow">
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content=" | 4mN3s14 | CTF Player &amp; Student">
+<meta property="og:description" content="Hell Couple Aplacahack challenge writeup Topic: Discrete Logarithm The challenge implements a standard Diffie-Hellman key exchange using the 1536-bit MODP group …">
+<meta property="og:url" content="http://localhost:37931/myblog/posts/hellcouple/">
+<meta property="og:site_name" content="4mN3s14 | CTF Player &amp; Student"><meta property="og:image" content="/myblog/images/logo.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630"><meta property="article:published_time" content="0001-01-01T00:00:00Z">
+  <meta
+    property="article:modified_time"
+    content="0001-01-01T00:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content=" | 4mN3s14 | CTF Player &amp; Student">
+<meta name="twitter:description" content="Hell Couple Aplacahack challenge writeup Topic: Discrete Logarithm The challenge implements a standard Diffie-Hellman key exchange using the 1536-bit MODP group …"><meta name="twitter:image" content="/myblog/images/logo.png"><meta name="twitter:site" content="@J0n4n1">
+  <meta name="twitter:creator" content="@J0n4n1">
+
+<script type="application/ld+json">
+
+
+
+
+
+
+
+
+
+
+"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"author\":{\"@type\":\"Person\",\"email\":\"kagimujkar@gmail.com\",\"name\":\"4mN3s14 | CTF Player \\u0026 Student\"},\"dateModified\":\"0001-01-01T00:00:00Z\",\"datePublished\":\"0001-01-01T00:00:00Z\",\"description\":\"Hell Couple Aplacahack challenge writeup Topic: Discrete Logarithm The challenge implements a standard Diffie-Hellman key exchange using the 1536-bit MODP group …\",\"headline\":\"\",\"image\":\"/myblog/images/logo.png\",\"mainEntityOfPage\":{\"@id\":\"http://localhost:37931/myblog/posts/hellcouple/\",\"@type\":\"WebPage\"},\"publisher\":{\"@type\":\"Organization\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"/myblog/images/logo.png\"},\"name\":\"4mN3s14 | CTF Player \\u0026 Student\"}}"</script>
+
+
+
+  
+  
+  
+    
+  
+  
+<script type="application/ld+json">"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"item\":\"http://localhost:37931/myblog/\",\"name\":\"4mN3s14 | CTF Player \\u0026 Student\",\"position\":1},{\"@type\":\"ListItem\",\"item\":\"http://localhost:37931/myblog/posts/\",\"name\":\"Posts\",\"position\":2},{\"@type\":\"ListItem\",\"item\":\"http://localhost:37931/myblog/posts/hellcouple/\",\"name\":\"\",\"position\":3}]}"</script>
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+  rel="stylesheet">
+
+
+<link
+  rel="stylesheet"
+  href="http://localhost:37931/myblog/css/theme.min.86a32b729f656fc6c119ed69193950db815a3ad9fdc967b32c76d602f11449a4.css"
+  integrity="sha256-hqMrcp9lb8bBGe1pGTlQ24FaOtn9yWezLHbWAvEUSaQ=">
+
+<link
+    rel="stylesheet"
+    href="http://localhost:37931/myblog/css/syntax-dark.min.b01037e5609e6260b74d6fcdd6d5131e8dcbc4d46d6ef4bfbe5a60bdfc1a9f30.css"
+    integrity="sha256-sBA35WCeYmC3TW/N1tUTHo3LxNRtbvS/vlpgvfwanzA="
+    id="syntax-dark-theme"
+    class="syntax-theme"><link
+    rel="stylesheet"
+    href="http://localhost:37931/myblog/css/syntax-light.min.9602bc2fcef52b4c62e05eae14b48ba428e114f116e993e504d83ed5a3aeda98.css"
+    integrity="sha256-lgK8L871K0xi4F6uFLSLpCjhFPEW6ZPlBNg&#43;1aOu2pg="
+    id="syntax-light-theme"
+    class="syntax-theme"
+    disabled><script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+
+    const syntaxDark = document.getElementById("syntax-dark-theme");
+    const syntaxLight = document.getElementById("syntax-light-theme");
+
+    if (theme === "light") {
+      if (syntaxDark) syntaxDark.disabled = true;
+      if (syntaxLight) syntaxLight.disabled = false;
+    } else {
+      if (syntaxDark) syntaxDark.disabled = false;
+      if (syntaxLight) syntaxLight.disabled = true;
+    }
+
+    
+    const observer = new MutationObserver(() => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      if (currentTheme === "light") {
+        if (syntaxDark) syntaxDark.disabled = true;
+        if (syntaxLight) syntaxLight.disabled = false;
+      } else {
+        if (syntaxDark) syntaxDark.disabled = false;
+        if (syntaxLight) syntaxLight.disabled = true;
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+  })();
+</script>
+
+
+
+
+<link
+  rel="stylesheet"
+  href="http://localhost:37931/myblog/css/bundle.min.d430be27649a3685c7891f7076e3e50f97bf39aabb96c243b89902f3dc6c9ead.css"
+  integrity="sha256-1DC&#43;J2SaNoXHiR9wduPlD5e/Oaq7lsJDuJkC89xsnq0=">
+
+
+
+
+
+<link rel="icon" type="image/x-icon" href="http://localhost:37931/myblog/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost:37931/myblog/favicon.ico">
+
+<link rel="icon" type="image/png" href="http://localhost:37931/myblog/favicon.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:37931/myblog/favicon/logo-transparent/favicon-32x32.png">
+
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:37931/myblog/favicon/logo-transparent/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:37931/myblog/favicon/logo-transparent/apple-touch-icon.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="192x192"
+  href="http://localhost:37931/myblog/favicon/logo-transparent/android-chrome-192x192.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="512x512"
+  href="http://localhost:37931/myblog/favicon/logo-transparent/android-chrome-512x512.png">
+<link rel="manifest" href="http://localhost:37931/myblog/favicon/logo-transparent/site.webmanifest">
+
+
+
+
+  
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="http://localhost:37931/myblog/index.xml"
+      title="4mN3s14 | CTF Player &amp; Student">
+  
+
+
+
+
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <a href="#main-content" class="skip-to-main" aria-label="Skip to main content"
+      >Skip to main content</a
+    >
+    <header class="sticky-header">
+      <div class="header-container">
+        <nav class="header-nav" role="navigation" aria-label="Main navigation">
+  <div class="header-content">
+    <div class="header-logo">
+      <a href="http://localhost:37931/myblog/" class="logo-link" aria-label="Home - 4mN3s14 | CTF Player &amp; Student">
+        4mN3s14 | CTF Player &amp; Student
+      </a>
+    </div>
+
+    
+    <button 
+      id="mobile-menu-toggle" 
+      class="mobile-menu-toggle" 
+      aria-label="Toggle menu" 
+      aria-expanded="false"
+      type="button">
+      <span class="hamburger-icon">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </span>
+    </button>
+
+    <div class="header-menu">
+      <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:37931/myblog/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:37931/myblog/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:37931/myblog/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+
+      <button id="search-toggle" class="search-toggle" aria-label="Search" type="button">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </button>
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" type="button">
+  <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+  </svg>
+  <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+  </svg>
+</button>
+
+    </div>
+  </div>
+
+  
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-content">
+      <div class="mobile-menu-header">
+        <span class="mobile-menu-title">Menu</span>
+        <button 
+          id="mobile-menu-close" 
+          class="mobile-menu-close" 
+          aria-label="Close menu" 
+          type="button">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-menu-nav" role="navigation" aria-label="Mobile navigation">
+        <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:37931/myblog/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:37931/myblog/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:37931/myblog/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+      </nav>
+      <div class="mobile-menu-footer">
+        <button id="mobile-search-toggle" class="mobile-search-toggle" aria-label="Search" type="button">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <span>Search</span>
+        </button>
+        <button class="theme-toggle" aria-label="Toggle theme" type="button">
+          <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+          <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+      </div>
+    </header>
+
+    <main id="main-content" class="flex-1" role="main">
+      
+  <div class="single-post-wrapper">
+    <article class="single-post">
+      
+
+
+
+
+
+
+
+      <header class="post-header">
+        <h1 class="post-title-main"></h1>
+
+        
+
+        <div class="post-meta">
+  <div class="post-meta-info">
+    <time datetime="0001-01-01T00:00:00Z" class="post-date">
+      <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+      January 1, 0001
+    </time>
+
+    <span class="meta-separator">•</span>
+
+    
+      <span class="post-word-count">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        369 words
+      </span>
+    
+
+    
+      <span class="meta-separator">•</span>
+      <span class="post-reading-time">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        2 min
+      </span>
+    
+  </div>
+
+  
+</div>
+
+      </header>
+
+      <div class="post-content-main">
+        <h1 id="hell-couple-aplacahack-challenge-writeup">Hell Couple Aplacahack challenge writeup</h1>
+<h2 id="topic-discrete-logarithm">Topic: Discrete Logarithm</h2>
+<p>The challenge implements a standard Diffie-Hellman key exchange using the 1536-bit MODP group from RFC 3526. This was my first time doing a challenge like this and I learned alot from it.</p>
+<h3 id="relevant-parameters">Relevant parameters:</h3>
+<ul>
+<li>
+<p>Prime: 1536-bit safe prime p</p>
+</li>
+<li>
+<p>Generator: g = 2</p>
+</li>
+<li>
+<p>Public values:</p>
+</li>
+<li>
+<p>alice_public</p>
+</li>
+<li>
+<p>bob_public</p>
+</li>
+<li>
+<p>Leakage:</p>
+</li>
+<li>
+<p>leak = alice_private &amp; (2^1500 - 1)</p>
+</li>
+</ul>
+<h4 id="the-encrypted-flag-was-produced-using">The encrypted flag was produced using:</h4>
+<ul>
+<li>
+<p>SHA256(shared_key) as AES key</p>
+</li>
+<li>
+<p>AES in CTR mode</p>
+</li>
+</ul>
+<h5 id="vulnerability">Vulnerability</h5>
+<h5 id="alices-private-key-is-generated-as">Alice’s private key is generated as:</h5>
+<p><strong>alice_private = random value &lt; p</strong></p>
+<h5 id="but-the-challenge-leaks">But the challenge leaks:</h5>
+<p><strong>leak = alice_private mod 2^1500</strong></p>
+<h5 id="since-p-is-1536-bits-this-means">Since p is 1536 bits, this means:</h5>
+<ul>
+<li>
+<p>1500 lower bits are known</p>
+</li>
+<li>
+<p>Only 36 upper bits are unknown</p>
+</li>
+</ul>
+<p><strong>So we can express:</strong>
+<strong>alice_private = leak + k·2^1500</strong></p>
+<h5 id="where">Where:</h5>
+<p><strong>0 ≤ k &lt; 2^36</strong>
+<strong>Instead of brute-forcing a 1536-bit key, we only need to search a 36-bit space.</strong></p>
+<h5 id="that-is">That is:</h5>
+<p><strong>2^36 ≈ 68 billion possibilities</strong></p>
+<p><strong>Too large for naive brute force — but small enough for Baby-Step Giant-Step.</strong></p>
+<h3 id="solve-script">Solve script</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> hashlib
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> Crypto.Cipher <span style="color:#f92672">import</span> AES
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> ceil, sqrt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ---- Given values ----</span>
+</span></span><span style="display:flex;"><span>p <span style="color:#f92672">=</span> <span style="color:#ae81ff">0xffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca237327ffffffffffffffff</span>
+</span></span><span style="display:flex;"><span>g <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>alice_public <span style="color:#f92672">=</span> <span style="color:#ae81ff">1599718256377804952101531599498863772568230618694466120580310027783856775419774715324430490009702307955575844601185230178048816258775546297605599320433889688149788702236901234905522868569967416567225850806042222083340147485157993071805547560375509693951764934940304995906394917881355417525918023021173242172441340007873982292615475287840119272527822675409016385400712544820436845576792437659620501263257558269716031694407258972273378598219915938064730248662540644</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bob_public <span style="color:#f92672">=</span> <span style="color:#ae81ff">1601509205497326911166665651407955633086809897508704527950455620720477838507803621126588237807460352033730891991811162559292107072226732941342412621198125808491110851607803610326932944231441277178997305795098725764729855265846212191447644979975042348063533857732774890088844866567954281331492269751048224888559719840307800593782696008426362668779570407212587612644451479819243906619852333855883749307751229874778873609891502901892234753096522217233589204630723331</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>leak <span style="color:#f92672">=</span> <span style="color:#ae81ff">18745015684416423248238358819116531099692322854758287583875043555248837262023679930415710097187512975438125769318401939978478358430852785607010460104247921522906629910012576819904488213243619895103769135299549586169221570769473234206574921382434244366730718275494665736161014808538417501350114510192342412033471326519013144824828968703748628325803878118375663318670612020895929494354336570752213975226257200515892803889402746161532447603042987169336605</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>encrypted_flag_hex <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;fb2f1136cea7c67b1edba34d3741eeac8442e70924b03202352422a28237ee6f3fb6d493&#34;</span>
+</span></span><span style="display:flex;"><span>encrypted_flag <span style="color:#f92672">=</span> bytes<span style="color:#f92672">.</span>fromhex(encrypted_flag_hex)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ---- Setup attack ----</span>
+</span></span><span style="display:flex;"><span>p_2_1500 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">**</span><span style="color:#ae81ff">1500</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>h <span style="color:#f92672">=</span> pow(g, leak, p)
+</span></span><span style="display:flex;"><span>h_inv <span style="color:#f92672">=</span> pow(h, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, p)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>base <span style="color:#f92672">=</span> pow(g, p_2_1500, p)
+</span></span><span style="display:flex;"><span>target <span style="color:#f92672">=</span> (alice_public <span style="color:#f92672">*</span> h_inv) <span style="color:#f92672">%</span> p
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ---- Baby Step Giant Step ----</span>
+</span></span><span style="display:flex;"><span>N <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">**</span><span style="color:#ae81ff">36</span>
+</span></span><span style="display:flex;"><span>m <span style="color:#f92672">=</span> ceil(sqrt(N))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;[*] Building baby steps...&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>baby_steps <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>current <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(m):
+</span></span><span style="display:flex;"><span>    baby_steps[current] <span style="color:#f92672">=</span> j
+</span></span><span style="display:flex;"><span>    current <span style="color:#f92672">=</span> (current <span style="color:#f92672">*</span> base) <span style="color:#f92672">%</span> p
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;[*] Giant steps...&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>factor <span style="color:#f92672">=</span> pow(base, <span style="color:#f92672">-</span>m, p)
+</span></span><span style="display:flex;"><span>gamma <span style="color:#f92672">=</span> target
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>k <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(m):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> gamma <span style="color:#f92672">in</span> baby_steps:
+</span></span><span style="display:flex;"><span>        k <span style="color:#f92672">=</span> i <span style="color:#f92672">*</span> m <span style="color:#f92672">+</span> baby_steps[gamma]
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;[+] Found k:&#34;</span>, k)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>    gamma <span style="color:#f92672">=</span> (gamma <span style="color:#f92672">*</span> factor) <span style="color:#f92672">%</span> p
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> k <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;[-] Failed.&#34;</span>)
+</span></span><span style="display:flex;"><span>    exit()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ---- Recover private key ----</span>
+</span></span><span style="display:flex;"><span>alice_private <span style="color:#f92672">=</span> leak <span style="color:#f92672">+</span> k <span style="color:#f92672">*</span> p_2_1500
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ---- Decrypt ----</span>
+</span></span><span style="display:flex;"><span>shared_key <span style="color:#f92672">=</span> pow(bob_public, alice_private, p)
+</span></span><span style="display:flex;"><span>session_key <span style="color:#f92672">=</span> hashlib<span style="color:#f92672">.</span>sha256(
+</span></span><span style="display:flex;"><span>    shared_key<span style="color:#f92672">.</span>to_bytes(p<span style="color:#f92672">.</span>bit_length() <span style="color:#f92672">//</span> <span style="color:#ae81ff">8</span>, <span style="color:#e6db74">&#34;big&#34;</span>)
+</span></span><span style="display:flex;"><span>)<span style="color:#f92672">.</span>digest()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nonce <span style="color:#f92672">=</span> encrypted_flag[:<span style="color:#ae81ff">8</span>]
+</span></span><span style="display:flex;"><span>ciphertext <span style="color:#f92672">=</span> encrypted_flag[<span style="color:#ae81ff">8</span>:]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cipher <span style="color:#f92672">=</span> AES<span style="color:#f92672">.</span>new(session_key, AES<span style="color:#f92672">.</span>MODE_CTR, nonce<span style="color:#f92672">=</span>nonce)
+</span></span><span style="display:flex;"><span>flag <span style="color:#f92672">=</span> cipher<span style="color:#f92672">.</span>decrypt(ciphertext)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;[+] FLAG:&#34;</span>, flag<span style="color:#f92672">.</span>decode())
+</span></span></code></pre></div><p>flag <strong>Alpaca{1_hat3_c0u913s&#x1f525;}</strong></p>
+
+      </div>
+
+      
+
+
+      <nav class="post-navigation" aria-label="Post navigation">
+        
+          <a
+            href="http://localhost:37931/myblog/posts/optimal-sort/"
+            class="nav-link nav-prev"
+            aria-label="Previous post: ">
+            <span class="nav-label">Previous</span>
+            <span class="nav-title"></span>
+          </a>
+        
+
+        
+          <a
+            href="http://localhost:37931/myblog/posts/ai-rizz/"
+            class="nav-link nav-next"
+            aria-label="Next post: ">
+            <span class="nav-label">Next</span>
+            <span class="nav-title"></span>
+          </a>
+        
+      </nav>
+    </article>
+
+    
+  <aside class="post-toc" id="post-toc" aria-label="Table of contents">
+    <button
+      class="toc-toggle"
+      id="toc-toggle"
+      aria-expanded="true"
+      aria-controls="toc-content"
+      aria-label="Toggle table of contents">
+      <svg
+        class="toc-burger-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <span class="toc-toggle-text">Table of Contents</span>
+      <svg
+        class="toc-chevron-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="toc-content" id="toc-content">
+      <nav class="toc-nav" aria-label="Table of contents">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#topic-discrete-logarithm">Topic: Discrete Logarithm</a>
+      <ul>
+        <li><a href="#relevant-parameters">Relevant parameters:</a></li>
+        <li><a href="#solve-script">Solve script</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </nav>
+    </div>
+  </aside>
+
+
+  </div>
+
+    </main>
+
+    <footer>
+      <footer class="site-footer">
+  <div class="footer-content">
+    <p class="footer-text">
+      &copy;
+      
+      2026
+      
+      4mN3s14 | CTF Player &amp; Student.
+      
+    </p>
+    
+      <div class="footer-social">
+        <div class="social-links">
+  
+    <a
+      href="https://github.com/John-Jkar"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-link"
+      aria-label="GitHub">
+      <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          fill-rule="evenodd"
+          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </a>
+  
+
+  
+
+  
+    <a href="mailto:kagimujkar@gmail.com" class="social-link" aria-label="Email">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+      </svg>
+    </a>
+  
+</div>
+
+      </div>
+    
+  </div>
+</footer>
+
+    </footer>
+
+    <div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search">
+  <div class="search-modal-backdrop" id="search-modal-backdrop"></div>
+  <div class="search-modal-container">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+      <input
+        type="search"
+        id="search-input"
+        class="search-input"
+        placeholder="Search..."
+        autocomplete="off"
+        aria-label="Search input">
+      <button class="search-input-clear" id="search-input-clear" aria-label="Clear search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+        </svg>
+      </button>
+      <button class="search-modal-close" id="search-modal-close" aria-label="Close search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+    
+
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" type="button">
+  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+  </svg>
+</button>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+<script src="http://localhost:37931/myblog/js/main.min.5809f4b25863ee26413f19a2183716d6a5b52e3a8bd308a7dd764fb5bd4d6d36.js" defer></script>
+
+  </body>
+</html>

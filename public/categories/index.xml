@@ -2,38 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 4mN3s14 | CTF Player &amp; Student</title>
-    <link>https://john-jkar.github.io/myblog/categories/</link>
+    <link>http://localhost:37931/myblog/categories/</link>
     <description>Recent content in Categories on 4mN3s14 | CTF Player &amp; Student</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://john-jkar.github.io/myblog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:37931/myblog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DFIR</title>
+      <link>http://localhost:37931/myblog/categories/dfir/</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:37931/myblog/categories/dfir/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:37931/myblog/categories/linux/</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:37931/myblog/categories/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Malware Analysis</title>
+      <link>http://localhost:37931/myblog/categories/malware-analysis/</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:37931/myblog/categories/malware-analysis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rootkits</title>
+      <link>http://localhost:37931/myblog/categories/rootkits/</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:37931/myblog/categories/rootkits/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Blogging</title>
-      <link>https://john-jkar.github.io/myblog/categories/blogging/</link>
+      <link>http://localhost:37931/myblog/categories/blogging/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://john-jkar.github.io/myblog/categories/blogging/</guid>
+      <guid>http://localhost:37931/myblog/categories/blogging/</guid>
       <description></description>
     </item>
     <item>
       <title>CTF</title>
-      <link>https://john-jkar.github.io/myblog/categories/ctf/</link>
+      <link>http://localhost:37931/myblog/categories/ctf/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://john-jkar.github.io/myblog/categories/ctf/</guid>
+      <guid>http://localhost:37931/myblog/categories/ctf/</guid>
       <description></description>
     </item>
     <item>
       <title>Pyjail</title>
-      <link>https://john-jkar.github.io/myblog/categories/pyjail/</link>
+      <link>http://localhost:37931/myblog/categories/pyjail/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://john-jkar.github.io/myblog/categories/pyjail/</guid>
+      <guid>http://localhost:37931/myblog/categories/pyjail/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Dev</title>
-      <link>https://john-jkar.github.io/myblog/categories/web-dev/</link>
+      <link>http://localhost:37931/myblog/categories/web-dev/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://john-jkar.github.io/myblog/categories/web-dev/</guid>
+      <guid>http://localhost:37931/myblog/categories/web-dev/</guid>
       <description></description>
     </item>
   </channel>
