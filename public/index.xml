@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>4mN3s14 | CTF Player &amp; Student</title>
-    <link>http://localhost:37931/myblog/</link>
+    <link>http://localhost:45131/myblog/</link>
     <description>Recent content on 4mN3s14 | CTF Player &amp; Student</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 29 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:37931/myblog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:45131/myblog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux Kernel Rootkit Analysis – Singularity Rootkit</title>
-      <link>http://localhost:37931/myblog/posts/linux-kernel-rootkit-analysis/</link>
+      <link>http://localhost:45131/myblog/posts/linux-kernel-rootkit-analysis/</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:37931/myblog/posts/linux-kernel-rootkit-analysis/</guid>
+      <guid>http://localhost:45131/myblog/posts/linux-kernel-rootkit-analysis/</guid>
       <description>&lt;h1 id=&#34;-linux-kernel-rootkit-analysis--singularity-rootkit-easy-malops-practice-challenge&#34;&gt;🔍 Linux Kernel Rootkit Analysis – Singularity Rootkit easy malops practice challenge&lt;/h1&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Today I kicked off will some malware analysis from malops.io. It was my first time to analyse a rootkit and it was very insightful.&#xA;In this blog Iam going to talk about my experience while analysing the rootkit&#xA;In this analysis, we examine a &lt;strong&gt;Linux kernel rootkit&lt;/strong&gt; recovered during a DFIR investigation.&lt;br&gt;&#xA;The malicious kernel module demonstrates advanced stealth capabilities, including:&lt;/p&gt;</description>
     </item>
     <item>
       <title>sigpwny CTF: Pyjail 2 Writeup — Bypassing Python Restrictions</title>
-      <link>http://localhost:37931/myblog/posts/pwnyctf-pyjail2/</link>
+      <link>http://localhost:45131/myblog/posts/pwnyctf-pyjail2/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:37931/myblog/posts/pwnyctf-pyjail2/</guid>
+      <guid>http://localhost:45131/myblog/posts/pwnyctf-pyjail2/</guid>
       <description>&lt;h1 id=&#34;sigpwny-ctf-pyjail-2-writeup--bypassing-python-restrictions&#34;&gt;sigpwny CTF: Pyjail 2 Writeup — Bypassing Python Restrictions&lt;/h1&gt;&#xA;&lt;h2 id=&#34;challenge-overview&#34;&gt;Challenge Overview&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;URL&lt;/strong&gt;: &lt;a href=&#34;https://ctf.sigpwny.com/challenges#Meetings/Pyjail%202-633&#34;&gt;https://ctf.sigpwny.com/challenges#Meetings/Pyjail%202-633&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;A Python jail challenge restricting the &lt;code&gt;exec&lt;/code&gt; function with multiple filters:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;No quotes (&lt;code&gt;&#39;&lt;/code&gt;, &lt;code&gt;&amp;quot;&lt;/code&gt;)&lt;/li&gt;&#xA;&lt;li&gt;No &lt;code&gt;x&lt;/code&gt; character (blocks &lt;code&gt;exec&lt;/code&gt;, &lt;code&gt;eval&lt;/code&gt;, hex strings)&lt;/li&gt;&#xA;&lt;li&gt;Limited character set for code execution&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;exploitation-strategy&#34;&gt;Exploitation Strategy&lt;/h2&gt;&#xA;&lt;h3 id=&#34;bypassing-restrictions&#34;&gt;Bypassing Restrictions&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Restriction&lt;/th&gt;&#xA;          &lt;th&gt;Bypass Technique&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;No quotes&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Build strings using &lt;code&gt;chr()&lt;/code&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;No &lt;code&gt;x&lt;/code&gt; character&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Use &lt;code&gt;chr(88).lower()&lt;/code&gt; → &lt;code&gt;&#39;X&#39;.lower()&lt;/code&gt; → &lt;code&gt;&#39;x&#39;&lt;/code&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Blocked functions&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Use &lt;code&gt;__import__()&lt;/code&gt; instead of &lt;code&gt;import&lt;/code&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h3 id=&#34;payload-construction&#34;&gt;Payload Construction&lt;/h3&gt;&#xA;&lt;p&gt;Build &lt;code&gt;/flag.txt&lt;/code&gt; path without quotes or literal &lt;code&gt;x&lt;/code&gt;:&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Pain of Building This Blog</title>
-      <link>http://localhost:37931/myblog/posts/the-pain-of-building-this-blog/</link>
+      <link>http://localhost:45131/myblog/posts/the-pain-of-building-this-blog/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:37931/myblog/posts/the-pain-of-building-this-blog/</guid>
+      <guid>http://localhost:45131/myblog/posts/the-pain-of-building-this-blog/</guid>
       <description>&lt;h1 id=&#34;the-pain-of-building-this-blog&#34;&gt;The Pain of Building This Blog.&lt;/h1&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s be real: setting up this blog was torture.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-struggle&#34;&gt;The Struggle&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;TOML errors&lt;/strong&gt;: Spent hours fixing config syntax&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Template hell&lt;/strong&gt;: Theme had broken syntax&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;About page mystery&lt;/strong&gt;: &lt;code&gt;about/_index.md&lt;/code&gt; vs &lt;code&gt;about.md&lt;/code&gt; confusion&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cache demons&lt;/strong&gt;: Hugo cached everything&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Avatar saga&lt;/strong&gt;: 4 hours to get transparent PNG working&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;why-bother&#34;&gt;Why Bother?&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Learning&lt;/strong&gt;: Debugging Hugo taught me systems&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Control&lt;/strong&gt;: No WordPress bloat, no Medium restrictions&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;CTF practice&lt;/strong&gt;: Finding syntax errors = RE practice&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;the-win&#34;&gt;The Win&lt;/h2&gt;&#xA;&lt;p&gt;After days of frustration:&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:37931/myblog/about/</link>
+      <link>http://localhost:45131/myblog/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:37931/myblog/about/</guid>
+      <guid>http://localhost:45131/myblog/about/</guid>
       <description>&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;&#xA;&lt;p&gt;Hi, I’m &lt;strong&gt;4mN3s14&lt;/strong&gt; — a computer security and forensics student, content writer, and curious mind obsessed with how things work (and how they break).&lt;/p&gt;&#xA;&lt;p&gt;I’ve spent the past few years writing content across different niches, including tech and faith-based blogs, while sharpening my skills in cybersecurity, CTF challenges, and digital forensics. I enjoy digging into topics like reverse engineering, OSINT, Linux, and real-world security problems, then breaking them down into clear, readable ideas that actually make sense.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:37931/myblog/posts/ai-rizz/</link>
+      <link>http://localhost:45131/myblog/posts/ai-rizz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:37931/myblog/posts/ai-rizz/</guid>
+      <guid>http://localhost:45131/myblog/posts/ai-rizz/</guid>
       <description>&lt;h1 id=&#34;ai-lover--pascalctf-writeup&#34;&gt;AI Lover — PascalCTF Writeup&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Challenge Name:&lt;/strong&gt; AI Lover&lt;br&gt;&#xA;&lt;strong&gt;Author:&lt;/strong&gt; Marco Balducci (@Mark-74)&lt;br&gt;&#xA;&lt;strong&gt;Points:&lt;/strong&gt; 50&lt;br&gt;&#xA;&lt;strong&gt;Category:&lt;/strong&gt; Web / AI Interaction / Social Engineering&lt;br&gt;&#xA;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=&#34;https://ailover.ctf.pascalctf.it&#34;&gt;https://ailover.ctf.pascalctf.it&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;challenge-description&#34;&gt;Challenge Description&lt;/h2&gt;&#xA;&lt;p&gt;The challenge presents an AI-driven chat interface that refuses to directly provide the flag.&lt;br&gt;&#xA;Any attempt to demand, threaten, or coerce the AI results in deflection. I had to rizz my way to get the flag from the ai which was actually fun.&lt;/p&gt;&#xA;&lt;p&gt;The hint &lt;em&gt;“I am not that good at this rizz stuff”&lt;/em&gt; implies that the solution relies on &lt;strong&gt;conversation, emotional intelligence, and trust&lt;/strong&gt;, not traditional web exploitation.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:37931/myblog/posts/hellcouple/</link>
+      <link>http://localhost:45131/myblog/posts/hellcouple/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:37931/myblog/posts/hellcouple/</guid>
+      <guid>http://localhost:45131/myblog/posts/hellcouple/</guid>
       <description>&lt;h1 id=&#34;hell-couple-aplacahack-challenge-writeup&#34;&gt;Hell Couple Aplacahack challenge writeup&lt;/h1&gt;&#xA;&lt;h2 id=&#34;topic-discrete-logarithm&#34;&gt;Topic: Discrete Logarithm&lt;/h2&gt;&#xA;&lt;p&gt;The challenge implements a standard Diffie-Hellman key exchange using the 1536-bit MODP group from RFC 3526. This was my first time doing a challenge like this and I learned alot from it.&lt;/p&gt;&#xA;&lt;h3 id=&#34;relevant-parameters&#34;&gt;Relevant parameters:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Prime: 1536-bit safe prime p&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Generator: g = 2&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Public values:&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;alice_public&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;bob_public&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Leakage:&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;leak = alice_private &amp;amp; (2^1500 - 1)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;the-encrypted-flag-was-produced-using&#34;&gt;The encrypted flag was produced using:&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;SHA256(shared_key) as AES key&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:37931/myblog/posts/optimal-sort/</link>
+      <link>http://localhost:45131/myblog/posts/optimal-sort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:37931/myblog/posts/optimal-sort/</guid>
+      <guid>http://localhost:45131/myblog/posts/optimal-sort/</guid>
       <description>&lt;h1 id=&#34;optimal-sort-writeup-from-alpacahack&#34;&gt;optimal-sort Writeup from alpacahack&lt;/h1&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;blockquote class=&#34;blockquote-regular&#34;&gt;&#xA;  &lt;p&gt;&lt;strong&gt;Challenge&lt;/strong&gt;: &lt;code&gt;optimal-sort&lt;/code&gt; (Misc, Hard) •&#xA;&lt;strong&gt;Server&lt;/strong&gt;: &lt;code&gt;nc 34.170.146.252 43373&lt;/code&gt;&lt;br&gt;&#xA;&lt;strong&gt;Author&lt;/strong&gt;: ark&lt;/p&gt;&#xA;&#xA;&lt;/blockquote&gt;&#xA;&lt;h1 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h1&gt;&#xA;&lt;p&gt;We&amp;rsquo;re given a Python service that challenges us to &amp;ldquo;sort&amp;rdquo; four randomly generated arrays of sizes &lt;em&gt;&lt;strong&gt;10, 100, 1000, and 2000&lt;/strong&gt;&lt;/em&gt;. For each array, we get exactly &lt;em&gt;&lt;strong&gt;n + 5&lt;/strong&gt;&lt;/em&gt; operations to swap elements at indices &lt;em&gt;&lt;strong&gt;i and j&lt;/strong&gt;&lt;/em&gt;. After each swap, the server checks if the array is sorted &lt;em&gt;&lt;strong&gt;(x &amp;lt;= y for all adjacent pairs)&lt;/strong&gt;&lt;/em&gt; and grants us the flag if we succeed on all four rounds.&#xA;At first glance, this seems impossible—you can&amp;rsquo;t reliably sort a random array in &lt;em&gt;&lt;strong&gt;n + 5&lt;/strong&gt;&lt;/em&gt; comparisons/swaps. But the vulnerability isn&amp;rsquo;t in the algorithmic constraint—it&amp;rsquo;s in the implementation of the swap itself.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:37931/myblog/posts/trading-places-metactf/</link>
+      <link>http://localhost:45131/myblog/posts/trading-places-metactf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:37931/myblog/posts/trading-places-metactf/</guid>
+      <guid>http://localhost:45131/myblog/posts/trading-places-metactf/</guid>
       <description>&lt;h1 id=&#34;trading-places-metactf-writeup&#34;&gt;Trading places metactf writeup&lt;/h1&gt;&#xA;&lt;h2 id=&#34;url&#34;&gt;URL&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://host5.metaproblems.com:7606/&#34;&gt;https://host5.metaproblems.com:7606/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;concept&#34;&gt;Concept&lt;/h1&gt;&#xA;&lt;p&gt;We were given a trading platform website where we had to login as admin to get the flag but we were only given user logins.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Jwt manipulation&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;solve&#34;&gt;Solve&lt;/h1&gt;&#xA;&lt;p&gt;On logging in as user, I inspected the cookies and noticing that we have a jwt token for the current user. I wrote a python script to&#xA;manipulate the user token into an admin token.&lt;/p&gt;</description>
     </item>
   </channel>
