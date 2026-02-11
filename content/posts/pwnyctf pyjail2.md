@@ -6,7 +6,7 @@ categories = ["CTF", "pyjail"]
 tags = ["python", "jailbreak", "chr-bypass", "sigpwny", "waf-bypass"]
 +++
 
-# sigpwny CTF: Pyjail 2 Writeup — Bypassing Python Restrictions 🔒🐍
+# sigpwny CTF: Pyjail 2 Writeup — Bypassing Python Restrictions 
 
 ## Challenge Overview
 
