@@ -2,94 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 4mN3s14 | CTF Player &amp; Student</title>
-    <link>http://localhost:42399/myblog/tags/</link>
+    <link>http://localhost:42239/myblog/tags/</link>
     <description>Recent content in Tags on 4mN3s14 | CTF Player &amp; Student</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 29 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:42399/myblog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:42239/myblog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Forensics</title>
-      <link>http://localhost:42399/myblog/tags/forensics/</link>
+      <link>http://localhost:42239/myblog/tags/forensics/</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:42399/myblog/tags/forensics/</guid>
+      <guid>http://localhost:42239/myblog/tags/forensics/</guid>
       <description></description>
     </item>
     <item>
       <title>Kernel</title>
-      <link>http://localhost:42399/myblog/tags/kernel/</link>
+      <link>http://localhost:42239/myblog/tags/kernel/</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:42399/myblog/tags/kernel/</guid>
+      <guid>http://localhost:42239/myblog/tags/kernel/</guid>
       <description></description>
     </item>
     <item>
       <title>LKM</title>
-      <link>http://localhost:42399/myblog/tags/lkm/</link>
+      <link>http://localhost:42239/myblog/tags/lkm/</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:42399/myblog/tags/lkm/</guid>
+      <guid>http://localhost:42239/myblog/tags/lkm/</guid>
       <description></description>
     </item>
     <item>
       <title>Reverse Engineering</title>
-      <link>http://localhost:42399/myblog/tags/reverse-engineering/</link>
+      <link>http://localhost:42239/myblog/tags/reverse-engineering/</link>
       <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:42399/myblog/tags/reverse-engineering/</guid>
+      <guid>http://localhost:42239/myblog/tags/reverse-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Chr-Bypass</title>
-      <link>http://localhost:42399/myblog/tags/chr-bypass/</link>
+      <link>http://localhost:42239/myblog/tags/chr-bypass/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:42399/myblog/tags/chr-bypass/</guid>
+      <guid>http://localhost:42239/myblog/tags/chr-bypass/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>http://localhost:42399/myblog/tags/hugo/</link>
+      <link>http://localhost:42239/myblog/tags/hugo/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:42399/myblog/tags/hugo/</guid>
+      <guid>http://localhost:42239/myblog/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Jailbreak</title>
-      <link>http://localhost:42399/myblog/tags/jailbreak/</link>
+      <link>http://localhost:42239/myblog/tags/jailbreak/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:42399/myblog/tags/jailbreak/</guid>
+      <guid>http://localhost:42239/myblog/tags/jailbreak/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:42399/myblog/tags/linux/</link>
+      <link>http://localhost:42239/myblog/tags/linux/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:42399/myblog/tags/linux/</guid>
+      <guid>http://localhost:42239/myblog/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:42399/myblog/tags/python/</link>
+      <link>http://localhost:42239/myblog/tags/python/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:42399/myblog/tags/python/</guid>
+      <guid>http://localhost:42239/myblog/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Sigpwny</title>
-      <link>http://localhost:42399/myblog/tags/sigpwny/</link>
+      <link>http://localhost:42239/myblog/tags/sigpwny/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:42399/myblog/tags/sigpwny/</guid>
+      <guid>http://localhost:42239/myblog/tags/sigpwny/</guid>
       <description></description>
     </item>
     <item>
       <title>Struggle</title>
-      <link>http://localhost:42399/myblog/tags/struggle/</link>
+      <link>http://localhost:42239/myblog/tags/struggle/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:42399/myblog/tags/struggle/</guid>
+      <guid>http://localhost:42239/myblog/tags/struggle/</guid>
       <description></description>
     </item>
     <item>
       <title>Waf-Bypass</title>
-      <link>http://localhost:42399/myblog/tags/waf-bypass/</link>
+      <link>http://localhost:42239/myblog/tags/waf-bypass/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:42399/myblog/tags/waf-bypass/</guid>
+      <guid>http://localhost:42239/myblog/tags/waf-bypass/</guid>
       <description></description>
     </item>
   </channel>
