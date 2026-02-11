@@ -6,7 +6,7 @@ categories = ["Blogging", "Web Dev"]
 tags = ["hugo", "struggle", "linux"]
 +++
 
-# The Pain of Building This Blog 💀
+# The Pain of Building This Blog.
 
 Let's be real: setting up this blog was torture.
 
@@ -28,10 +28,10 @@ Let's be real: setting up this blog was torture.
 
 After days of frustration:
 
-✅ Blog is live  
-✅ About page works  
-✅ Avatar displays  
-✅ Zero syntax errors  
+- Blog is live  
+- About page works  
+- Avatar displays  
+- Zero syntax errors  
 
 Was it worth it?
 
@@ -39,6 +39,5 @@ Was it worth it?
 
 ---
 
-*Next up: actual CTF writeups. Promise.*
+*And so it begins......*
 
-🏴‍☠️ — Jonan (4mN3s14) | Dead Pirate Society
