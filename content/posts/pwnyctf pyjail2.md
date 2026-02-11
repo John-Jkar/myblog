@@ -43,6 +43,7 @@ chr(46)   → '.'
 chr(116)  → 't'
 chr(88).lower() → 'x'  # ASCII 88 = 'X', .lower() → 'x'
 chr(116)  → 't'
+```
 
 # Final Payloads
 ## Method 1: Read via open()
@@ -51,11 +52,11 @@ print(open(chr(47)+chr(102)+chr(108)+chr(97)+chr(103)+chr(46)+chr(116)+chr(88).l
 ~~~
 
 ## Method 2: Execute via os.system()
-~~~python
+```python
 __import__(chr(111)+chr(115)).system(chr(99)+chr(97)+chr(116)+chr(32)+chr(47)+chr(102)+chr(108)+chr(97)+chr(103)+chr(46)+chr(116)+chr(88).lower()+chr(116))
-~~~
+```
 
-## Key Takeaways
+# Key Takeaways
 ## Why This Worked
 -Character whitelisting bypass: chr() converts integers to characters outside filtered set
 -Case manipulation: .lower() converts uppercase to lowercase, bypassing literal character bans
