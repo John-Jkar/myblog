@@ -1,3 +1,9 @@
++++
+title = "Destructuring Challenge Writeup"
+date = 2026-02-11T08:00:00Z
+draft = false
++++
+
 # Destructuring Challenge Writeup
 
 **Challenge:** destructuring  
