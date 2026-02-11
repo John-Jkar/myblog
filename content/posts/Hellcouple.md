@@ -1,9 +1,3 @@
----
-title: "My Post"
-date: 2026-02-11T14:00:00Z   # <-- set the date you want
-draft: false
----
-
 
 # HellCouple Aplacahack challenge writeup
 
