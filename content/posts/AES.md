@@ -1,5 +1,8 @@
-
-+++ title = "AAAAAAAAEEEEEEEESSSSSSSS - CTF Writeup" date = 2026-02-15T06:00:00Z draft = false tags = ["crypto", "aes", "ecb", "oracle attack", "ctf"] categories = ["CTF Writeups"] +++
++++
+title = "AES Writeup"
+date = 2026-02-15T08:00:00Z
+draft = false
++++
 
 # AAAAAAAAEEEEEEEESSSSSSSS - Alpacahack challenge writeup
 

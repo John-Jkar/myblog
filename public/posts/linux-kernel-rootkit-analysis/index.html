@@ -511,7 +511,7 @@ The malicious kernel module demonstrates advanced stealth capabilities, includin
 <hr>
 <h2 id="process-hiding-capability">Process Hiding Capability</h2>
 <p>The rootkit maintains an internal array for tracking hidden PIDs:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> hidden_pids[<span style="color:#ae81ff">32</span>];
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> hidden_pids[<span style="color:#ae81ff">32</span>];
 </span></span></code></pre></div><h1 id="module-selfhiding">Module Self‑Hiding</h1>
 <p>To remain stealthy, the rootkit removes itself from kernel module lists.</p>
 <h2 id="responsible-function">Responsible Function</h2>
