@@ -1,0 +1,880 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+  class="h-full">
+  <head><script src="/myblog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=myblog/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="en-us">
+<script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<title>AAAAAAAAEEEEEEEESSSSSSSS - CTF Writeup | 4mN3s14 | CTF Player &amp; Student</title>
+<meta
+  name="description"
+  content="
+    AAAAAAAAEEEEEEEESSSSSSSS - Alpacahack challenge writeup Category: Crypto
+Difficulty: Medium
+Solves: 21
+Author: hiikunz
+Challenge Description We&rsquo;re given a …
+  
+  ">
+
+
+  <meta name="keywords" content="crypto, aes, ecb, oracle attack, ctf">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/myblog/posts/aes/">
+
+<meta name="robots" content="index, follow">
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="AAAAAAAAEEEEEEEESSSSSSSS - CTF Writeup | 4mN3s14 | CTF Player &amp; Student">
+<meta property="og:description" content="AAAAAAAAEEEEEEEESSSSSSSS - Alpacahack challenge writeup Category: Crypto
+Difficulty: Medium
+Solves: 21
+Author: hiikunz
+Challenge Description We&rsquo;re given a …">
+<meta property="og:url" content="http://localhost:1313/myblog/posts/aes/">
+<meta property="og:site_name" content="4mN3s14 | CTF Player &amp; Student"><meta property="og:image" content="/myblog/images/logo.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630"><meta property="article:published_time" content="2026-02-15T06:00:00Z">
+  <meta
+    property="article:modified_time"
+    content="2026-02-15T06:00:00Z"><meta property="article:section" content="crypto"><meta property="article:tag" content="crypto"><meta property="article:tag" content="aes"><meta property="article:tag" content="ecb"><meta property="article:tag" content="oracle attack"><meta property="article:tag" content="ctf">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AAAAAAAAEEEEEEEESSSSSSSS - CTF Writeup | 4mN3s14 | CTF Player &amp; Student">
+<meta name="twitter:description" content="AAAAAAAAEEEEEEEESSSSSSSS - Alpacahack challenge writeup Category: Crypto
+Difficulty: Medium
+Solves: 21
+Author: hiikunz
+Challenge Description We&rsquo;re given a …"><meta name="twitter:image" content="/myblog/images/logo.png"><meta name="twitter:site" content="@J0n4n1">
+  <meta name="twitter:creator" content="@J0n4n1">
+
+<script type="application/ld+json">
+
+
+
+
+
+
+
+
+
+
+
+
+"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"author\":{\"@type\":\"Person\",\"email\":\"kagimujkar@gmail.com\",\"name\":\"4mN3s14 | CTF Player \\u0026 Student\"},\"dateModified\":\"2026-02-15T06:00:00Z\",\"datePublished\":\"2026-02-15T06:00:00Z\",\"description\":\"AAAAAAAAEEEEEEEESSSSSSSS - Alpacahack challenge writeup Category: Crypto\\nDifficulty: Medium\\nSolves: 21\\nAuthor: hiikunz\\nChallenge Description We\\u0026rsquo;re given a …\",\"headline\":\"AAAAAAAAEEEEEEEESSSSSSSS - CTF Writeup\",\"image\":\"/myblog/images/logo.png\",\"keywords\":[\"crypto\",\"aes\",\"ecb\",\"oracle attack\",\"ctf\"],\"mainEntityOfPage\":{\"@id\":\"http://localhost:1313/myblog/posts/aes/\",\"@type\":\"WebPage\"},\"publisher\":{\"@type\":\"Organization\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"/myblog/images/logo.png\"},\"name\":\"4mN3s14 | CTF Player \\u0026 Student\"}}"</script>
+
+
+
+  
+  
+  
+    
+  
+  
+<script type="application/ld+json">"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"item\":\"http://localhost:1313/myblog/\",\"name\":\"4mN3s14 | CTF Player \\u0026 Student\",\"position\":1},{\"@type\":\"ListItem\",\"item\":\"http://localhost:1313/myblog/posts/\",\"name\":\"Posts\",\"position\":2},{\"@type\":\"ListItem\",\"item\":\"http://localhost:1313/myblog/posts/aes/\",\"name\":\"AAAAAAAAEEEEEEEESSSSSSSS - CTF Writeup\",\"position\":3}]}"</script>
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+  rel="stylesheet">
+
+
+<link
+  rel="stylesheet"
+  href="http://localhost:1313/myblog/css/theme.min.86a32b729f656fc6c119ed69193950db815a3ad9fdc967b32c76d602f11449a4.css"
+  integrity="sha256-hqMrcp9lb8bBGe1pGTlQ24FaOtn9yWezLHbWAvEUSaQ=">
+
+<link
+    rel="stylesheet"
+    href="http://localhost:1313/myblog/css/syntax-dark.min.b01037e5609e6260b74d6fcdd6d5131e8dcbc4d46d6ef4bfbe5a60bdfc1a9f30.css"
+    integrity="sha256-sBA35WCeYmC3TW/N1tUTHo3LxNRtbvS/vlpgvfwanzA="
+    id="syntax-dark-theme"
+    class="syntax-theme"><link
+    rel="stylesheet"
+    href="http://localhost:1313/myblog/css/syntax-light.min.9602bc2fcef52b4c62e05eae14b48ba428e114f116e993e504d83ed5a3aeda98.css"
+    integrity="sha256-lgK8L871K0xi4F6uFLSLpCjhFPEW6ZPlBNg&#43;1aOu2pg="
+    id="syntax-light-theme"
+    class="syntax-theme"
+    disabled><script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+
+    const syntaxDark = document.getElementById("syntax-dark-theme");
+    const syntaxLight = document.getElementById("syntax-light-theme");
+
+    if (theme === "light") {
+      if (syntaxDark) syntaxDark.disabled = true;
+      if (syntaxLight) syntaxLight.disabled = false;
+    } else {
+      if (syntaxDark) syntaxDark.disabled = false;
+      if (syntaxLight) syntaxLight.disabled = true;
+    }
+
+    
+    const observer = new MutationObserver(() => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      if (currentTheme === "light") {
+        if (syntaxDark) syntaxDark.disabled = true;
+        if (syntaxLight) syntaxLight.disabled = false;
+      } else {
+        if (syntaxDark) syntaxDark.disabled = false;
+        if (syntaxLight) syntaxLight.disabled = true;
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+  })();
+</script>
+
+
+
+
+<link
+  rel="stylesheet"
+  href="http://localhost:1313/myblog/css/bundle.min.d430be27649a3685c7891f7076e3e50f97bf39aabb96c243b89902f3dc6c9ead.css"
+  integrity="sha256-1DC&#43;J2SaNoXHiR9wduPlD5e/Oaq7lsJDuJkC89xsnq0=">
+
+
+
+
+
+<link rel="icon" type="image/x-icon" href="http://localhost:1313/myblog/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost:1313/myblog/favicon.ico">
+
+<link rel="icon" type="image/png" href="http://localhost:1313/myblog/favicon.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/myblog/favicon/logo-transparent/favicon-32x32.png">
+
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/myblog/favicon/logo-transparent/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/myblog/favicon/logo-transparent/apple-touch-icon.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="192x192"
+  href="http://localhost:1313/myblog/favicon/logo-transparent/android-chrome-192x192.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="512x512"
+  href="http://localhost:1313/myblog/favicon/logo-transparent/android-chrome-512x512.png">
+<link rel="manifest" href="http://localhost:1313/myblog/favicon/logo-transparent/site.webmanifest">
+
+
+
+
+  
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="http://localhost:1313/myblog/index.xml"
+      title="4mN3s14 | CTF Player &amp; Student">
+  
+
+
+
+
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <a href="#main-content" class="skip-to-main" aria-label="Skip to main content"
+      >Skip to main content</a
+    >
+    <header class="sticky-header">
+      <div class="header-container">
+        <nav class="header-nav" role="navigation" aria-label="Main navigation">
+  <div class="header-content">
+    <div class="header-logo">
+      <a href="http://localhost:1313/myblog/" class="logo-link" aria-label="Home - 4mN3s14 | CTF Player &amp; Student">
+        4mN3s14 | CTF Player &amp; Student
+      </a>
+    </div>
+
+    
+    <button 
+      id="mobile-menu-toggle" 
+      class="mobile-menu-toggle" 
+      aria-label="Toggle menu" 
+      aria-expanded="false"
+      type="button">
+      <span class="hamburger-icon">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </span>
+    </button>
+
+    <div class="header-menu">
+      <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+
+      <button id="search-toggle" class="search-toggle" aria-label="Search" type="button">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </button>
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" type="button">
+  <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+  </svg>
+  <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+  </svg>
+</button>
+
+    </div>
+  </div>
+
+  
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-content">
+      <div class="mobile-menu-header">
+        <span class="mobile-menu-title">Menu</span>
+        <button 
+          id="mobile-menu-close" 
+          class="mobile-menu-close" 
+          aria-label="Close menu" 
+          type="button">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-menu-nav" role="navigation" aria-label="Mobile navigation">
+        <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+      </nav>
+      <div class="mobile-menu-footer">
+        <button id="mobile-search-toggle" class="mobile-search-toggle" aria-label="Search" type="button">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <span>Search</span>
+        </button>
+        <button class="theme-toggle" aria-label="Toggle theme" type="button">
+          <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+          <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+      </div>
+    </header>
+
+    <main id="main-content" class="flex-1" role="main">
+      
+  <div class="single-post-wrapper">
+    <article class="single-post">
+      
+
+
+
+
+
+
+
+      <header class="post-header">
+        <h1 class="post-title-main">AAAAAAAAEEEEEEEESSSSSSSS - CTF Writeup</h1>
+
+        
+
+        <div class="post-meta">
+  <div class="post-meta-info">
+    <time datetime="2026-02-15T06:00:00Z" class="post-date">
+      <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+      February 15, 2026
+    </time>
+
+    <span class="meta-separator">•</span>
+
+    
+      <span class="post-word-count">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        755 words
+      </span>
+    
+
+    
+      <span class="meta-separator">•</span>
+      <span class="post-reading-time">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        4 min
+      </span>
+    
+  </div>
+
+  
+    <div class="post-tags">
+      
+        <a href="http://localhost:1313/myblog/tags/crypto" class="post-tag">crypto</a>
+      
+        <a href="http://localhost:1313/myblog/tags/aes" class="post-tag">aes</a>
+      
+        <a href="http://localhost:1313/myblog/tags/ecb" class="post-tag">ecb</a>
+      
+        <a href="http://localhost:1313/myblog/tags/oracle-attack" class="post-tag">oracle attack</a>
+      
+        <a href="http://localhost:1313/myblog/tags/ctf" class="post-tag">ctf</a>
+      
+    </div>
+  
+</div>
+
+      </header>
+
+      <div class="post-content-main">
+        <h1 id="aaaaaaaaeeeeeeeessssssss---alpacahack-challenge-writeup">AAAAAAAAEEEEEEEESSSSSSSS - Alpacahack challenge writeup</h1>
+<p><strong>Category:</strong> Crypto<br>
+<strong>Difficulty:</strong> Medium<br>
+<strong>Solves:</strong> 21<br>
+<strong>Author:</strong> hiikunz</p>
+<h2 id="challenge-description">Challenge Description</h2>
+<p>We&rsquo;re given a Python script that encrypts a flag using AES-ECB mode with a twist - each character of the flag is repeated 8 times before encryption. We can also query an encryption oracle with arbitrary plaintexts.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> flag:
+</span></span><span style="display:flex;"><span>    ffffffffllllllllaaaaaaaagggggggg <span style="color:#f92672">+=</span> bytes([c] <span style="color:#f92672">*</span> <span style="color:#ae81ff">8</span>)
+</span></span><span style="display:flex;"><span>ciphertext <span style="color:#f92672">=</span> cipher<span style="color:#f92672">.</span>encrypt(ffffffffllllllllaaaaaaaagggggggg)
+</span></span></code></pre></div><h2 id="initial-analysis">Initial Analysis</h2>
+<p>Let&rsquo;s break down what the code does:</p>
+<ol>
+<li><strong>Flag format</strong>: 32 bytes total, format <code>Alpaca{...}</code></li>
+<li><strong>Character repetition</strong>: Each character is repeated 8 times</li>
+<li><strong>Total plaintext</strong>: 32 characters × 8 repetitions = 256 bytes</li>
+<li><strong>Encryption</strong>: AES-ECB mode (Electronic Codebook)</li>
+<li><strong>Blocks</strong>: 256 bytes ÷ 16 bytes per block = 16 blocks</li>
+</ol>
+<h3 id="understanding-the-encoding">Understanding the Encoding</h3>
+<p>If the flag is <code>Alpaca{test_flag_here______}</code>, the plaintext becomes:</p>
+<pre tabindex="0"><code>AAAAAAAALLLLLLLLPPPPPPPPAAAAAAAA...
+</code></pre><p>Where each character appears 8 times consecutively.</p>
+<h3 id="block-structure">Block Structure</h3>
+<p>Since AES uses 16-byte blocks and each character occupies 8 bytes:</p>
+<pre tabindex="0"><code>Block 0 (bytes 0-15):   flag[0]*8 + flag[1]*8   = &#34;AAAAAAAA&#34; + &#34;LLLLLLLL&#34;
+Block 1 (bytes 16-31):  flag[2]*8 + flag[3]*8   = &#34;PPPPPPPP&#34; + &#34;AAAAAAAA&#34;
+Block 2 (bytes 32-47):  flag[4]*8 + flag[5]*8   = &#34;CCCCCCCC&#34; + &#34;AAAAAAAA&#34;
+...
+Block 15 (bytes 240-255): flag[30]*8 + flag[31]*8
+</code></pre><p>Each block contains exactly 2 flag characters!</p>
+<h2 id="the-vulnerability-ecb-mode">The Vulnerability: ECB Mode</h2>
+<p>AES-ECB has a critical weakness: <strong>identical plaintext blocks always produce identical ciphertext blocks</strong>.</p>
+<p>Since we can query the encryption oracle with any plaintext, we can:</p>
+<ol>
+<li>Create test plaintexts with the same structure (character repeated 8 times + character repeated 8 times)</li>
+<li>Send them to the oracle</li>
+<li>Compare the resulting ciphertext with the leaked ciphertext</li>
+<li>When they match, we&rsquo;ve found those 2 characters!</li>
+</ol>
+<h2 id="attack-strategy">Attack Strategy</h2>
+<p>For each of the 16 blocks:</p>
+<ol>
+<li>Extract the target ciphertext block from the leaked data</li>
+<li>Try all possible pairs of characters from the charset (60 characters)</li>
+<li>For each pair <code>(c1, c2)</code>:
+<ul>
+<li>Create plaintext: <code>c1*8 + c2*8</code> (16 bytes total)</li>
+<li>Send to oracle and get ciphertext</li>
+<li>Compare with target block</li>
+</ul>
+</li>
+<li>When match found → we&rsquo;ve recovered 2 flag characters!</li>
+</ol>
+<h3 id="complexity">Complexity</h3>
+<ul>
+<li>Charset size: 60 characters (<code>A-Z</code>, <code>a-z</code>, <code>{</code>, <code>}</code>, <code>_</code>)</li>
+<li>Combinations per block: 60 × 60 = 3,600</li>
+<li>Total blocks: 16</li>
+<li><strong>Worst case queries</strong>: 16 × 3,600 = 57,600</li>
+</ul>
+<p>This is completely feasible!</p>
+<h2 id="solution-code">Solution Code</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> socket
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Flag charset</span>
+</span></span><span style="display:flex;"><span>flag_charset <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">_&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>HOST <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;34.170.146.252&#34;</span>
+</span></span><span style="display:flex;"><span>PORT <span style="color:#f92672">=</span> <span style="color:#ae81ff">50373</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">recv_until</span>(sock, delimiter):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Receive data until delimiter is found&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    data <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> delimiter <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> data:
+</span></span><span style="display:flex;"><span>        chunk <span style="color:#f92672">=</span> sock<span style="color:#f92672">.</span>recv(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> chunk:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>        data <span style="color:#f92672">+=</span> chunk
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> data
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">send_query</span>(sock, plaintext_bytes):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Send a plaintext query and get the ciphertext response&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    query <span style="color:#f92672">=</span> plaintext_bytes<span style="color:#f92672">.</span>hex() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    sock<span style="color:#f92672">.</span>sendall(query<span style="color:#f92672">.</span>encode())
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Receive response</span>
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> recv_until(sock, <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    hex_part <span style="color:#f92672">=</span> response<span style="color:#f92672">.</span>decode()<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;ciphertext(hex): &#34;</span>)[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> bytes<span style="color:#f92672">.</span>fromhex(hex_part)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Connect to the server</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[*] Connecting to </span><span style="color:#e6db74">{</span>HOST<span style="color:#e6db74">}</span><span style="color:#e6db74">:</span><span style="color:#e6db74">{</span>PORT<span style="color:#e6db74">}</span><span style="color:#e6db74">...&#34;</span>)
+</span></span><span style="display:flex;"><span>    sock <span style="color:#f92672">=</span> socket<span style="color:#f92672">.</span>socket(socket<span style="color:#f92672">.</span>AF_INET, socket<span style="color:#f92672">.</span>SOCK_STREAM)
+</span></span><span style="display:flex;"><span>    sock<span style="color:#f92672">.</span>connect((HOST, PORT))
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;[+] Connected!&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Receive the leaked ciphertext</span>
+</span></span><span style="display:flex;"><span>    recv_until(sock, <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;ciphertext(hex): &#34;</span>)
+</span></span><span style="display:flex;"><span>    leaked_line <span style="color:#f92672">=</span> recv_until(sock, <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    leaked_ct_hex <span style="color:#f92672">=</span> leaked_line<span style="color:#f92672">.</span>decode()<span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>    leaked_ct <span style="color:#f92672">=</span> bytes<span style="color:#f92672">.</span>fromhex(leaked_ct_hex)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[*] Leaked ciphertext: </span><span style="color:#e6db74">{</span>leaked_ct_hex[:<span style="color:#ae81ff">64</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">...&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[*] Starting attack...</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Wait for prompt</span>
+</span></span><span style="display:flex;"><span>    recv_until(sock, <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;plaintext to encrypt (hex): &#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    flag <span style="color:#f92672">=</span> bytearray(<span style="color:#ae81ff">32</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Recover flag 2 characters at a time</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> block_idx <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">16</span>):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[*] Block </span><span style="color:#e6db74">{</span>block_idx<span style="color:#e6db74">:</span><span style="color:#e6db74">2d</span><span style="color:#e6db74">}</span><span style="color:#e6db74">/16...&#34;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; &#39;</span>, flush<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        target_block <span style="color:#f92672">=</span> leaked_ct[block_idx <span style="color:#f92672">*</span> <span style="color:#ae81ff">16</span>:(block_idx <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">16</span>]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        found <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        query_count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> c1 <span style="color:#f92672">in</span> flag_charset:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> found:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> c2 <span style="color:#f92672">in</span> flag_charset:
+</span></span><span style="display:flex;"><span>                query_count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># Create test plaintext: c1*8 + c2*8</span>
+</span></span><span style="display:flex;"><span>                test_plaintext <span style="color:#f92672">=</span> bytes([c1] <span style="color:#f92672">*</span> <span style="color:#ae81ff">8</span> <span style="color:#f92672">+</span> [c2] <span style="color:#f92672">*</span> <span style="color:#ae81ff">8</span>)
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># Query oracle</span>
+</span></span><span style="display:flex;"><span>                test_ct <span style="color:#f92672">=</span> send_query(sock, test_plaintext)
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> test_ct <span style="color:#f92672">==</span> target_block:
+</span></span><span style="display:flex;"><span>                    flag[<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>block_idx] <span style="color:#f92672">=</span> c1
+</span></span><span style="display:flex;"><span>                    flag[<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>block_idx <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> c2
+</span></span><span style="display:flex;"><span>                    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;&#39;</span><span style="color:#e6db74">{</span>chr(c1)<span style="color:#e6db74">}{</span>chr(c2)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39; (</span><span style="color:#e6db74">{</span>query_count<span style="color:#e6db74">}</span><span style="color:#e6db74"> queries)&#34;</span>)
+</span></span><span style="display:flex;"><span>                    found <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> found:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;NOT FOUND!&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    sock<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;=&#39;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">60</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[+] FLAG: </span><span style="color:#e6db74">{</span>flag<span style="color:#f92672">.</span>decode()<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;=&#39;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">60</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span></code></pre></div><h2 id="running-the-exploit">Running the Exploit</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python3 solve.py
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Connecting to 34.170.146.252:50373...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Connected!
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Leaked ciphertext: dbbf7c0ea989bd5af7f153f7b101f64b...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Starting attack...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Block  0/16... <span style="color:#e6db74">&#39;Al&#39;</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">156</span> queries<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Block  1/16... <span style="color:#e6db74">&#39;pa&#39;</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">289</span> queries<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Block  2/16... <span style="color:#e6db74">&#39;ca&#39;</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">98</span> queries<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Block  3/16... <span style="color:#e6db74">&#39;{E&#39;</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">412</span> queries<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Block  4/16... <span style="color:#e6db74">&#39;CB&#39;</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">234</span> queries<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Block  5/16... <span style="color:#e6db74">&#39;_m&#39;</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">567</span> queries<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">============================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> FLAG: Alpaca<span style="color:#f92672">{</span>ECB_m0d3_l3aks_pl41nt3xt<span style="color:#f92672">}</span> <span style="color:#f92672">(</span>fake flag<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">============================================================</span>
+</span></span></code></pre></div><h2 id="key-takeaways">Key Takeaways</h2>
+<h3 id="why-ecb-mode-is-dangerous">Why ECB Mode is Dangerous</h3>
+<ol>
+<li><strong>Deterministic</strong>: Same plaintext → same ciphertext</li>
+<li><strong>No diffusion</strong>: Each block is encrypted independently</li>
+<li><strong>Pattern leakage</strong>: Repeated patterns in plaintext are visible in ciphertext</li>
+</ol>
+<h3 id="what-made-this-attack-possible">What Made This Attack Possible</h3>
+<ol>
+<li><strong>Character repetition</strong>: Creates a predictable structure</li>
+<li><strong>ECB mode</strong>: No randomization between blocks</li>
+<li><strong>Encryption oracle</strong>: Allows us to test arbitrary plaintexts</li>
+<li><strong>Known charset</strong>: Limited search space (60 characters)</li>
+</ol>
+<h3 id="real-world-implications">Real-World Implications</h3>
+<ul>
+<li><strong>Never use ECB mode</strong> for anything beyond simple key wrapping</li>
+<li>Always use authenticated encryption (GCM, ChaCha20-Poly1305)</li>
+<li>This attack works even without knowing the key!</li>
+<li>Visual example: The famous <a href="https://blog.filippo.io/the-ecb-penguin/">ECB penguin</a></li>
+</ul>
+<h2 id="flag">Flag</h2>
+<pre tabindex="0"><code>Alpaca{ECB_m0d3_l3aks_pl41nt3xt} (fake flag)
+</code></pre><hr>
+
+      </div>
+
+      
+        <footer class="post-footer">
+          <div class="post-tags-footer">
+            <span class="tags-label">Tags:</span>
+            
+              <a href="http://localhost:1313/myblog/tags/crypto" class="post-tag">crypto</a>
+            
+              <a href="http://localhost:1313/myblog/tags/aes" class="post-tag">aes</a>
+            
+              <a href="http://localhost:1313/myblog/tags/ecb" class="post-tag">ecb</a>
+            
+              <a href="http://localhost:1313/myblog/tags/oracle-attack" class="post-tag">oracle attack</a>
+            
+              <a href="http://localhost:1313/myblog/tags/ctf" class="post-tag">ctf</a>
+            
+          </div>
+        </footer>
+      
+
+
+      <nav class="post-navigation" aria-label="Post navigation">
+        
+          <a
+            href="http://localhost:1313/myblog/posts/destructing/"
+            class="nav-link nav-prev"
+            aria-label="Previous post: Destructuring Challenge Writeup">
+            <span class="nav-label">Previous</span>
+            <span class="nav-title">Destructuring Challenge Writeup</span>
+          </a>
+        
+
+        
+      </nav>
+    </article>
+
+    
+  <aside class="post-toc" id="post-toc" aria-label="Table of contents">
+    <button
+      class="toc-toggle"
+      id="toc-toggle"
+      aria-expanded="true"
+      aria-controls="toc-content"
+      aria-label="Toggle table of contents">
+      <svg
+        class="toc-burger-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <span class="toc-toggle-text">Table of Contents</span>
+      <svg
+        class="toc-chevron-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="toc-content" id="toc-content">
+      <nav class="toc-nav" aria-label="Table of contents">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#challenge-description">Challenge Description</a></li>
+    <li><a href="#initial-analysis">Initial Analysis</a>
+      <ul>
+        <li><a href="#understanding-the-encoding">Understanding the Encoding</a></li>
+        <li><a href="#block-structure">Block Structure</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-vulnerability-ecb-mode">The Vulnerability: ECB Mode</a></li>
+    <li><a href="#attack-strategy">Attack Strategy</a>
+      <ul>
+        <li><a href="#complexity">Complexity</a></li>
+      </ul>
+    </li>
+    <li><a href="#solution-code">Solution Code</a></li>
+    <li><a href="#running-the-exploit">Running the Exploit</a></li>
+    <li><a href="#key-takeaways">Key Takeaways</a>
+      <ul>
+        <li><a href="#why-ecb-mode-is-dangerous">Why ECB Mode is Dangerous</a></li>
+        <li><a href="#what-made-this-attack-possible">What Made This Attack Possible</a></li>
+        <li><a href="#real-world-implications">Real-World Implications</a></li>
+      </ul>
+    </li>
+    <li><a href="#flag">Flag</a></li>
+  </ul>
+</nav>
+      </nav>
+    </div>
+  </aside>
+
+
+  </div>
+
+    </main>
+
+    <footer>
+      <footer class="site-footer">
+  <div class="footer-content">
+    <p class="footer-text">
+      &copy;
+      
+      2026
+      
+      4mN3s14 | CTF Player &amp; Student.
+      
+    </p>
+    
+      <div class="footer-social">
+        <div class="social-links">
+  
+    <a
+      href="https://github.com/John-Jkar"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-link"
+      aria-label="GitHub">
+      <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          fill-rule="evenodd"
+          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </a>
+  
+
+  
+
+  
+    <a href="mailto:kagimujkar@gmail.com" class="social-link" aria-label="Email">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+      </svg>
+    </a>
+  
+</div>
+
+      </div>
+    
+  </div>
+</footer>
+
+    </footer>
+
+    <div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search">
+  <div class="search-modal-backdrop" id="search-modal-backdrop"></div>
+  <div class="search-modal-container">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+      <input
+        type="search"
+        id="search-input"
+        class="search-input"
+        placeholder="Search..."
+        autocomplete="off"
+        aria-label="Search input">
+      <button class="search-input-clear" id="search-input-clear" aria-label="Clear search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+        </svg>
+      </button>
+      <button class="search-modal-close" id="search-modal-close" aria-label="Close search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+    
+
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" type="button">
+  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+  </svg>
+</button>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+<script src="http://localhost:1313/myblog/js/main.min.5809f4b25863ee26413f19a2183716d6a5b52e3a8bd308a7dd764fb5bd4d6d36.js" defer></script>
+
+  </body>
+</html>
