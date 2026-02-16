@@ -9,7 +9,6 @@ categories = ["CTF Writeups"]
 
 **Category:** Crypto  
 **Difficulty:** Medium  
-**Solves:** 21  
 **Author:** hiikunz
 
 ## Challenge Description
