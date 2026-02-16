@@ -1,3 +1,13 @@
+
++++
+title = "You-Are-Being-Redirected – Writeup"
+date = 2026-02-15T08:00:00Z
+draft = false
+categories = ["CTF", "Web"]
+tags = ["open-redirect", "client-side", "url-parsing"]
++++
+
+
 ## You Are Being Redirected – Daily Aplacahack Writeup
 
 **Category:** Web (Client-Side)  
