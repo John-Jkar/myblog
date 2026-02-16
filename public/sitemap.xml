@@ -2,131 +2,131 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/myblog/</loc>
+    <loc>https://john-jkar.github.io/myblog/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/posts/aes/</loc>
+    <loc>https://john-jkar.github.io/myblog/posts/aes/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/aes/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/aes/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/binary-exploitation/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/binary-exploitation/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/categories/</loc>
+    <loc>https://john-jkar.github.io/myblog/categories/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/crypto/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/crypto/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/ctf/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/ctf/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/categories/ctf-writeups/</loc>
+    <loc>https://john-jkar.github.io/myblog/categories/ctf-writeups/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/ecb/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/ecb/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/oracle-attack/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/oracle-attack/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/posts/</loc>
+    <loc>https://john-jkar.github.io/myblog/posts/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/pwn/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/pwn/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/rop/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/rop/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/posts/rop/</loc>
+    <loc>https://john-jkar.github.io/myblog/posts/rop/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/posts/destructing/</loc>
+    <loc>https://john-jkar.github.io/myblog/posts/destructing/</loc>
     <lastmod>2026-02-11T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/categories/dfir/</loc>
+    <loc>https://john-jkar.github.io/myblog/categories/dfir/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/forensics/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/forensics/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/kernel/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/kernel/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/categories/linux/</loc>
+    <loc>https://john-jkar.github.io/myblog/categories/linux/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/posts/linux-kernel-rootkit-analysis/</loc>
+    <loc>https://john-jkar.github.io/myblog/posts/linux-kernel-rootkit-analysis/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/lkm/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/lkm/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/categories/malware-analysis/</loc>
+    <loc>https://john-jkar.github.io/myblog/categories/malware-analysis/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/reverse-engineering/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/reverse-engineering/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/categories/rootkits/</loc>
+    <loc>https://john-jkar.github.io/myblog/categories/rootkits/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/categories/blogging/</loc>
+    <loc>https://john-jkar.github.io/myblog/categories/blogging/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/chr-bypass/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/chr-bypass/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/categories/ctf/</loc>
+    <loc>https://john-jkar.github.io/myblog/categories/ctf/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/hugo/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/hugo/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/jailbreak/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/jailbreak/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/linux/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/linux/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/categories/pyjail/</loc>
+    <loc>https://john-jkar.github.io/myblog/categories/pyjail/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/python/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/python/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/sigpwny/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/sigpwny/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/posts/pwnyctf-pyjail2/</loc>
+    <loc>https://john-jkar.github.io/myblog/posts/pwnyctf-pyjail2/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/struggle/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/struggle/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/posts/the-pain-of-building-this-blog/</loc>
+    <loc>https://john-jkar.github.io/myblog/posts/the-pain-of-building-this-blog/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/tags/waf-bypass/</loc>
+    <loc>https://john-jkar.github.io/myblog/tags/waf-bypass/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/categories/web-dev/</loc>
+    <loc>https://john-jkar.github.io/myblog/categories/web-dev/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/about/</loc>
+    <loc>https://john-jkar.github.io/myblog/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/myblog/posts/ai-rizz/</loc>
+    <loc>https://john-jkar.github.io/myblog/posts/ai-rizz/</loc>
   </url><url>
-    <loc>http://localhost:1313/myblog/posts/hellcouple/</loc>
+    <loc>https://john-jkar.github.io/myblog/posts/hellcouple/</loc>
   </url><url>
-    <loc>http://localhost:1313/myblog/posts/optimal-sort/</loc>
+    <loc>https://john-jkar.github.io/myblog/posts/optimal-sort/</loc>
   </url><url>
-    <loc>http://localhost:1313/myblog/posts/trading-places-metactf/</loc>
+    <loc>https://john-jkar.github.io/myblog/posts/trading-places-metactf/</loc>
   </url>
 </urlset>
