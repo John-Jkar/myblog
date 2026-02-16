@@ -75,6 +75,3 @@ canonifyURLs = true
   publishDate = ["date"]
   lastmod = ["date"]
 
-[module]
-  [[module.imports]]
-    path = "github.com/theNewDynamic/hugo-mana-theme"
