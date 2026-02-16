@@ -11,6 +11,9 @@
     <loc>http://localhost:1313/myblog/tags/aes/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/myblog/tags/binary-exploitation/</loc>
+    <lastmod>2026-02-15T06:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/myblog/categories/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
@@ -30,6 +33,15 @@
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/myblog/posts/</loc>
+    <lastmod>2026-02-15T06:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/myblog/tags/pwn/</loc>
+    <lastmod>2026-02-15T06:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/myblog/tags/rop/</loc>
+    <lastmod>2026-02-15T06:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/myblog/posts/rop/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/myblog/tags/</loc>

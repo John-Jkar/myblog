@@ -8,6 +8,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="en-us">
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-012FK38E82"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-012FK38E82');
+</script>
+
 <script>
   
   (function () {
@@ -23,9 +35,8 @@
   content="
     AAAAAAAAEEEEEEEESSSSSSSS - Alpacahack challenge writeup Category: Crypto
 Difficulty: Medium
-Solves: 21
 Author: hiikunz
-Challenge Description We&rsquo;re given a …
+Challenge Description We&rsquo;re given a Python …
   
   ">
 
@@ -45,9 +56,8 @@ Challenge Description We&rsquo;re given a …
 <meta property="og:title" content="AAAAAAAAEEEEEEEESSSSSSSS - CTF Writeup | 4mN3s14 | CTF Player &amp; Student">
 <meta property="og:description" content="AAAAAAAAEEEEEEEESSSSSSSS - Alpacahack challenge writeup Category: Crypto
 Difficulty: Medium
-Solves: 21
 Author: hiikunz
-Challenge Description We&rsquo;re given a …">
+Challenge Description We&rsquo;re given a Python …">
 <meta property="og:url" content="http://localhost:1313/myblog/posts/aes/">
 <meta property="og:site_name" content="4mN3s14 | CTF Player &amp; Student"><meta property="og:image" content="/myblog/images/logo.png">
   <meta property="og:image:width" content="1200">
@@ -59,9 +69,8 @@ Challenge Description We&rsquo;re given a …">
 <meta name="twitter:title" content="AAAAAAAAEEEEEEEESSSSSSSS - CTF Writeup | 4mN3s14 | CTF Player &amp; Student">
 <meta name="twitter:description" content="AAAAAAAAEEEEEEEESSSSSSSS - Alpacahack challenge writeup Category: Crypto
 Difficulty: Medium
-Solves: 21
 Author: hiikunz
-Challenge Description We&rsquo;re given a …"><meta name="twitter:image" content="/myblog/images/logo.png"><meta name="twitter:site" content="@J0n4n1">
+Challenge Description We&rsquo;re given a Python …"><meta name="twitter:image" content="/myblog/images/logo.png"><meta name="twitter:site" content="@J0n4n1">
   <meta name="twitter:creator" content="@J0n4n1">
 
 <script type="application/ld+json">
@@ -77,7 +86,7 @@ Challenge Description We&rsquo;re given a …"><meta name="twitter:image" conten
 
 
 
-"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"author\":{\"@type\":\"Person\",\"email\":\"kagimujkar@gmail.com\",\"name\":\"4mN3s14 | CTF Player \\u0026 Student\"},\"dateModified\":\"2026-02-15T06:00:00Z\",\"datePublished\":\"2026-02-15T06:00:00Z\",\"description\":\"AAAAAAAAEEEEEEEESSSSSSSS - Alpacahack challenge writeup Category: Crypto\\nDifficulty: Medium\\nSolves: 21\\nAuthor: hiikunz\\nChallenge Description We\\u0026rsquo;re given a …\",\"headline\":\"AAAAAAAAEEEEEEEESSSSSSSS - CTF Writeup\",\"image\":\"/myblog/images/logo.png\",\"keywords\":[\"crypto\",\"aes\",\"ecb\",\"oracle attack\",\"ctf\"],\"mainEntityOfPage\":{\"@id\":\"http://localhost:1313/myblog/posts/aes/\",\"@type\":\"WebPage\"},\"publisher\":{\"@type\":\"Organization\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"/myblog/images/logo.png\"},\"name\":\"4mN3s14 | CTF Player \\u0026 Student\"}}"</script>
+"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"author\":{\"@type\":\"Person\",\"email\":\"kagimujkar@gmail.com\",\"name\":\"4mN3s14 | CTF Player \\u0026 Student\"},\"dateModified\":\"2026-02-15T06:00:00Z\",\"datePublished\":\"2026-02-15T06:00:00Z\",\"description\":\"AAAAAAAAEEEEEEEESSSSSSSS - Alpacahack challenge writeup Category: Crypto\\nDifficulty: Medium\\nAuthor: hiikunz\\nChallenge Description We\\u0026rsquo;re given a Python …\",\"headline\":\"AAAAAAAAEEEEEEEESSSSSSSS - CTF Writeup\",\"image\":\"/myblog/images/logo.png\",\"keywords\":[\"crypto\",\"aes\",\"ecb\",\"oracle attack\",\"ctf\"],\"mainEntityOfPage\":{\"@id\":\"http://localhost:1313/myblog/posts/aes/\",\"@type\":\"WebPage\"},\"publisher\":{\"@type\":\"Organization\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"/myblog/images/logo.png\"},\"name\":\"4mN3s14 | CTF Player \\u0026 Student\"}}"</script>
 
 
 
@@ -413,7 +422,7 @@ Challenge Description We&rsquo;re given a …"><meta name="twitter:image" conten
             stroke-width="2"
             d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
         </svg>
-        755 words
+        753 words
       </span>
     
 
@@ -455,7 +464,6 @@ Challenge Description We&rsquo;re given a …"><meta name="twitter:image" conten
         <h1 id="aaaaaaaaeeeeeeeessssssss---alpacahack-challenge-writeup">AAAAAAAAEEEEEEEESSSSSSSS - Alpacahack challenge writeup</h1>
 <p><strong>Category:</strong> Crypto<br>
 <strong>Difficulty:</strong> Medium<br>
-<strong>Solves:</strong> 21<br>
 <strong>Author:</strong> hiikunz</p>
 <h2 id="challenge-description">Challenge Description</h2>
 <p>We&rsquo;re given a Python script that encrypts a flag using AES-ECB mode with a twist - each character of the flag is repeated 8 times before encryption. We can also query an encryption oracle with arbitrary plaintexts.</p>
@@ -673,11 +681,11 @@ Block 15 (bytes 240-255): flag[30]*8 + flag[31]*8
       <nav class="post-navigation" aria-label="Post navigation">
         
           <a
-            href="http://localhost:1313/myblog/posts/destructing/"
+            href="http://localhost:1313/myblog/posts/rop/"
             class="nav-link nav-prev"
-            aria-label="Previous post: Destructuring Challenge Writeup">
+            aria-label="Previous post: Simple ROP Writeup">
             <span class="nav-label">Previous</span>
-            <span class="nav-title">Destructuring Challenge Writeup</span>
+            <span class="nav-title">Simple ROP Writeup</span>
           </a>
         
 

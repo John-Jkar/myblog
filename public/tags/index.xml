@@ -16,6 +16,13 @@
       <description></description>
     </item>
     <item>
+      <title>Binary Exploitation</title>
+      <link>http://localhost:1313/myblog/tags/binary-exploitation/</link>
+      <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/binary-exploitation/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Crypto</title>
       <link>http://localhost:1313/myblog/tags/crypto/</link>
       <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
@@ -41,6 +48,20 @@
       <link>http://localhost:1313/myblog/tags/oracle-attack/</link>
       <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
       <guid>http://localhost:1313/myblog/tags/oracle-attack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pwn</title>
+      <link>http://localhost:1313/myblog/tags/pwn/</link>
+      <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/pwn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rop</title>
+      <link>http://localhost:1313/myblog/tags/rop/</link>
+      <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/rop/</guid>
       <description></description>
     </item>
     <item>
