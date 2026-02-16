@@ -1,7 +1,7 @@
 baseURL = 'https://john-jkar.github.io/myblog/'
 languageCode = 'en-us'
 title = '4mN3s14 | CTF Player & Student'
- # theme = 'hugo-mana-theme'
+ theme = 'hugo-mana-theme'
 description = 'A student cybersecurity enthusiast and CTF player with Dead Pirate Society'
 
 enableEmoji = true
@@ -61,7 +61,7 @@ canonifyURLs = true
   
   [params.footer]
     since = 2026
-    customText = "🏴‍☠️ Dead Pirate Society | Learning in public"
+    customText = " Dead Pirate Society | Learning in public"
   
   [params.post]
     showReadingTime = true
