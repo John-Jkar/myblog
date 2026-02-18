@@ -1,13 +1,11 @@
 +++
-title =  Disappeared (Daily Alpacahack) Writeup"
-date = 2026-02-15T06:00:00Z
+title = " Disappeared (Daily Alpacahack) Writeup"
+date = 2026-02-18T06:00:00Z
 draft = false
-description = "Medium Pwn challenge writeup from Daily Alpacahack demonstrating how -DNDEBUG removes assert() checks, enabling a stack write and ret2win exploit."
-tags = ["ctf", "pwn", "binary exploitation", "ret2win", "stack canary", "gcc", "ndebug"]
+tags = ["ctf", "pwn", "binary exploitation", "ret2win"]
 categories = ["CTF Writeups"]
-showToc = true
-tocOpen = false
 +++
+
 
 # Disappeared — Daily Alpacahack Writeup
 

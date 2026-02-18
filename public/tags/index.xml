@@ -6,8 +6,36 @@
     <description>Recent content in Tags on 4mN3s14 | CTF Player &amp; Student</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Feb 2026 08:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Feb 2026 06:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/myblog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Binary Exploitation</title>
+      <link>http://localhost:1313/myblog/tags/binary-exploitation/</link>
+      <pubDate>Wed, 18 Feb 2026 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/binary-exploitation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ctf</title>
+      <link>http://localhost:1313/myblog/tags/ctf/</link>
+      <pubDate>Wed, 18 Feb 2026 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/ctf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pwn</title>
+      <link>http://localhost:1313/myblog/tags/pwn/</link>
+      <pubDate>Wed, 18 Feb 2026 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/pwn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ret2win</title>
+      <link>http://localhost:1313/myblog/tags/ret2win/</link>
+      <pubDate>Wed, 18 Feb 2026 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/ret2win/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Client-Side</title>
       <link>http://localhost:1313/myblog/tags/client-side/</link>
@@ -37,24 +65,10 @@
       <description></description>
     </item>
     <item>
-      <title>Binary Exploitation</title>
-      <link>http://localhost:1313/myblog/tags/binary-exploitation/</link>
-      <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/tags/binary-exploitation/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Crypto</title>
       <link>http://localhost:1313/myblog/tags/crypto/</link>
       <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
       <guid>http://localhost:1313/myblog/tags/crypto/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ctf</title>
-      <link>http://localhost:1313/myblog/tags/ctf/</link>
-      <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/tags/ctf/</guid>
       <description></description>
     </item>
     <item>
@@ -69,13 +83,6 @@
       <link>http://localhost:1313/myblog/tags/oracle-attack/</link>
       <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
       <guid>http://localhost:1313/myblog/tags/oracle-attack/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Pwn</title>
-      <link>http://localhost:1313/myblog/tags/pwn/</link>
-      <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/tags/pwn/</guid>
       <description></description>
     </item>
     <item>

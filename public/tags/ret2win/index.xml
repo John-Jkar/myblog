@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ret2win on 4mN3s14 | CTF Player &amp; Student</title>
+    <link>http://localhost:1313/myblog/tags/ret2win/</link>
+    <description>Recent content in Ret2win on 4mN3s14 | CTF Player &amp; Student</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Feb 2026 06:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/myblog/tags/ret2win/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> Disappeared (Daily Alpacahack) Writeup</title>
+      <link>http://localhost:1313/myblog/posts/diappeared/</link>
+      <pubDate>Wed, 18 Feb 2026 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/posts/diappeared/</guid>
+      <description>&lt;h1 id=&#34;disappeared--daily-alpacahack-writeup&#34;&gt;Disappeared — Daily Alpacahack Writeup&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Pwn · &lt;strong&gt;Difficulty:&lt;/strong&gt; Medium ·&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;We&amp;rsquo;re given source code and a netcat address. The code looks safe at first glance — there&amp;rsquo;s a bounds check on the array index before any write. The trick is in the compile command:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gcc -DNDEBUG -o chal main.c -no-pie&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Two flags matter: &lt;code&gt;-DNDEBUG&lt;/code&gt; and &lt;code&gt;-no-pie&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-vulnerability&#34;&gt;The Vulnerability&lt;/h2&gt;&#xA;&lt;h3 id=&#34;-dndebug-silently-deletes-assert&#34;&gt;&lt;code&gt;-DNDEBUG&lt;/code&gt; silently deletes &lt;code&gt;assert()&lt;/code&gt;&lt;/h3&gt;&#xA;&lt;p&gt;The C standard specifies that when &lt;code&gt;NDEBUG&lt;/code&gt; is defined, every &lt;code&gt;assert()&lt;/code&gt; call is &lt;strong&gt;completely removed by the preprocessor&lt;/strong&gt; — not weakened, not skipped at runtime. Deleted.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

