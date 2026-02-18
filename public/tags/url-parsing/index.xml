@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Url-Parsing on 4mN3s14 | CTF Player &amp; Student</title>
+    <link>http://localhost:1313/myblog/tags/url-parsing/</link>
+    <description>Recent content in Url-Parsing on 4mN3s14 | CTF Player &amp; Student</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Feb 2026 08:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/myblog/tags/url-parsing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>You-Are-Being-Redirected – Writeup</title>
+      <link>http://localhost:1313/myblog/posts/you-are-being-redirected/</link>
+      <pubDate>Sun, 15 Feb 2026 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/posts/you-are-being-redirected/</guid>
+      <description>&lt;h2 id=&#34;you-are-being-redirected--daily-aplacahack-writeup&#34;&gt;You Are Being Redirected – Daily Aplacahack Writeup&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Web (Client-Side)&lt;br&gt;&#xA;&lt;strong&gt;Goal:&lt;/strong&gt; Exfiltrate the admin’s flag cookie using the redirect functionality.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;&#xA;&lt;p&gt;This challenge involves exploiting a client-side open redirect vulnerability in combination with an admin bot that visits user-supplied paths. The objective is to execute JavaScript in the context of the challenge origin and exfiltrate the administrator’s cookie containing the flag.&lt;/p&gt;&#xA;&lt;h3 id=&#34;vulnerability&#34;&gt;Vulnerability&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;code&gt;/redirect?to=&lt;/code&gt; endpoint attempts to block &lt;code&gt;javascript:&lt;/code&gt; URLs using a string check such as:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

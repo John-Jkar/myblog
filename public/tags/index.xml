@@ -6,8 +6,29 @@
     <description>Recent content in Tags on 4mN3s14 | CTF Player &amp; Student</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Feb 2026 06:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Feb 2026 08:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/myblog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Client-Side</title>
+      <link>http://localhost:1313/myblog/tags/client-side/</link>
+      <pubDate>Sun, 15 Feb 2026 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/client-side/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Open-Redirect</title>
+      <link>http://localhost:1313/myblog/tags/open-redirect/</link>
+      <pubDate>Sun, 15 Feb 2026 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/open-redirect/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Url-Parsing</title>
+      <link>http://localhost:1313/myblog/tags/url-parsing/</link>
+      <pubDate>Sun, 15 Feb 2026 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/url-parsing/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Aes</title>
       <link>http://localhost:1313/myblog/tags/aes/</link>

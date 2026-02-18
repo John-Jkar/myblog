@@ -6,8 +6,15 @@
     <description>Recent content in Posts on 4mN3s14 | CTF Player &amp; Student</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Feb 2026 06:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Feb 2026 08:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/myblog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>You-Are-Being-Redirected – Writeup</title>
+      <link>http://localhost:1313/myblog/posts/you-are-being-redirected/</link>
+      <pubDate>Sun, 15 Feb 2026 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/posts/you-are-being-redirected/</guid>
+      <description>&lt;h2 id=&#34;you-are-being-redirected--daily-aplacahack-writeup&#34;&gt;You Are Being Redirected – Daily Aplacahack Writeup&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Web (Client-Side)&lt;br&gt;&#xA;&lt;strong&gt;Goal:&lt;/strong&gt; Exfiltrate the admin’s flag cookie using the redirect functionality.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;&#xA;&lt;p&gt;This challenge involves exploiting a client-side open redirect vulnerability in combination with an admin bot that visits user-supplied paths. The objective is to execute JavaScript in the context of the challenge origin and exfiltrate the administrator’s cookie containing the flag.&lt;/p&gt;&#xA;&lt;h3 id=&#34;vulnerability&#34;&gt;Vulnerability&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;code&gt;/redirect?to=&lt;/code&gt; endpoint attempts to block &lt;code&gt;javascript:&lt;/code&gt; URLs using a string check such as:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AAAAAAAAEEEEEEEESSSSSSSS - CTF Writeup</title>
       <link>http://localhost:1313/myblog/posts/aes/</link>
@@ -69,7 +76,7 @@
       <link>http://localhost:1313/myblog/posts/optimal-sort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/myblog/posts/optimal-sort/</guid>
-      <description>&lt;h1 id=&#34;optimal-sort-writeup-from-alpacahack&#34;&gt;optimal-sort Writeup from alpacahack&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Challenge&lt;/strong&gt;: &lt;code&gt;optimal-sort&lt;/code&gt; (Misc, Hard) •&#xA;&lt;strong&gt;Server&lt;/strong&gt;: &lt;code&gt;nc 34.170.146.252 43373&lt;/code&gt;&lt;br&gt;&#xA;&lt;strong&gt;Author&lt;/strong&gt;: ark&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h1 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h1&gt;&#xA;&lt;p&gt;We&amp;rsquo;re given a Python service that challenges us to &amp;ldquo;sort&amp;rdquo; four randomly generated arrays of sizes &lt;em&gt;&lt;strong&gt;10, 100, 1000, and 2000&lt;/strong&gt;&lt;/em&gt;. For each array, we get exactly &lt;em&gt;&lt;strong&gt;n + 5&lt;/strong&gt;&lt;/em&gt; operations to swap elements at indices &lt;em&gt;&lt;strong&gt;i and j&lt;/strong&gt;&lt;/em&gt;. After each swap, the server checks if the array is sorted &lt;em&gt;&lt;strong&gt;(x &amp;lt;= y for all adjacent pairs)&lt;/strong&gt;&lt;/em&gt; and grants us the flag if we succeed on all four rounds.&#xA;At first glance, this seems impossible—you can&amp;rsquo;t reliably sort a random array in &lt;em&gt;&lt;strong&gt;n + 5&lt;/strong&gt;&lt;/em&gt; comparisons/swaps. But the vulnerability isn&amp;rsquo;t in the algorithmic constraint—it&amp;rsquo;s in the implementation of the swap itself.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;optimal-sort-writeup-from-alpacahack&#34;&gt;optimal-sort Writeup from alpacahack&lt;/h1&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;blockquote class=&#34;blockquote-regular&#34;&gt;&#xA;  &lt;p&gt;&lt;strong&gt;Challenge&lt;/strong&gt;: &lt;code&gt;optimal-sort&lt;/code&gt; (Misc, Hard) •&#xA;&lt;strong&gt;Server&lt;/strong&gt;: &lt;code&gt;nc 34.170.146.252 43373&lt;/code&gt;&lt;br&gt;&#xA;&lt;strong&gt;Author&lt;/strong&gt;: ark&lt;/p&gt;&#xA;&#xA;&lt;/blockquote&gt;&#xA;&lt;h1 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h1&gt;&#xA;&lt;p&gt;We&amp;rsquo;re given a Python service that challenges us to &amp;ldquo;sort&amp;rdquo; four randomly generated arrays of sizes &lt;em&gt;&lt;strong&gt;10, 100, 1000, and 2000&lt;/strong&gt;&lt;/em&gt;. For each array, we get exactly &lt;em&gt;&lt;strong&gt;n + 5&lt;/strong&gt;&lt;/em&gt; operations to swap elements at indices &lt;em&gt;&lt;strong&gt;i and j&lt;/strong&gt;&lt;/em&gt;. After each swap, the server checks if the array is sorted &lt;em&gt;&lt;strong&gt;(x &amp;lt;= y for all adjacent pairs)&lt;/strong&gt;&lt;/em&gt; and grants us the flag if we succeed on all four rounds.&#xA;At first glance, this seems impossible—you can&amp;rsquo;t reliably sort a random array in &lt;em&gt;&lt;strong&gt;n + 5&lt;/strong&gt;&lt;/em&gt; comparisons/swaps. But the vulnerability isn&amp;rsquo;t in the algorithmic constraint—it&amp;rsquo;s in the implementation of the swap itself.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>

@@ -6,8 +6,22 @@
     <description>Recent content in Categories on 4mN3s14 | CTF Player &amp; Student</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Feb 2026 06:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Feb 2026 08:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/myblog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CTF</title>
+      <link>http://localhost:1313/myblog/categories/ctf/</link>
+      <pubDate>Sun, 15 Feb 2026 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/categories/ctf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>http://localhost:1313/myblog/categories/web/</link>
+      <pubDate>Sun, 15 Feb 2026 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/categories/web/</guid>
+      <description></description>
+    </item>
     <item>
       <title>CTF Writeups</title>
       <link>http://localhost:1313/myblog/categories/ctf-writeups/</link>
@@ -48,13 +62,6 @@
       <link>http://localhost:1313/myblog/categories/blogging/</link>
       <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/myblog/categories/blogging/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CTF</title>
-      <link>http://localhost:1313/myblog/categories/ctf/</link>
-      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/categories/ctf/</guid>
       <description></description>
     </item>
     <item>
