@@ -65,6 +65,13 @@
       <description></description>
     </item>
     <item>
+      <title>Ansi</title>
+      <link>http://localhost:1313/myblog/tags/ansi/</link>
+      <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/ansi/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Crypto</title>
       <link>http://localhost:1313/myblog/tags/crypto/</link>
       <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
@@ -79,6 +86,20 @@
       <description></description>
     </item>
     <item>
+      <title>Escape Sequences</title>
+      <link>http://localhost:1313/myblog/tags/escape-sequences/</link>
+      <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/escape-sequences/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Misc</title>
+      <link>http://localhost:1313/myblog/tags/misc/</link>
+      <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/misc/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Oracle Attack</title>
       <link>http://localhost:1313/myblog/tags/oracle-attack/</link>
       <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
@@ -86,10 +107,24 @@
       <description></description>
     </item>
     <item>
+      <title>Rev</title>
+      <link>http://localhost:1313/myblog/tags/rev/</link>
+      <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/rev/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Rop</title>
       <link>http://localhost:1313/myblog/tags/rop/</link>
       <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
       <guid>http://localhost:1313/myblog/tags/rop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terminal</title>
+      <link>http://localhost:1313/myblog/tags/terminal/</link>
+      <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/terminal/</guid>
       <description></description>
     </item>
     <item>

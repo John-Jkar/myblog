@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Misc on 4mN3s14 | CTF Player &amp; Student</title>
+    <link>http://localhost:1313/myblog/tags/misc/</link>
+    <description>Recent content in Misc on 4mN3s14 | CTF Player &amp; Student</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Feb 2026 06:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/myblog/tags/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dancing Cursor - Daily Alpacahack Writeup</title>
+      <link>http://localhost:1313/myblog/posts/missing-cursor/</link>
+      <pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/posts/missing-cursor/</guid>
+      <description>&lt;h1 id=&#34;dancing-cursor--daily--alpacahack-writeup&#34;&gt;Dancing Cursor — Daily  Alpacahack Writeup&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Challenge:&lt;/strong&gt; Dancing Cursor&lt;br&gt;&#xA;&lt;strong&gt;Category:&lt;/strong&gt; Rev / Misc&lt;br&gt;&#xA;&lt;strong&gt;Difficulty:&lt;/strong&gt; Medium&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;&#xA;&lt;p&gt;We&amp;rsquo;re handed a single command:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo SGVyZSBpcyB0aGUgZmxhZzo... | base64 -d&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Running it in a terminal flashes the message:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Here is the flag:&#xA;Xiqxox{==============================================}&#xA;... but it has been wiped away.&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Clearly &lt;code&gt;Xiqxox{===}&lt;/code&gt; is a decoy. The real flag was written and then erased before we could see it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;understanding-the-trick&#34;&gt;Understanding the Trick&lt;/h2&gt;&#xA;&lt;p&gt;Decoding the base64 gives raw bytes that are mostly &lt;strong&gt;ANSI terminal escape sequences&lt;/strong&gt;. The structure is:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

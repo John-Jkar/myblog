@@ -56,19 +56,37 @@
     <loc>http://localhost:1313/myblog/tags/aes/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/myblog/tags/ansi/</loc>
+    <lastmod>2026-02-15T06:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/myblog/tags/crypto/</loc>
+    <lastmod>2026-02-15T06:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/myblog/posts/missing-cursor/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/myblog/tags/ecb/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/myblog/tags/escape-sequences/</loc>
+    <lastmod>2026-02-15T06:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/myblog/tags/misc/</loc>
+    <lastmod>2026-02-15T06:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/myblog/tags/oracle-attack/</loc>
+    <lastmod>2026-02-15T06:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/myblog/tags/rev/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/myblog/tags/rop/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/myblog/posts/rop/</loc>
+    <lastmod>2026-02-15T06:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/myblog/tags/terminal/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/myblog/posts/destructing/</loc>
