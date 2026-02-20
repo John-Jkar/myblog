@@ -1,11 +1,10 @@
 +++
 title = "Dancing Cursor - Daily Alpacahack Writeup"
-date = 2026-02-15T06:00:00Z
+date = 2026-02-20T06:00:00Z
 draft = false
 tags = ["ctf", "ansi", "escape sequences", "terminal", "misc", "rev"]
 categories = ["CTF Writeups"]
 +++
-
 # Dancing Cursor — Daily  Alpacahack Writeup
 
 **Challenge:** Dancing Cursor  
