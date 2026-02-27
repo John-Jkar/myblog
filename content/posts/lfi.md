@@ -1,3 +1,11 @@
++++
+title = "Local File Inclusion (LFI) - CTF Writeup"
+date = 2026-02-27T00:00:00Z
+draft = false
+tags = ["web", "lfi", "local file inclusion", "path traversal", "ctf"]
+categories = ["CTF Writeups"]
++++
+
 # Alpaca Rangers — Daily Alpacahack Write-up
 
 **Category:** Web **Difficulty:** Medium **Topic:** Local File Inclusion (LFI) 
