@@ -1,6 +1,6 @@
 baseURL = 'https://john-jkar.github.io/myblog/'
 locale = 'en-US'
-title = '4mN3s14 | CTF Player & Student'
+title = '4mN3s14 | Blog'
  theme = 'hugo-mana-theme'
 description = 'A student cybersecurity enthusiast and CTF player with Dead Pirate Society'
 
