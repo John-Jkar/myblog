@@ -1,9 +1,8 @@
-
 +++
-title = "QuartzLock VulNyx: Writeup
-date = 2026-0602T00:00:00Z
+title = "QuartzLock VulNyx: Writeup"
+date = 2026-06-02T00:00:00Z
 draft = false
-tags = ["misc", "vulnyx", "labs"]     
+tags = ["misc", "vulnyx", "labs"]
 categories = ["CTF Writeups"]
 +++
 
@@ -670,4 +669,3 @@ The replay case in this reproduction was removed immediately after execution.
 - [SPDX metadata](qpak/sbom.json)
 - [Raw reproduced evidence](evidence/)
 - [Screenshots](screenshots/)
-
