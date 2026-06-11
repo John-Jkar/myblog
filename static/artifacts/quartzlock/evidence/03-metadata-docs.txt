@@ -1,0 +1,24 @@
+$ curl -sk --resolve quartz.nyx:443:192.168.100.143 https://quartz.nyx/.well-known/quartz-attestation | jq
+
+{
+  "accepted_scopes": [
+    "device:enroll",
+    "bundle:submit",
+    "probe:upload"
+  ],
+  "canonicalization": "jcs-v1",
+  "compatibility_mode": true,
+  "issuer": "quartz-enroll",
+  "legacy_parser": "stream",
+  "service": "QuartzLock Device Trust",
+  "token_format": "JWT"
+}
+
+$ curl -sk --resolve quartz.nyx:443:192.168.100.143 https://quartz.nyx/docs
+
+  QuartzLock API Documentation
+  Current gateway: quartz.nyx
+    Enrollment
+    POST /api/v2/enrollment/quote
+    POST /api/v2/enrollment/exchange
+    Enrollment objects are canonicalized with JCS-v1 before token exchange. Compatibility mode remains enabled for legacy streaming clients.

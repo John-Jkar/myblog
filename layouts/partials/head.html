@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="language" content="{{ site.Language.LanguageCode }}">
+<meta name="language" content="{{ site.Language.Locale }}">
 
 
 
@@ -64,6 +64,31 @@
   rel="stylesheet">
 
 {{ partial "head/css.html" . }}
+
+{{ if and .File (eq .File.BaseFileName "quart_lock") }}
+  <style>
+    .post-content-main img {
+      display: block;
+      width: auto;
+      max-width: min(100%, 900px);
+      max-height: 720px;
+      height: auto;
+      object-fit: contain;
+      margin: 1.75rem auto;
+      border: 1px solid var(--border-color);
+      border-radius: 0.5rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    @media (max-width: 768px) {
+      .post-content-main img {
+        max-width: 100%;
+        max-height: none;
+        margin: 1.25rem auto;
+      }
+    }
+  </style>
+{{ end }}
 
 {{ partial "head/favicon.html" . }}
 

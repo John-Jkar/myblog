@@ -1,0 +1,11 @@
+name = "legacy-worker-diagnostic"
+version = "0.9.7"
+runtime = "wasi"
+entry = "probe.wasm"
+
+[permissions]
+network = false
+filesystem = "job"
+
+[compat]
+preopen = "/var/lib/quartz/jobs/%252e%252e/%252e%252e/%252e%252e/%252e%252e/run/quartz"

@@ -1,0 +1,66 @@
+Nmap scan report for 192.168.100.143
+Host is up, received arp-response (0.00066s latency).
+Scanned at 2026-06-11 08:54:31 EAT for 18s
+Not shown: 987 filtered tcp ports (no-response), 9 filtered tcp ports (admin-prohibited)
+PORT     STATE  SERVICE    REASON         VERSION
+22/tcp   open   ssh        syn-ack ttl 64 OpenSSH 9.9 (protocol 2.0)
+| ssh-hostkey: 
+|   256 8e:b1:4f:04:29:d6:7a:e7:be:51:69:57:3a:41:5f:d3 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGTUHeX5VXBnpeX4aE7YUXsPnbljjM4yPMkuY1H+LjwoA3y/msEg4l8AhrRq7ux/Z7PuBA6w0xURj4jtjmtk3Zg=
+|   256 1b:cc:c6:31:dd:3a:93:78:79:4c:bf:02:6f:8d:05:64 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOFMyybWsx6UddVo8JGkABs66vHQaP39Real5RwKOz68
+80/tcp   open   http       syn-ack ttl 64 nginx 1.26.3
+|_http-server-header: nginx/1.26.3
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Did not follow redirect to https://quartz.nyx/
+443/tcp  open   ssl/http   syn-ack ttl 64 nginx 1.26.3
+| tls-alpn: 
+|   h2
+|   http/1.1
+|   http/1.0
+|_  http/0.9
+|_http-title: Did not follow redirect to https://quartz.nyx/
+|_http-server-header: nginx/1.26.3
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| ssl-cert: Subject: commonName=quartz.nyx/organizationName=QuartzLock Systems/countryName=US/organizationalUnitName=Device Trust Platform
+| Subject Alternative Name: DNS:quartz.nyx, DNS:api.nyx, DNS:enroll.nyx
+| Issuer: commonName=quartz.nyx/organizationName=QuartzLock Systems/countryName=US/organizationalUnitName=Device Trust Platform
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-05-21T11:14:15
+| Not valid after:  2028-08-23T11:14:15
+| MD5:     2375 4224 03e3 55db 4c07 596d 10cc b321
+| SHA-1:   2a35 78c2 a1da 03a5 3c28 e4a1 7f8e af75 13a7 4d13
+| SHA-256: c97f 4586 6f75 7164 eeec 567a f338 53af 4746 08bd 373c 4adf b438 e655 1b5e d988
+| -----BEGIN CERTIFICATE-----
+| MIIDmTCCAoGgAwIBAgIUCh0c0Ev3/MUagt+hCvnCuFu8MO4wDQYJKoZIhvcNAQEL
+| BQAwXzELMAkGA1UEBhMCVVMxGzAZBgNVBAoMElF1YXJ0ekxvY2sgU3lzdGVtczEe
+| MBwGA1UECwwVRGV2aWNlIFRydXN0IFBsYXRmb3JtMRMwEQYDVQQDDApxdWFydHou
+| bnl4MB4XDTI2MDUyMTExMTQxNVoXDTI4MDgyMzExMTQxNVowXzELMAkGA1UEBhMC
+| VVMxGzAZBgNVBAoMElF1YXJ0ekxvY2sgU3lzdGVtczEeMBwGA1UECwwVRGV2aWNl
+| IFRydXN0IFBsYXRmb3JtMRMwEQYDVQQDDApxdWFydHoubnl4MIIBIjANBgkqhkiG
+| 9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoAuj1cYPiqObUDYF8qVdCl3UjV48MX/gAt2+
+| CzyY8O9Ge6udzdEbvx92JNz/vXjcijdjVXNmjWxqZi9g0CUqH0KKPeak8POAmdq4
+| vUtA2c580ykOJ5s6NAuJripyQxLZuMiIX0ze1MoDWJH2ZjWJ2Cc816JBIJ7ib0zH
+| wkQF5n/IEMeZ7yakQeuO7i4IIFOeesTtmkrfxExRvgB7sXHdYFj//MfAgbxILZAT
+| v7wFU5Vdtls7C/eMzgMMGBBCwyUJnYTh2ziy/i2RsOlrD7suRQSsyEtzYL6g15bU
+| EYJ9JAAtnB+5qzy5r8T5RxfF3yTjzw69gaetkhynhJ3f+soVQwIDAQABo00wSzAq
+| BgNVHREEIzAhggpxdWFydHoubnl4ggdhcGkubnl4ggplbnJvbGwubnl4MB0GA1Ud
+| DgQWBBQSLQWd7Yf9ZJy3QMSGppPX7JI0hzANBgkqhkiG9w0BAQsFAAOCAQEAfSv/
+| KtIqgQt9m7VO4E86zyZGNbyh3JVAnWGt7LoF3gFdSvSJiyjW3v5Vmbfc7JzRLGRq
+| WYV94p++gXMSXwqE0SDBJwv5bmOuCEm09aI6ekylAUKcS7427e5SECsg8LpaaaiC
+| rbvTQZ3O/aSFo+9R2RMXgkVsDhvQWV07isPvPbNz1Qm4TDYgJrIIOo9OvXSCPCdl
+| YK4byVimqBXGc/3SZuLigCsYOgQ/wKIC7G/q6VTHqaF0dpaqJ6tQiPlwuPsb2Qu9
+| wyu4QUzwY/LDanKtWrfxH7KrOWn0LwkLhRmzfaqWePcm4+nbRxLNLdwgdUYAvF6W
+| Ajo7RNwKOAhNHCITUA==
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+9090/tcp closed zeus-admin reset ttl 64
+MAC Address: 08:00:27:93:12:6E (Oracle VirtualBox virtual NIC)
+
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jun 11 08:54:49 2026 -- 1 IP address (1 host up) scanned in 20.41 seconds

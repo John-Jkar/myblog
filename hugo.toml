@@ -1,5 +1,5 @@
 baseURL = 'https://john-jkar.github.io/myblog/'
-languageCode = 'en-us'
+locale = 'en-US'
 title = '4mN3s14 | CTF Player & Student'
  theme = 'hugo-mana-theme'
 description = 'A student cybersecurity enthusiast and CTF player with Dead Pirate Society'
@@ -74,4 +74,3 @@ canonifyURLs = true
   date = ["date"]
   publishDate = ["date"]
   lastmod = ["date"]
-

@@ -1,0 +1,40 @@
+$ Normal enrollment request
+{
+  "sub": "edge-node-117",
+  "tenant": "public",
+  "scope": [
+    "device:enroll"
+  ]
+}
+{
+  "issued_scope": [
+    "device:enroll"
+  ],
+  "token_type": "Bearer",
+  "expires_in": 900
+}
+
+$ Duplicate-key request: privileged scope first, harmless scope last
+{"sub":"edge-node-117","tenant":"public","scope":["bundle:submit","probe:upload"],"scope":["device:enroll"]}
+{
+  "issued_scope": [
+    "bundle:submit",
+    "probe:upload"
+  ],
+  "token_type": "Bearer",
+  "expires_in": 900
+}
+
+$ Decoded JWT claims
+{
+  "iss": "quartz-enroll",
+  "sub": "edge-node-117",
+  "tenant": "public",
+  "scope": [
+    "bundle:submit",
+    "probe:upload"
+  ],
+  "iat": 1781159259,
+  "exp": 1781160159,
+  "aud": "quartz-api"
+}

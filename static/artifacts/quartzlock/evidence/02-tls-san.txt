@@ -1,0 +1,4 @@
+subject=C=US, O=QuartzLock Systems, OU=Device Trust Platform, CN=quartz.nyx
+issuer=C=US, O=QuartzLock Systems, OU=Device Trust Platform, CN=quartz.nyx
+X509v3 Subject Alternative Name: 
+    DNS:quartz.nyx, DNS:api.nyx, DNS:enroll.nyx

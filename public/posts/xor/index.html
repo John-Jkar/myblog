@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="en-US" class="h-full">
+  <head><script src="/myblog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=myblog/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="en-US">
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P24WBJ6BMJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P24WBJ6BMJ');
+</script>
+
+
+
+<script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<title>Daily Alpacahack - XOR (Crypto / Easy) Writeup | 4mN3s14 | CTF Player &amp; Student</title>
+<meta
+  name="description"
+  content="
+    Daily Alpacahack Writeup: XOR (Crypto / Easy) Category: Crypto
+Difficulty: Easy
+Challenge Description We&rsquo;re given a Python encryption script and a …
+  
+  ">
+
+
+  <meta name="keywords" content="crypto, xor, ctf">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/myblog/posts/xor/">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Daily Alpacahack - XOR (Crypto / Easy) Writeup | 4mN3s14 | CTF Player &amp; Student">
+<meta property="og:description" content="Daily Alpacahack Writeup: XOR (Crypto / Easy) Category: Crypto
+Difficulty: Easy
+Challenge Description We&rsquo;re given a Python encryption script and a …">
+<meta property="og:url" content="http://localhost:1313/myblog/posts/xor/">
+<meta property="og:site_name" content="4mN3s14 | CTF Player &amp; Student"><meta property="og:image" content="/myblog/images/logo.png">
+  <meta property="og:image:alt" content="Daily Alpacahack - XOR (Crypto / Easy) Writeup | 4mN3s14 | CTF Player &amp; Student">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630"><meta property="article:published_time" content="2026-03-12T00:00:00Z">
+  <meta
+    property="article:modified_time"
+    content="2026-03-12T00:00:00Z"><meta property="article:section" content="crypto"><meta property="article:tag" content="crypto"><meta property="article:tag" content="xor"><meta property="article:tag" content="ctf">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daily Alpacahack - XOR (Crypto / Easy) Writeup | 4mN3s14 | CTF Player &amp; Student">
+<meta name="twitter:description" content="Daily Alpacahack Writeup: XOR (Crypto / Easy) Category: Crypto
+Difficulty: Easy
+Challenge Description We&rsquo;re given a Python encryption script and a …"><meta name="twitter:image" content="/myblog/images/logo.png">
+  <meta name="twitter:image:alt" content="Daily Alpacahack - XOR (Crypto / Easy) Writeup | 4mN3s14 | CTF Player &amp; Student"><meta name="twitter:site" content="@J0n4n1">
+  <meta name="twitter:creator" content="@J0n4n1">
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","email":"kagimujkar@gmail.com","name":"4mN3s14 | CTF Player \u0026 Student","sameAs":["https://github.com/John-Jkar","https://twitter.com/J0n4n1"]},"dateModified":"2026-03-12T00:00:00Z","datePublished":"2026-03-12T00:00:00Z","description":"Daily Alpacahack Writeup: XOR (Crypto / Easy) Category: Crypto\nDifficulty: Easy\nChallenge Description We\u0026rsquo;re given a Python encryption script and a …","headline":"Daily Alpacahack - XOR (Crypto / Easy) Writeup","inLanguage":"en-US","keywords":["crypto","xor","ctf"],"mainEntityOfPage":{"@id":"http://localhost:1313/myblog/posts/xor/","@type":"WebPage"},"publisher":{"@type":"Organization","name":"4mN3s14 | CTF Player \u0026 Student","url":"http://localhost:1313/myblog/"},"timeRequired":"PT2M","url":"http://localhost:1313/myblog/posts/xor/","wordCount":346}</script>
+
+
+
+  
+  
+  
+    
+  
+  
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/myblog/","name":"Home","position":1},{"@type":"ListItem","item":"http://localhost:1313/myblog/posts/","name":"Posts","position":2},{"@type":"ListItem","item":"http://localhost:1313/myblog/posts/xor/","name":"Daily Alpacahack - XOR (Crypto / Easy) Writeup","position":3}]}</script>
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+  rel="stylesheet">
+
+
+<link rel="stylesheet" href="http://localhost:1313/myblog/css/theme.min.29a2f04a9f41258e6c40c77a2b2be43ac8a3a9805c65165860d8b8ec5c442050.css">
+
+
+  <link
+    rel="stylesheet"
+    href="http://localhost:1313/myblog/css/syntax-dark.min.b01037e5609e6260b74d6fcdd6d5131e8dcbc4d46d6ef4bfbe5a60bdfc1a9f30.css"
+    id="syntax-dark-theme"
+    class="syntax-theme">
+  <link
+    rel="stylesheet"
+    href="http://localhost:1313/myblog/css/syntax-light.min.9602bc2fcef52b4c62e05eae14b48ba428e114f116e993e504d83ed5a3aeda98.css"
+    id="syntax-light-theme"
+    class="syntax-theme"
+    disabled><script>
+  
+  (function () {
+    const storedTheme = localStorage.getItem("theme");
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = storedTheme || (systemPrefersLight ? "light" : "dark");
+
+    const syntaxDark = document.getElementById("syntax-dark-theme");
+    const syntaxLight = document.getElementById("syntax-light-theme");
+
+    if (theme === "light") {
+      if (syntaxDark) syntaxDark.disabled = true;
+      if (syntaxLight) syntaxLight.disabled = false;
+    } else {
+      if (syntaxDark) syntaxDark.disabled = false;
+      if (syntaxLight) syntaxLight.disabled = true;
+    }
+
+    
+    const observer = new MutationObserver(() => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      if (currentTheme === "light") {
+        if (syntaxDark) syntaxDark.disabled = true;
+        if (syntaxLight) syntaxLight.disabled = false;
+      } else {
+        if (syntaxDark) syntaxDark.disabled = false;
+        if (syntaxLight) syntaxLight.disabled = true;
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+  })();
+</script>
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/myblog/css/bundle.min.57d6410f7c0fffb9ad468070f9ab22cec491cb85b9a66f072e8cce12fe18b8e0.css">
+
+
+
+
+
+<link rel="icon" type="image/x-icon" href="http://localhost:1313/myblog/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost:1313/myblog/favicon.ico">
+
+
+<link rel="icon" type="image/png" href="http://localhost:1313/myblog/favicon.png">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/myblog/favicon-32x32.png">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/myblog/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/myblog/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313/myblog/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="http://localhost:1313/myblog/android-chrome-512x512.png">
+<link rel="manifest" href="http://localhost:1313/myblog/site.webmanifest">
+
+
+
+
+  
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="http://localhost:1313/myblog/index.xml"
+      title="4mN3s14 | CTF Player &amp; Student">
+  
+
+
+
+
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <a href="#main-content" class="skip-to-main" aria-label="Skip to main content"
+      >Skip to main content</a
+    >
+    <header class="sticky-header">
+      <div class="header-container">
+        <nav class="header-nav" role="navigation" aria-label="Main navigation">
+  <div class="header-content">
+    <div class="header-logo">
+      <a href="http://localhost:1313/myblog/" class="logo-link" aria-label="Home - 4mN3s14 | CTF Player &amp; Student">
+        4mN3s14 | CTF Player &amp; Student
+      </a>
+    </div>
+
+    
+    <button 
+      id="mobile-menu-toggle" 
+      class="mobile-menu-toggle" 
+      aria-label="Toggle menu" 
+      aria-expanded="false"
+      type="button">
+      <span class="hamburger-icon">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </span>
+    </button>
+
+    <div class="header-menu">
+      <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+
+      <button id="search-toggle" class="search-toggle" aria-label="Search" type="button">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </button>
+
+      
+
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" type="button">
+  <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+  </svg>
+  <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+  </svg>
+</button>
+
+    </div>
+  </div>
+</nav>
+
+      </div>
+      <div class="reading-progress-bar" aria-hidden="true"></div>
+    </header>
+
+    <main id="main-content" class="flex-1" role="main">
+      
+  <div class="single-post-wrapper">
+    <article class="single-post">
+      
+
+
+
+
+
+
+
+      <header class="post-header">
+        
+
+<nav aria-label="breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="http://localhost:1313/myblog/" itemprop="item"><span itemprop="name">Home</span></a>
+      <meta itemprop="position" content="1" />
+      <span aria-hidden="true" class="breadcrumb-sep">›</span>
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="http://localhost:1313/myblog/posts/" itemprop="item"><span itemprop="name">Posts</span></a>
+      <meta itemprop="position" content="2" />
+      <span aria-hidden="true" class="breadcrumb-sep">›</span>
+    </li>
+    
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <span itemprop="name" class="breadcrumb-current">Daily Alpacahack - XOR (Crypto / Easy) Writeup</span>
+      <meta itemprop="position" content="3" />
+    </li>
+  </ol>
+</nav>
+
+
+        <h1 class="post-title-main">Daily Alpacahack - XOR (Crypto / Easy) Writeup</h1>
+
+        
+
+        <div class="post-meta">
+  <div class="post-meta-info">
+    <time datetime="2026-03-12T00:00:00Z" class="post-date">
+      <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+      March 12, 2026
+    </time>
+
+    <span class="meta-separator">•</span>
+
+    
+      <span class="post-word-count">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        346 words
+      </span>
+    
+
+    
+      <span class="meta-separator">•</span>
+      <span class="post-reading-time">
+        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        2 min
+      </span>
+    
+  </div>
+
+  
+    <div class="post-tags">
+      
+        <a href="http://localhost:1313/myblog/tags/crypto" class="post-tag">crypto</a>
+      
+        <a href="http://localhost:1313/myblog/tags/xor" class="post-tag">xor</a>
+      
+        <a href="http://localhost:1313/myblog/tags/ctf" class="post-tag">ctf</a>
+      
+    </div>
+  
+</div>
+
+      </header>
+
+      <div class="post-content-main">
+        <h1 id="daily-alpacahack-writeup-xor-crypto--easy">Daily Alpacahack Writeup: XOR (Crypto / Easy)</h1>
+<p><strong>Category:</strong> Crypto<br>
+<strong>Difficulty:</strong> Easy</p>
+<h2 id="challenge-description">Challenge Description</h2>
+<p>We&rsquo;re given a Python encryption script and a ciphertext hex string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> secrets
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> string
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> itertools <span style="color:#f92672">import</span> cycle
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>flag <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getenv(<span style="color:#e6db74">&#34;FLAG&#34;</span>, <span style="color:#e6db74">&#34;Alpaca</span><span style="color:#e6db74">{FAKEFAKEFAKEFAKE}</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>encode()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> flag<span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;Alpaca{&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># key = b&#34;???????&#34;, e.g, abcdefg</span>
+</span></span><span style="display:flex;"><span>key <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join(secrets<span style="color:#f92672">.</span>choice(string<span style="color:#f92672">.</span>ascii_letters)<span style="color:#f92672">.</span>encode() <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">7</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> len(key) <span style="color:#f92672">==</span> <span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> bytes([c1 <span style="color:#f92672">^</span> c2 <span style="color:#66d9ef">for</span> c1, c2 <span style="color:#f92672">in</span> zip(flag, cycle(key))])
+</span></span><span style="display:flex;"><span>print(c<span style="color:#f92672">.</span>hex())
+</span></span></code></pre></div><p><strong>Ciphertext:</strong></p>
+<pre tabindex="0"><code>031b13072d280a2c1816392f3b041d07020d2f1619232817153b24141d000c3925281a3704161b
+</code></pre><h2 id="analysis">Analysis</h2>
+<p>The encryption scheme is a <strong>repeating-key XOR cipher</strong>:</p>
+<ul>
+<li>A random 7-byte key is generated using <code>secrets.choice(string.ascii_letters)</code></li>
+<li>The flag is XOR&rsquo;d against the key, repeating the key cyclically with <code>itertools.cycle</code></li>
+</ul>
+<p>XOR has the useful property:</p>
+<pre tabindex="0"><code>A ^ B = C  →  C ^ A = B
+</code></pre><p>So if we know both the ciphertext and the original plaintext, we can recover the key:</p>
+<pre tabindex="0"><code>key = ciphertext ^ plaintext
+</code></pre><hr>
+<h2 id="exploit-known-plaintext-attack">Exploit: Known-Plaintext Attack</h2>
+<p>We know the flag format is <code>Alpaca{...}</code>, meaning the first 7 bytes of the plaintext are always <code>Alpaca{</code>.</p>
+<p>Crucially, <strong>7 bytes = exactly the key length</strong>. This means the first 7 bytes of ciphertext were encrypted with exactly one full cycle of the key — giving us a direct, clean recovery.</p>
+<p><strong>Recovered key: <code>BwcfNIq</code></strong></p>
+<h2 id="solve-script">Solve Script</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> itertools <span style="color:#f92672">import</span> cycle
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ciphertext <span style="color:#f92672">=</span> bytes<span style="color:#f92672">.</span>fromhex(<span style="color:#e6db74">&#34;031b13072d280a2c1816392f3b041d07020d2f1619232817153b24141d000c3925281a3704161b&#34;</span>)
+</span></span><span style="display:flex;"><span>known <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;Alpaca{&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># XOR known plaintext prefix against ciphertext to recover key</span>
+</span></span><span style="display:flex;"><span>key <span style="color:#f92672">=</span> bytes([c <span style="color:#f92672">^</span> p <span style="color:#66d9ef">for</span> c, p <span style="color:#f92672">in</span> zip(ciphertext, known)])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Decrypt full ciphertext with recovered key</span>
+</span></span><span style="display:flex;"><span>flag <span style="color:#f92672">=</span> bytes([c <span style="color:#f92672">^</span> k <span style="color:#66d9ef">for</span> c, k <span style="color:#f92672">in</span> zip(ciphertext, cycle(key))])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Key:  </span><span style="color:#e6db74">{</span>key<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Flag: </span><span style="color:#e6db74">{</span>flag<span style="color:#f92672">.</span>decode()<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><p><strong>Output:</strong></p>
+<pre tabindex="0"><code>Key:  b&#39;BwcfNIq&#39;
+Flag: Alpaca{nou_aru_paka_ha_tsume_wo_kakusu}
+</code></pre><h2 id="flag">Flag</h2>
+<pre tabindex="0"><code>Alpaca{nou_aru_paka_ha_tsume_wo_kakusu}
+</code></pre><h2 id="takeaway">Takeaway</h2>
+<p>This challenge demonstrates a <strong>known-plaintext attack</strong> against a repeating-key XOR cipher.</p>
+<p>The attack works because:</p>
+<ol>
+<li>We know the flag prefix <code>Alpaca{</code> — 7 bytes of plaintext</li>
+<li>The key is exactly 7 bytes long</li>
+<li>XOR-ing the known plaintext with the ciphertext directly reveals the full key</li>
+<li>With the full key, decrypting the rest of the flag is trivial</li>
+</ol>
+<p>The flag itself is a play on the Japanese proverb <strong>能ある鷹は爪を隠す</strong> (<em>&ldquo;A capable hawk hides its talons&rdquo;</em>), with &ldquo;taka&rdquo; (hawk) replaced by &ldquo;paka&rdquo; (alpaca) — a nod to the CTF&rsquo;s theme.</p>
+
+      </div>
+
+      
+        <footer class="post-footer">
+          <div class="post-tags-footer">
+            <span class="tags-label">Tags:</span>
+            
+              <a href="http://localhost:1313/myblog/tags/crypto" class="post-tag">crypto</a>
+            
+              <a href="http://localhost:1313/myblog/tags/xor" class="post-tag">xor</a>
+            
+              <a href="http://localhost:1313/myblog/tags/ctf" class="post-tag">ctf</a>
+            
+          </div>
+        </footer>
+      
+
+      
+
+
+<section class="related-posts" aria-label="Related Posts">
+  <h2 class="related-posts-title">Related Posts</h2>
+  <ul class="related-posts-list">
+    
+    <li class="related-post-item">
+      <a href="http://localhost:1313/myblog/posts/aes/" class="related-post-link">
+        <strong>AAAAAAAAEEEEEEEESSSSSSSS - CTF Writeup</strong>
+        <span>AAAAAAAAEEEEEEEESSSSSSSS - Alpacahack challenge writeup Category: Crypto
+Difficulty: Medium
+Author: hiikunz
+Challenge …</span>
+      </a>
+    </li>
+    
+    <li class="related-post-item">
+      <a href="http://localhost:1313/myblog/posts/pyjs/" class="related-post-link">
+        <strong>pyjs — CTF Writeup</strong>
+        <span>pyjs — Daily Alpacahack Writeup CTF: AlpacaHack / SECCON
+Category: Misc
+Difficulty: Hard
+Author: minaminao
+Challenge We …</span>
+      </a>
+    </li>
+    
+    <li class="related-post-item">
+      <a href="http://localhost:1313/myblog/posts/lfi/" class="related-post-link">
+        <strong>Local File Inclusion (LFI) - CTF Writeup</strong>
+        <span>Alpaca Rangers — Daily Alpacahack Write-up Category: Web Difficulty: Medium Topic: Local File Inclusion (LFI) …</span>
+      </a>
+    </li>
+    
+  </ul>
+</section>
+
+
+
+      <nav class="post-navigation" aria-label="Post navigation">
+        
+          <a
+            href="http://localhost:1313/myblog/posts/malware/"
+            class="nav-link nav-prev"
+            aria-label="Previous post: A Practical Primer on Malware Analysis">
+            <span class="nav-label">Previous</span>
+            <span class="nav-title">A Practical Primer on Malware Analysis</span>
+          </a>
+        
+
+        
+          <a
+            href="http://localhost:1313/myblog/posts/quart_lock/"
+            class="nav-link nav-next"
+            aria-label="Next post: QuartzLock VulNyx: Writeup">
+            <span class="nav-label">Next</span>
+            <span class="nav-title">QuartzLock VulNyx: Writeup</span>
+          </a>
+        
+      </nav>
+    </article>
+
+    
+  <aside class="post-toc" id="post-toc" aria-label="Table of Contents">
+    <button
+      class="toc-toggle"
+      id="toc-toggle"
+      aria-expanded="true"
+      aria-controls="toc-content"
+      aria-label="Toggle table of contents">
+      <svg
+        class="toc-burger-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <span class="toc-toggle-text">Table of Contents</span>
+      <svg
+        class="toc-chevron-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <div class="toc-content" id="toc-content">
+      <nav class="toc-nav" aria-label="Table of Contents">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#challenge-description">Challenge Description</a></li>
+    <li><a href="#analysis">Analysis</a></li>
+    <li><a href="#exploit-known-plaintext-attack">Exploit: Known-Plaintext Attack</a></li>
+    <li><a href="#solve-script">Solve Script</a></li>
+    <li><a href="#flag">Flag</a></li>
+    <li><a href="#takeaway">Takeaway</a></li>
+  </ul>
+</nav>
+      </nav>
+    </div>
+  </aside>
+
+
+  </div>
+
+    </main>
+
+    <footer>
+      <footer class="site-footer">
+  <div class="footer-content">
+    <p class="footer-text">
+      &copy;
+      
+      2026
+      
+      4mN3s14 | CTF Player &amp; Student.
+      
+    </p>
+    
+      <div class="footer-social">
+        <div class="social-links">
+  
+    <a
+      href="https://github.com/John-Jkar"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-link"
+      aria-label="GitHub">
+      <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          fill-rule="evenodd"
+          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </a>
+  
+
+  
+
+  
+
+  
+    <a
+      href="https://x.com/J0n4n1"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-link"
+      aria-label="X (Twitter)">
+      <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+      </svg>
+    </a>
+  
+
+  
+    <a href="mailto:kagimujkar@gmail.com" class="social-link" aria-label="Email">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+      </svg>
+    </a>
+  
+</div>
+
+      </div>
+    
+  </div>
+</footer>
+
+    </footer>
+
+    <div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Search" data-no-results="No results found">
+  <div class="search-modal-backdrop" id="search-modal-backdrop"></div>
+  <div class="search-modal-container">
+    <div class="search-input-wrapper">
+      <svg class="search-input-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+      <input
+        type="search"
+        id="search-input"
+        class="search-input"
+        placeholder="Search..."
+        autocomplete="off"
+        aria-label="Search">
+      <button class="search-input-clear" id="search-input-clear" aria-label="Clear search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+        </svg>
+      </button>
+      <button class="search-modal-close" id="search-modal-close" aria-label="Close search">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+    
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu-content">
+    <div class="mobile-menu-header">
+      <span class="mobile-menu-title">Menu</span>
+      <button
+        id="mobile-menu-close"
+        class="mobile-menu-close"
+        aria-label="Close menu"
+        type="button">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav" role="navigation" aria-label="Mobile navigation">
+      <ul class="menu-list">
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/"
+        class="menu-link ">
+        Home
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/posts/"
+        class="menu-link ">
+        Posts
+      </a>
+    </li>
+  
+    <li class="menu-item">
+      <a
+        href="http://localhost:1313/myblog/about/"
+        class="menu-link ">
+        About
+      </a>
+    </li>
+  
+</ul>
+
+    </nav>
+    <div class="mobile-menu-footer">
+      <button id="mobile-search-toggle" class="mobile-search-toggle" aria-label="Search" type="button">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <span>Search</span>
+      </button>
+      
+
+      <button class="theme-toggle" aria-label="Toggle theme" type="button">
+        <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+    
+
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" type="button">
+  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+  </svg>
+</button>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="http://localhost:1313/myblog/js/main.min.137938305a4255a5ce0531471a42b4448c4adb05e04052a70000719c0704d082.js" defer></script>
+
+  </body>
+</html>

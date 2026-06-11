@@ -1,0 +1,24 @@
+$ ssh-keygen -t ed25519 -f caden_key -N ""
+
+$ ./legacy_exec.sh /bin/bash -c "qcert sign --serial 'QL-EDGE-%' ..."
+legacy worker response: certificate written: /tmp/writeup_caden-cert.pub
+principal: caden
+valid_for: 1h
+
+$ ssh-keygen -Lf writeup_caden-cert.pub
+evidence/writeup_caden-cert.pub:
+        Type: ssh-ed25519-cert-v01@openssh.com user certificate
+        Public key: ED25519-CERT SHA256:yuQVEAiu0ioUSNnR96Jf+mHyA0BzJJTzrUtF/UpScxc
+        Signing CA: ED25519 SHA256:se8LOwlwDwdguLFEy+FUqOBk9DIFn6AeBnMTzOe0HxE (using ssh-ed25519)
+        Key ID: "quartz-caden-131e9181"
+        Serial: 0
+        Valid: from 2026-06-11T09:30:00 to 2026-06-11T10:31:14
+        Principals: 
+                caden
+        Critical Options: (none)
+        Extensions: 
+                permit-X11-forwarding
+                permit-agent-forwarding
+                permit-port-forwarding
+                permit-pty
+                permit-user-rc

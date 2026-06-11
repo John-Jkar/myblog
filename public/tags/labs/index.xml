@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Labs on 4mN3s14 | CTF Player &amp; Student</title>
+		<link>http://localhost:1313/myblog/tags/labs/</link>
+		<description>Recent content in Labs on 4mN3s14 | CTF Player &amp; Student</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 02 Jun 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/myblog/tags/labs/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>QuartzLock VulNyx: Writeup</title>
+				<link>http://localhost:1313/myblog/posts/quart_lock/</link>
+				<pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/myblog/posts/quart_lock/</guid>
+				<description>&lt;blockquote class=&#34;blockquote-regular&#34;&gt;&#xA;  &lt;p&gt;Authorized lab target only. This walkthrough was reproduced against&#xA;&lt;code&gt;192.168.100.143&lt;/code&gt; on June 11, 2026.&lt;/p&gt;&#xA;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;target-summary&#34;&gt;Target Summary&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Item&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Value&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Target&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;192.168.100.143&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Primary hostname&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;quartz.nyx&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Additional hosts&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;api.nyx&lt;/code&gt;, &lt;code&gt;enroll.nyx&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Initial execution&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;svc-attest&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;User foothold&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;caden&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Root mechanism&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;qctl replay&lt;/code&gt; plugin overlay&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;User flag&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;[REDACTED]&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Root flag&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;[REDACTED]&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;attack-chain&#34;&gt;Attack Chain&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Discover &lt;code&gt;api.nyx&lt;/code&gt; and &lt;code&gt;enroll.nyx&lt;/code&gt; in the TLS certificate.&lt;/li&gt;&#xA;&lt;li&gt;Abuse duplicate JSON &lt;code&gt;scope&lt;/code&gt; keys to obtain a privileged JWT.&lt;/li&gt;&#xA;&lt;li&gt;Upload a qpak containing a double-encoded WASI preopen traversal.&lt;/li&gt;&#xA;&lt;li&gt;Reach &lt;code&gt;/run/quartz/worker.sock&lt;/code&gt; and invoke &lt;code&gt;RunLegacyProbe&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Execute commands as &lt;code&gt;svc-attest&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Abuse wildcard asset matching in &lt;code&gt;qcert&lt;/code&gt; to obtain an SSH certificate for&#xA;&lt;code&gt;caden&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;SSH as &lt;code&gt;caden&lt;/code&gt; and read the user flag.&lt;/li&gt;&#xA;&lt;li&gt;Abuse the &lt;code&gt;qctl replay&lt;/code&gt; namespace overlay to execute a case plugin as root.&lt;/li&gt;&#xA;&lt;li&gt;Read the root flag.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;&#xA;&lt;p&gt;The attacking system needs:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

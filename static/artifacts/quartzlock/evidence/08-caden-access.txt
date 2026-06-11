@@ -1,0 +1,33 @@
+$ ssh -i caden_key -o CertificateFile=evidence/writeup_caden-cert.pub caden@192.168.100.143
+
+uid=1001(caden) gid=1001(caden) groups=1001(caden),1002(quartz-maint) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+quartzlock
+user flag: [REDACTED]
+
+quartz-maint tools:
+-rwxr-x---. 1 root quartz-maint 1372 May 21 16:20 /usr/local/bin/qctl
+
+replay help:
+usage: qctl replay [-h] [--plugin PLUGIN] case_id
+
+positional arguments:
+  case_id
+
+options:
+  -h, --help       show this help message and exit
+  --plugin PLUGIN
+
+case documentation:
+QuartzLock Maintenance Replay Cases
+
+Members of quartz-maint may create replay cases here.
+
+Expected layout:
+
+case-id/
+└── plugins/
+    └── rpm-integrity
+
+The maintenance service validates trusted plugin names before replay.
+During replay, case plugin overlays are mounted into the maintenance runtime
+to reproduce the original failed job environment.

