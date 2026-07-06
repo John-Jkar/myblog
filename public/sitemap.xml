@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/myblog/</loc>
-    <lastmod>2026-06-02T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link
@@ -13,7 +13,7 @@
   </url>
   <url>
     <loc>http://localhost:1313/myblog/categories/</loc>
-    <lastmod>2026-06-02T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
@@ -22,14 +22,134 @@
                href="http://localhost:1313/myblog/categories/"/>
   </url>
   <url>
+    <loc>http://localhost:1313/myblog/tags/ctf/</loc>
+    <lastmod>2026-07-06T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/myblog/tags/ctf/"/>
+  </url>
+  <url>
     <loc>http://localhost:1313/myblog/categories/ctf-writeups/</loc>
-    <lastmod>2026-06-02T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
                href="http://localhost:1313/myblog/categories/ctf-writeups/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/myblog/tags/cve/</loc>
+    <lastmod>2026-07-06T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/myblog/tags/cve/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/myblog/posts/fireflow/</loc>
+    <lastmod>2026-07-06T10:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/myblog/posts/fireflow/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/myblog/tags/htb/</loc>
+    <lastmod>2026-07-06T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/myblog/tags/htb/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/myblog/tags/kubelet/</loc>
+    <lastmod>2026-07-06T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/myblog/tags/kubelet/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/myblog/tags/kubernetes/</loc>
+    <lastmod>2026-07-06T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/myblog/tags/kubernetes/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/myblog/tags/langflow/</loc>
+    <lastmod>2026-07-06T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/myblog/tags/langflow/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/myblog/posts/</loc>
+    <lastmod>2026-07-06T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/myblog/posts/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/myblog/tags/rce/</loc>
+    <lastmod>2026-07-06T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/myblog/tags/rce/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/myblog/tags/</loc>
+    <lastmod>2026-07-06T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/myblog/tags/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/myblog/tags/web-exploitation/</loc>
+    <lastmod>2026-07-06T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/myblog/tags/web-exploitation/"/>
+  </url>
+  <url>
+    <loc>http://localhost:1313/myblog/about/</loc>
+    <lastmod>2026-06-11T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="http://localhost:1313/myblog/about/"/>
   </url>
   <url>
     <loc>http://localhost:1313/myblog/tags/labs/</loc>
@@ -52,16 +172,6 @@
                href="http://localhost:1313/myblog/tags/misc/"/>
   </url>
   <url>
-    <loc>http://localhost:1313/myblog/posts/</loc>
-    <lastmod>2026-06-02T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-               rel="alternate"
-               hreflang="en"
-               href="http://localhost:1313/myblog/posts/"/>
-  </url>
-  <url>
     <loc>http://localhost:1313/myblog/posts/quart_lock/</loc>
     <lastmod>2026-06-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -70,16 +180,6 @@
                rel="alternate"
                hreflang="en"
                href="http://localhost:1313/myblog/posts/quart_lock/"/>
-  </url>
-  <url>
-    <loc>http://localhost:1313/myblog/tags/</loc>
-    <lastmod>2026-06-02T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link
-               rel="alternate"
-               hreflang="en"
-               href="http://localhost:1313/myblog/tags/"/>
   </url>
   <url>
     <loc>http://localhost:1313/myblog/tags/vulnyx/</loc>
@@ -100,16 +200,6 @@
                rel="alternate"
                hreflang="en"
                href="http://localhost:1313/myblog/tags/crypto/"/>
-  </url>
-  <url>
-    <loc>http://localhost:1313/myblog/tags/ctf/</loc>
-    <lastmod>2026-03-12T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link
-               rel="alternate"
-               hreflang="en"
-               href="http://localhost:1313/myblog/tags/ctf/"/>
   </url>
   <url>
     <loc>http://localhost:1313/myblog/posts/xor/</loc>
@@ -680,16 +770,6 @@
                rel="alternate"
                hreflang="en"
                href="http://localhost:1313/myblog/categories/web-dev/"/>
-  </url>
-  <url>
-    <loc>http://localhost:1313/myblog/about/</loc>
-    
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-               rel="alternate"
-               hreflang="en"
-               href="http://localhost:1313/myblog/about/"/>
   </url>
   <url>
     <loc>http://localhost:1313/myblog/posts/ai-rizz/</loc>

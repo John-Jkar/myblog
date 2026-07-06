@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Cve on 4mN3s14 | Blog</title>
+		<link>http://localhost:1313/myblog/tags/cve/</link>
+		<description>Recent content in Cve on 4mN3s14 | Blog</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 06 Jul 2026 10:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/myblog/tags/cve/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>FireFlow - HTB Machine Writeup</title>
+				<link>http://localhost:1313/myblog/posts/fireflow/</link>
+				<pubDate>Mon, 06 Jul 2026 10:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/myblog/posts/fireflow/</guid>
+				<description>&lt;h1 id=&#34;fireflow---hack-the-box-machine-writeup&#34;&gt;FireFlow - Hack The Box Machine Writeup&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Machine:&lt;/strong&gt; FireFlow&lt;br&gt;&#xA;&lt;strong&gt;Category:&lt;/strong&gt; Web, Kubernetes, RCE&lt;br&gt;&#xA;&lt;strong&gt;Difficulty:&lt;/strong&gt; Hard&lt;br&gt;&#xA;&lt;strong&gt;Author:&lt;/strong&gt; 4mN3s14&lt;/p&gt;&#xA;&lt;h2 id=&#34;recon&#34;&gt;Recon&lt;/h2&gt;&#xA;&lt;p&gt;Nmap scan revealed ports 22 (SSH) and 443 (HTTPS) open with a self-signed cert for &lt;code&gt;fireflow.htb&lt;/code&gt; and &lt;code&gt;*.fireflow.htb&lt;/code&gt;:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo nmap -sC -sV -vv -oA fireflow 10.129.244.214&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;PORT      STATE    SERVICE   VERSION&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;22/tcp    open     ssh       OpenSSH 9.6p1 Ubuntu&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;443/tcp   open     ssl/http  nginx&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Added &lt;code&gt;fireflow.htb&lt;/code&gt; and &lt;code&gt;flow.fireflow.htb&lt;/code&gt; to &lt;code&gt;/etc/hosts&lt;/code&gt; after visiting the main page.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

