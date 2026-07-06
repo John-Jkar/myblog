@@ -2,814 +2,814 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://john-jkar.github.io/myblog/</loc>
+    <loc>http://localhost:1313/myblog/</loc>
     <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/"/>
+               href="http://localhost:1313/myblog/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/categories/</loc>
+    <loc>http://localhost:1313/myblog/categories/</loc>
     <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/categories/"/>
+               href="http://localhost:1313/myblog/categories/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/ctf/</loc>
+    <loc>http://localhost:1313/myblog/tags/ctf/</loc>
     <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/ctf/"/>
+               href="http://localhost:1313/myblog/tags/ctf/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/categories/ctf-writeups/</loc>
+    <loc>http://localhost:1313/myblog/categories/ctf-writeups/</loc>
     <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/categories/ctf-writeups/"/>
+               href="http://localhost:1313/myblog/categories/ctf-writeups/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/cve/</loc>
+    <loc>http://localhost:1313/myblog/tags/cve/</loc>
     <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/cve/"/>
+               href="http://localhost:1313/myblog/tags/cve/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/fireflow/</loc>
+    <loc>http://localhost:1313/myblog/posts/fireflow/</loc>
     <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/fireflow/"/>
+               href="http://localhost:1313/myblog/posts/fireflow/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/htb/</loc>
+    <loc>http://localhost:1313/myblog/tags/htb/</loc>
     <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/htb/"/>
+               href="http://localhost:1313/myblog/tags/htb/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/kubelet/</loc>
+    <loc>http://localhost:1313/myblog/tags/kubelet/</loc>
     <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/kubelet/"/>
+               href="http://localhost:1313/myblog/tags/kubelet/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/kubernetes/</loc>
+    <loc>http://localhost:1313/myblog/tags/kubernetes/</loc>
     <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/kubernetes/"/>
+               href="http://localhost:1313/myblog/tags/kubernetes/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/langflow/</loc>
+    <loc>http://localhost:1313/myblog/tags/langflow/</loc>
     <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/langflow/"/>
+               href="http://localhost:1313/myblog/tags/langflow/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/</loc>
+    <loc>http://localhost:1313/myblog/posts/</loc>
     <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/"/>
+               href="http://localhost:1313/myblog/posts/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/rce/</loc>
+    <loc>http://localhost:1313/myblog/tags/rce/</loc>
     <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/rce/"/>
+               href="http://localhost:1313/myblog/tags/rce/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/</loc>
+    <loc>http://localhost:1313/myblog/tags/</loc>
     <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/"/>
+               href="http://localhost:1313/myblog/tags/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/web-exploitation/</loc>
+    <loc>http://localhost:1313/myblog/tags/web-exploitation/</loc>
     <lastmod>2026-07-06T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/web-exploitation/"/>
+               href="http://localhost:1313/myblog/tags/web-exploitation/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/about/</loc>
+    <loc>http://localhost:1313/myblog/about/</loc>
     <lastmod>2026-06-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/about/"/>
+               href="http://localhost:1313/myblog/about/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/labs/</loc>
+    <loc>http://localhost:1313/myblog/tags/labs/</loc>
     <lastmod>2026-06-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/labs/"/>
+               href="http://localhost:1313/myblog/tags/labs/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/misc/</loc>
+    <loc>http://localhost:1313/myblog/tags/misc/</loc>
     <lastmod>2026-06-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/misc/"/>
+               href="http://localhost:1313/myblog/tags/misc/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/quart_lock/</loc>
+    <loc>http://localhost:1313/myblog/posts/quart_lock/</loc>
     <lastmod>2026-06-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/quart_lock/"/>
+               href="http://localhost:1313/myblog/posts/quart_lock/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/vulnyx/</loc>
+    <loc>http://localhost:1313/myblog/tags/vulnyx/</loc>
     <lastmod>2026-06-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/vulnyx/"/>
+               href="http://localhost:1313/myblog/tags/vulnyx/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/crypto/</loc>
+    <loc>http://localhost:1313/myblog/tags/crypto/</loc>
     <lastmod>2026-03-12T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/crypto/"/>
+               href="http://localhost:1313/myblog/tags/crypto/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/xor/</loc>
+    <loc>http://localhost:1313/myblog/posts/xor/</loc>
     <lastmod>2026-03-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/xor/"/>
+               href="http://localhost:1313/myblog/posts/xor/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/xor/</loc>
+    <loc>http://localhost:1313/myblog/tags/xor/</loc>
     <lastmod>2026-03-12T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/xor/"/>
+               href="http://localhost:1313/myblog/tags/xor/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/malware/</loc>
+    <loc>http://localhost:1313/myblog/posts/malware/</loc>
     <lastmod>2026-03-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/malware/"/>
+               href="http://localhost:1313/myblog/posts/malware/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/cybersecurity/</loc>
+    <loc>http://localhost:1313/myblog/tags/cybersecurity/</loc>
     <lastmod>2026-03-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/cybersecurity/"/>
+               href="http://localhost:1313/myblog/tags/cybersecurity/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/malware/</loc>
+    <loc>http://localhost:1313/myblog/tags/malware/</loc>
     <lastmod>2026-03-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/malware/"/>
+               href="http://localhost:1313/myblog/tags/malware/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/reverse-engineering/</loc>
+    <loc>http://localhost:1313/myblog/tags/reverse-engineering/</loc>
     <lastmod>2026-03-08T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/reverse-engineering/"/>
+               href="http://localhost:1313/myblog/tags/reverse-engineering/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/polyglot/</loc>
+    <loc>http://localhost:1313/myblog/tags/polyglot/</loc>
     <lastmod>2026-03-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/polyglot/"/>
+               href="http://localhost:1313/myblog/tags/polyglot/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/pyjs/</loc>
+    <loc>http://localhost:1313/myblog/tags/pyjs/</loc>
     <lastmod>2026-03-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/pyjs/"/>
+               href="http://localhost:1313/myblog/tags/pyjs/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/pyjs/</loc>
+    <loc>http://localhost:1313/myblog/posts/pyjs/</loc>
     <lastmod>2026-03-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/pyjs/"/>
+               href="http://localhost:1313/myblog/posts/pyjs/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/lfi/</loc>
+    <loc>http://localhost:1313/myblog/tags/lfi/</loc>
     <lastmod>2026-02-27T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/lfi/"/>
+               href="http://localhost:1313/myblog/tags/lfi/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/local-file-inclusion/</loc>
+    <loc>http://localhost:1313/myblog/tags/local-file-inclusion/</loc>
     <lastmod>2026-02-27T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/local-file-inclusion/"/>
+               href="http://localhost:1313/myblog/tags/local-file-inclusion/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/lfi/</loc>
+    <loc>http://localhost:1313/myblog/posts/lfi/</loc>
     <lastmod>2026-02-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/lfi/"/>
+               href="http://localhost:1313/myblog/posts/lfi/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/path-traversal/</loc>
+    <loc>http://localhost:1313/myblog/tags/path-traversal/</loc>
     <lastmod>2026-02-27T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/path-traversal/"/>
+               href="http://localhost:1313/myblog/tags/path-traversal/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/web/</loc>
+    <loc>http://localhost:1313/myblog/tags/web/</loc>
     <lastmod>2026-02-27T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/web/"/>
+               href="http://localhost:1313/myblog/tags/web/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/ansi/</loc>
+    <loc>http://localhost:1313/myblog/tags/ansi/</loc>
     <lastmod>2026-02-20T06:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/ansi/"/>
+               href="http://localhost:1313/myblog/tags/ansi/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/missing-cursor/</loc>
+    <loc>http://localhost:1313/myblog/posts/missing-cursor/</loc>
     <lastmod>2026-02-20T06:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/missing-cursor/"/>
+               href="http://localhost:1313/myblog/posts/missing-cursor/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/escape-sequences/</loc>
+    <loc>http://localhost:1313/myblog/tags/escape-sequences/</loc>
     <lastmod>2026-02-20T06:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/escape-sequences/"/>
+               href="http://localhost:1313/myblog/tags/escape-sequences/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/rev/</loc>
+    <loc>http://localhost:1313/myblog/tags/rev/</loc>
     <lastmod>2026-02-20T06:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/rev/"/>
+               href="http://localhost:1313/myblog/tags/rev/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/terminal/</loc>
+    <loc>http://localhost:1313/myblog/tags/terminal/</loc>
     <lastmod>2026-02-20T06:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/terminal/"/>
+               href="http://localhost:1313/myblog/tags/terminal/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/diappeared/</loc>
+    <loc>http://localhost:1313/myblog/posts/diappeared/</loc>
     <lastmod>2026-02-18T06:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/diappeared/"/>
+               href="http://localhost:1313/myblog/posts/diappeared/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/binary-exploitation/</loc>
+    <loc>http://localhost:1313/myblog/tags/binary-exploitation/</loc>
     <lastmod>2026-02-18T06:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/binary-exploitation/"/>
+               href="http://localhost:1313/myblog/tags/binary-exploitation/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/pwn/</loc>
+    <loc>http://localhost:1313/myblog/tags/pwn/</loc>
     <lastmod>2026-02-18T06:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/pwn/"/>
+               href="http://localhost:1313/myblog/tags/pwn/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/ret2win/</loc>
+    <loc>http://localhost:1313/myblog/tags/ret2win/</loc>
     <lastmod>2026-02-18T06:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/ret2win/"/>
+               href="http://localhost:1313/myblog/tags/ret2win/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/client-side/</loc>
+    <loc>http://localhost:1313/myblog/tags/client-side/</loc>
     <lastmod>2026-02-15T08:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/client-side/"/>
+               href="http://localhost:1313/myblog/tags/client-side/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/categories/ctf/</loc>
+    <loc>http://localhost:1313/myblog/categories/ctf/</loc>
     <lastmod>2026-02-15T08:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/categories/ctf/"/>
+               href="http://localhost:1313/myblog/categories/ctf/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/open-redirect/</loc>
+    <loc>http://localhost:1313/myblog/tags/open-redirect/</loc>
     <lastmod>2026-02-15T08:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/open-redirect/"/>
+               href="http://localhost:1313/myblog/tags/open-redirect/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/url-parsing/</loc>
+    <loc>http://localhost:1313/myblog/tags/url-parsing/</loc>
     <lastmod>2026-02-15T08:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/url-parsing/"/>
+               href="http://localhost:1313/myblog/tags/url-parsing/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/categories/web/</loc>
+    <loc>http://localhost:1313/myblog/categories/web/</loc>
     <lastmod>2026-02-15T08:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/categories/web/"/>
+               href="http://localhost:1313/myblog/categories/web/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/you-are-being-redirected/</loc>
+    <loc>http://localhost:1313/myblog/posts/you-are-being-redirected/</loc>
     <lastmod>2026-02-15T08:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/you-are-being-redirected/"/>
+               href="http://localhost:1313/myblog/posts/you-are-being-redirected/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/aes/</loc>
+    <loc>http://localhost:1313/myblog/posts/aes/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/aes/"/>
+               href="http://localhost:1313/myblog/posts/aes/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/aes/</loc>
+    <loc>http://localhost:1313/myblog/tags/aes/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/aes/"/>
+               href="http://localhost:1313/myblog/tags/aes/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/ecb/</loc>
+    <loc>http://localhost:1313/myblog/tags/ecb/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/ecb/"/>
+               href="http://localhost:1313/myblog/tags/ecb/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/oracle-attack/</loc>
+    <loc>http://localhost:1313/myblog/tags/oracle-attack/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/oracle-attack/"/>
+               href="http://localhost:1313/myblog/tags/oracle-attack/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/rop/</loc>
+    <loc>http://localhost:1313/myblog/tags/rop/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/rop/"/>
+               href="http://localhost:1313/myblog/tags/rop/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/rop/</loc>
+    <loc>http://localhost:1313/myblog/posts/rop/</loc>
     <lastmod>2026-02-15T06:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/rop/"/>
+               href="http://localhost:1313/myblog/posts/rop/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/destructing/</loc>
+    <loc>http://localhost:1313/myblog/posts/destructing/</loc>
     <lastmod>2026-02-11T08:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/destructing/"/>
+               href="http://localhost:1313/myblog/posts/destructing/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/categories/dfir/</loc>
+    <loc>http://localhost:1313/myblog/categories/dfir/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/categories/dfir/"/>
+               href="http://localhost:1313/myblog/categories/dfir/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/forensics/</loc>
+    <loc>http://localhost:1313/myblog/tags/forensics/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/forensics/"/>
+               href="http://localhost:1313/myblog/tags/forensics/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/kernel/</loc>
+    <loc>http://localhost:1313/myblog/tags/kernel/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/kernel/"/>
+               href="http://localhost:1313/myblog/tags/kernel/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/categories/linux/</loc>
+    <loc>http://localhost:1313/myblog/categories/linux/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/categories/linux/"/>
+               href="http://localhost:1313/myblog/categories/linux/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/linux-kernel-rootkit-analysis/</loc>
+    <loc>http://localhost:1313/myblog/posts/linux-kernel-rootkit-analysis/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/linux-kernel-rootkit-analysis/"/>
+               href="http://localhost:1313/myblog/posts/linux-kernel-rootkit-analysis/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/lkm/</loc>
+    <loc>http://localhost:1313/myblog/tags/lkm/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/lkm/"/>
+               href="http://localhost:1313/myblog/tags/lkm/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/categories/malware-analysis/</loc>
+    <loc>http://localhost:1313/myblog/categories/malware-analysis/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/categories/malware-analysis/"/>
+               href="http://localhost:1313/myblog/categories/malware-analysis/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/categories/rootkits/</loc>
+    <loc>http://localhost:1313/myblog/categories/rootkits/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/categories/rootkits/"/>
+               href="http://localhost:1313/myblog/categories/rootkits/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/categories/blogging/</loc>
+    <loc>http://localhost:1313/myblog/categories/blogging/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/categories/blogging/"/>
+               href="http://localhost:1313/myblog/categories/blogging/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/chr-bypass/</loc>
+    <loc>http://localhost:1313/myblog/tags/chr-bypass/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/chr-bypass/"/>
+               href="http://localhost:1313/myblog/tags/chr-bypass/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/hugo/</loc>
+    <loc>http://localhost:1313/myblog/tags/hugo/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/hugo/"/>
+               href="http://localhost:1313/myblog/tags/hugo/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/jailbreak/</loc>
+    <loc>http://localhost:1313/myblog/tags/jailbreak/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/jailbreak/"/>
+               href="http://localhost:1313/myblog/tags/jailbreak/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/linux/</loc>
+    <loc>http://localhost:1313/myblog/tags/linux/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/linux/"/>
+               href="http://localhost:1313/myblog/tags/linux/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/categories/pyjail/</loc>
+    <loc>http://localhost:1313/myblog/categories/pyjail/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/categories/pyjail/"/>
+               href="http://localhost:1313/myblog/categories/pyjail/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/python/</loc>
+    <loc>http://localhost:1313/myblog/tags/python/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/python/"/>
+               href="http://localhost:1313/myblog/tags/python/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/sigpwny/</loc>
+    <loc>http://localhost:1313/myblog/tags/sigpwny/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/sigpwny/"/>
+               href="http://localhost:1313/myblog/tags/sigpwny/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/pwnyctf-pyjail2/</loc>
+    <loc>http://localhost:1313/myblog/posts/pwnyctf-pyjail2/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/pwnyctf-pyjail2/"/>
+               href="http://localhost:1313/myblog/posts/pwnyctf-pyjail2/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/struggle/</loc>
+    <loc>http://localhost:1313/myblog/tags/struggle/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/struggle/"/>
+               href="http://localhost:1313/myblog/tags/struggle/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/the-pain-of-building-this-blog/</loc>
+    <loc>http://localhost:1313/myblog/posts/the-pain-of-building-this-blog/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/the-pain-of-building-this-blog/"/>
+               href="http://localhost:1313/myblog/posts/the-pain-of-building-this-blog/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/tags/waf-bypass/</loc>
+    <loc>http://localhost:1313/myblog/tags/waf-bypass/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/tags/waf-bypass/"/>
+               href="http://localhost:1313/myblog/tags/waf-bypass/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/categories/web-dev/</loc>
+    <loc>http://localhost:1313/myblog/categories/web-dev/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/categories/web-dev/"/>
+               href="http://localhost:1313/myblog/categories/web-dev/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/ai-rizz/</loc>
+    <loc>http://localhost:1313/myblog/posts/ai-rizz/</loc>
     
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/ai-rizz/"/>
+               href="http://localhost:1313/myblog/posts/ai-rizz/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/hellcouple/</loc>
+    <loc>http://localhost:1313/myblog/posts/hellcouple/</loc>
     
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/hellcouple/"/>
+               href="http://localhost:1313/myblog/posts/hellcouple/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/optimal-sort/</loc>
+    <loc>http://localhost:1313/myblog/posts/optimal-sort/</loc>
     
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/optimal-sort/"/>
+               href="http://localhost:1313/myblog/posts/optimal-sort/"/>
   </url>
   <url>
-    <loc>https://john-jkar.github.io/myblog/posts/trading-places-metactf/</loc>
+    <loc>http://localhost:1313/myblog/posts/trading-places-metactf/</loc>
     
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://john-jkar.github.io/myblog/posts/trading-places-metactf/"/>
+               href="http://localhost:1313/myblog/posts/trading-places-metactf/"/>
   </url>
   
 </urlset>

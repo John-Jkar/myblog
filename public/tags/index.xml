@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Tags on 4mN3s14 | Blog</title>
-		<link>https://john-jkar.github.io/myblog/tags/</link>
+		<link>http://localhost:1313/myblog/tags/</link>
 		<description>Recent content in Tags on 4mN3s14 | Blog</description>
 		<generator>Hugo</generator>
 		<language>en-US</language>
@@ -12,334 +12,334 @@
 		
 			<lastBuildDate>Mon, 06 Jul 2026 10:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="https://john-jkar.github.io/myblog/tags/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/myblog/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Ctf</title>
-				<link>https://john-jkar.github.io/myblog/tags/ctf/</link>
+				<link>http://localhost:1313/myblog/tags/ctf/</link>
 				<pubDate>Mon, 06 Jul 2026 10:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/ctf/</guid>
+				<guid>http://localhost:1313/myblog/tags/ctf/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Cve</title>
-				<link>https://john-jkar.github.io/myblog/tags/cve/</link>
+				<link>http://localhost:1313/myblog/tags/cve/</link>
 				<pubDate>Mon, 06 Jul 2026 10:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/cve/</guid>
+				<guid>http://localhost:1313/myblog/tags/cve/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Htb</title>
-				<link>https://john-jkar.github.io/myblog/tags/htb/</link>
+				<link>http://localhost:1313/myblog/tags/htb/</link>
 				<pubDate>Mon, 06 Jul 2026 10:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/htb/</guid>
+				<guid>http://localhost:1313/myblog/tags/htb/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Kubelet</title>
-				<link>https://john-jkar.github.io/myblog/tags/kubelet/</link>
+				<link>http://localhost:1313/myblog/tags/kubelet/</link>
 				<pubDate>Mon, 06 Jul 2026 10:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/kubelet/</guid>
+				<guid>http://localhost:1313/myblog/tags/kubelet/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Kubernetes</title>
-				<link>https://john-jkar.github.io/myblog/tags/kubernetes/</link>
+				<link>http://localhost:1313/myblog/tags/kubernetes/</link>
 				<pubDate>Mon, 06 Jul 2026 10:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/kubernetes/</guid>
+				<guid>http://localhost:1313/myblog/tags/kubernetes/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Langflow</title>
-				<link>https://john-jkar.github.io/myblog/tags/langflow/</link>
+				<link>http://localhost:1313/myblog/tags/langflow/</link>
 				<pubDate>Mon, 06 Jul 2026 10:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/langflow/</guid>
+				<guid>http://localhost:1313/myblog/tags/langflow/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Rce</title>
-				<link>https://john-jkar.github.io/myblog/tags/rce/</link>
+				<link>http://localhost:1313/myblog/tags/rce/</link>
 				<pubDate>Mon, 06 Jul 2026 10:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/rce/</guid>
+				<guid>http://localhost:1313/myblog/tags/rce/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Web Exploitation</title>
-				<link>https://john-jkar.github.io/myblog/tags/web-exploitation/</link>
+				<link>http://localhost:1313/myblog/tags/web-exploitation/</link>
 				<pubDate>Mon, 06 Jul 2026 10:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/web-exploitation/</guid>
+				<guid>http://localhost:1313/myblog/tags/web-exploitation/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Labs</title>
-				<link>https://john-jkar.github.io/myblog/tags/labs/</link>
+				<link>http://localhost:1313/myblog/tags/labs/</link>
 				<pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/labs/</guid>
+				<guid>http://localhost:1313/myblog/tags/labs/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Misc</title>
-				<link>https://john-jkar.github.io/myblog/tags/misc/</link>
+				<link>http://localhost:1313/myblog/tags/misc/</link>
 				<pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/misc/</guid>
+				<guid>http://localhost:1313/myblog/tags/misc/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Vulnyx</title>
-				<link>https://john-jkar.github.io/myblog/tags/vulnyx/</link>
+				<link>http://localhost:1313/myblog/tags/vulnyx/</link>
 				<pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/vulnyx/</guid>
+				<guid>http://localhost:1313/myblog/tags/vulnyx/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Crypto</title>
-				<link>https://john-jkar.github.io/myblog/tags/crypto/</link>
+				<link>http://localhost:1313/myblog/tags/crypto/</link>
 				<pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/crypto/</guid>
+				<guid>http://localhost:1313/myblog/tags/crypto/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Xor</title>
-				<link>https://john-jkar.github.io/myblog/tags/xor/</link>
+				<link>http://localhost:1313/myblog/tags/xor/</link>
 				<pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/xor/</guid>
+				<guid>http://localhost:1313/myblog/tags/xor/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Cybersecurity</title>
-				<link>https://john-jkar.github.io/myblog/tags/cybersecurity/</link>
+				<link>http://localhost:1313/myblog/tags/cybersecurity/</link>
 				<pubDate>Sun, 08 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/cybersecurity/</guid>
+				<guid>http://localhost:1313/myblog/tags/cybersecurity/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Malware</title>
-				<link>https://john-jkar.github.io/myblog/tags/malware/</link>
+				<link>http://localhost:1313/myblog/tags/malware/</link>
 				<pubDate>Sun, 08 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/malware/</guid>
+				<guid>http://localhost:1313/myblog/tags/malware/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Reverse Engineering</title>
-				<link>https://john-jkar.github.io/myblog/tags/reverse-engineering/</link>
+				<link>http://localhost:1313/myblog/tags/reverse-engineering/</link>
 				<pubDate>Sun, 08 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/reverse-engineering/</guid>
+				<guid>http://localhost:1313/myblog/tags/reverse-engineering/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Polyglot</title>
-				<link>https://john-jkar.github.io/myblog/tags/polyglot/</link>
+				<link>http://localhost:1313/myblog/tags/polyglot/</link>
 				<pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/polyglot/</guid>
+				<guid>http://localhost:1313/myblog/tags/polyglot/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Pyjs</title>
-				<link>https://john-jkar.github.io/myblog/tags/pyjs/</link>
+				<link>http://localhost:1313/myblog/tags/pyjs/</link>
 				<pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/pyjs/</guid>
+				<guid>http://localhost:1313/myblog/tags/pyjs/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Lfi</title>
-				<link>https://john-jkar.github.io/myblog/tags/lfi/</link>
+				<link>http://localhost:1313/myblog/tags/lfi/</link>
 				<pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/lfi/</guid>
+				<guid>http://localhost:1313/myblog/tags/lfi/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Local File Inclusion</title>
-				<link>https://john-jkar.github.io/myblog/tags/local-file-inclusion/</link>
+				<link>http://localhost:1313/myblog/tags/local-file-inclusion/</link>
 				<pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/local-file-inclusion/</guid>
+				<guid>http://localhost:1313/myblog/tags/local-file-inclusion/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Path Traversal</title>
-				<link>https://john-jkar.github.io/myblog/tags/path-traversal/</link>
+				<link>http://localhost:1313/myblog/tags/path-traversal/</link>
 				<pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/path-traversal/</guid>
+				<guid>http://localhost:1313/myblog/tags/path-traversal/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Web</title>
-				<link>https://john-jkar.github.io/myblog/tags/web/</link>
+				<link>http://localhost:1313/myblog/tags/web/</link>
 				<pubDate>Fri, 27 Feb 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/web/</guid>
+				<guid>http://localhost:1313/myblog/tags/web/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Ansi</title>
-				<link>https://john-jkar.github.io/myblog/tags/ansi/</link>
+				<link>http://localhost:1313/myblog/tags/ansi/</link>
 				<pubDate>Fri, 20 Feb 2026 06:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/ansi/</guid>
+				<guid>http://localhost:1313/myblog/tags/ansi/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Escape Sequences</title>
-				<link>https://john-jkar.github.io/myblog/tags/escape-sequences/</link>
+				<link>http://localhost:1313/myblog/tags/escape-sequences/</link>
 				<pubDate>Fri, 20 Feb 2026 06:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/escape-sequences/</guid>
+				<guid>http://localhost:1313/myblog/tags/escape-sequences/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Rev</title>
-				<link>https://john-jkar.github.io/myblog/tags/rev/</link>
+				<link>http://localhost:1313/myblog/tags/rev/</link>
 				<pubDate>Fri, 20 Feb 2026 06:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/rev/</guid>
+				<guid>http://localhost:1313/myblog/tags/rev/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Terminal</title>
-				<link>https://john-jkar.github.io/myblog/tags/terminal/</link>
+				<link>http://localhost:1313/myblog/tags/terminal/</link>
 				<pubDate>Fri, 20 Feb 2026 06:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/terminal/</guid>
+				<guid>http://localhost:1313/myblog/tags/terminal/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Binary Exploitation</title>
-				<link>https://john-jkar.github.io/myblog/tags/binary-exploitation/</link>
+				<link>http://localhost:1313/myblog/tags/binary-exploitation/</link>
 				<pubDate>Wed, 18 Feb 2026 06:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/binary-exploitation/</guid>
+				<guid>http://localhost:1313/myblog/tags/binary-exploitation/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Pwn</title>
-				<link>https://john-jkar.github.io/myblog/tags/pwn/</link>
+				<link>http://localhost:1313/myblog/tags/pwn/</link>
 				<pubDate>Wed, 18 Feb 2026 06:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/pwn/</guid>
+				<guid>http://localhost:1313/myblog/tags/pwn/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Ret2win</title>
-				<link>https://john-jkar.github.io/myblog/tags/ret2win/</link>
+				<link>http://localhost:1313/myblog/tags/ret2win/</link>
 				<pubDate>Wed, 18 Feb 2026 06:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/ret2win/</guid>
+				<guid>http://localhost:1313/myblog/tags/ret2win/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Client-Side</title>
-				<link>https://john-jkar.github.io/myblog/tags/client-side/</link>
+				<link>http://localhost:1313/myblog/tags/client-side/</link>
 				<pubDate>Sun, 15 Feb 2026 08:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/client-side/</guid>
+				<guid>http://localhost:1313/myblog/tags/client-side/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Open-Redirect</title>
-				<link>https://john-jkar.github.io/myblog/tags/open-redirect/</link>
+				<link>http://localhost:1313/myblog/tags/open-redirect/</link>
 				<pubDate>Sun, 15 Feb 2026 08:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/open-redirect/</guid>
+				<guid>http://localhost:1313/myblog/tags/open-redirect/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Url-Parsing</title>
-				<link>https://john-jkar.github.io/myblog/tags/url-parsing/</link>
+				<link>http://localhost:1313/myblog/tags/url-parsing/</link>
 				<pubDate>Sun, 15 Feb 2026 08:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/url-parsing/</guid>
+				<guid>http://localhost:1313/myblog/tags/url-parsing/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Aes</title>
-				<link>https://john-jkar.github.io/myblog/tags/aes/</link>
+				<link>http://localhost:1313/myblog/tags/aes/</link>
 				<pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/aes/</guid>
+				<guid>http://localhost:1313/myblog/tags/aes/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Ecb</title>
-				<link>https://john-jkar.github.io/myblog/tags/ecb/</link>
+				<link>http://localhost:1313/myblog/tags/ecb/</link>
 				<pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/ecb/</guid>
+				<guid>http://localhost:1313/myblog/tags/ecb/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Oracle Attack</title>
-				<link>https://john-jkar.github.io/myblog/tags/oracle-attack/</link>
+				<link>http://localhost:1313/myblog/tags/oracle-attack/</link>
 				<pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/oracle-attack/</guid>
+				<guid>http://localhost:1313/myblog/tags/oracle-attack/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Rop</title>
-				<link>https://john-jkar.github.io/myblog/tags/rop/</link>
+				<link>http://localhost:1313/myblog/tags/rop/</link>
 				<pubDate>Sun, 15 Feb 2026 06:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/rop/</guid>
+				<guid>http://localhost:1313/myblog/tags/rop/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Forensics</title>
-				<link>https://john-jkar.github.io/myblog/tags/forensics/</link>
+				<link>http://localhost:1313/myblog/tags/forensics/</link>
 				<pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/forensics/</guid>
+				<guid>http://localhost:1313/myblog/tags/forensics/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Kernel</title>
-				<link>https://john-jkar.github.io/myblog/tags/kernel/</link>
+				<link>http://localhost:1313/myblog/tags/kernel/</link>
 				<pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/kernel/</guid>
+				<guid>http://localhost:1313/myblog/tags/kernel/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>LKM</title>
-				<link>https://john-jkar.github.io/myblog/tags/lkm/</link>
+				<link>http://localhost:1313/myblog/tags/lkm/</link>
 				<pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/lkm/</guid>
+				<guid>http://localhost:1313/myblog/tags/lkm/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Chr-Bypass</title>
-				<link>https://john-jkar.github.io/myblog/tags/chr-bypass/</link>
+				<link>http://localhost:1313/myblog/tags/chr-bypass/</link>
 				<pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/chr-bypass/</guid>
+				<guid>http://localhost:1313/myblog/tags/chr-bypass/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Hugo</title>
-				<link>https://john-jkar.github.io/myblog/tags/hugo/</link>
+				<link>http://localhost:1313/myblog/tags/hugo/</link>
 				<pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/hugo/</guid>
+				<guid>http://localhost:1313/myblog/tags/hugo/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Jailbreak</title>
-				<link>https://john-jkar.github.io/myblog/tags/jailbreak/</link>
+				<link>http://localhost:1313/myblog/tags/jailbreak/</link>
 				<pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/jailbreak/</guid>
+				<guid>http://localhost:1313/myblog/tags/jailbreak/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Linux</title>
-				<link>https://john-jkar.github.io/myblog/tags/linux/</link>
+				<link>http://localhost:1313/myblog/tags/linux/</link>
 				<pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/linux/</guid>
+				<guid>http://localhost:1313/myblog/tags/linux/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Python</title>
-				<link>https://john-jkar.github.io/myblog/tags/python/</link>
+				<link>http://localhost:1313/myblog/tags/python/</link>
 				<pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/python/</guid>
+				<guid>http://localhost:1313/myblog/tags/python/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Sigpwny</title>
-				<link>https://john-jkar.github.io/myblog/tags/sigpwny/</link>
+				<link>http://localhost:1313/myblog/tags/sigpwny/</link>
 				<pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/sigpwny/</guid>
+				<guid>http://localhost:1313/myblog/tags/sigpwny/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Struggle</title>
-				<link>https://john-jkar.github.io/myblog/tags/struggle/</link>
+				<link>http://localhost:1313/myblog/tags/struggle/</link>
 				<pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/struggle/</guid>
+				<guid>http://localhost:1313/myblog/tags/struggle/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Waf-Bypass</title>
-				<link>https://john-jkar.github.io/myblog/tags/waf-bypass/</link>
+				<link>http://localhost:1313/myblog/tags/waf-bypass/</link>
 				<pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>https://john-jkar.github.io/myblog/tags/waf-bypass/</guid>
+				<guid>http://localhost:1313/myblog/tags/waf-bypass/</guid>
 				<description></description>
 			</item>
 	</channel>
