@@ -10,7 +10,7 @@ categories = ["CTF Writeups"]
 
 **Machine:** FireFlow  
 **Category:** Web, Kubernetes, RCE  
-**Difficulty:** Hard  
+**Difficulty:** Meduim  
 **Author:** 4mN3s14
 
 ## Recon

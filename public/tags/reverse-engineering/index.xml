@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Reverse Engineering on 4mN3s14 | Blog</title>
-		<link>http://localhost:1313/myblog/tags/reverse-engineering/</link>
+		<link>https://john-jkar.github.io/myblog/tags/reverse-engineering/</link>
 		<description>Recent content in Reverse Engineering on 4mN3s14 | Blog</description>
 		<generator>Hugo</generator>
 		<language>en-US</language>
@@ -12,19 +12,19 @@
 		
 			<lastBuildDate>Sun, 08 Mar 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/myblog/tags/reverse-engineering/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://john-jkar.github.io/myblog/tags/reverse-engineering/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>A Practical Primer on Malware Analysis</title>
-				<link>http://localhost:1313/myblog/posts/malware/</link>
+				<link>https://john-jkar.github.io/myblog/posts/malware/</link>
 				<pubDate>Sun, 08 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/myblog/posts/malware/</guid>
+				<guid>https://john-jkar.github.io/myblog/posts/malware/</guid>
 				<description>&lt;h1 id=&#34;a-practical-primer-on-malware-analysis&#34;&gt;A Practical Primer on Malware Analysis&lt;/h1&gt;&#xA;&lt;p&gt;When a suspicious binary lands on your desk, the clock is ticking. Whether it arrived via a phishing email, a quarantined AV alert, or an anomalous process on a server — your goal is the same: understand what it does, fast, with minimum exposure. This post covers the fundamentals every analyst should know: how malware is classified, the techniques it uses, and how to triage an unknown sample with confidence.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Linux Kernel Rootkit Analysis – Singularity Rootkit</title>
-				<link>http://localhost:1313/myblog/posts/linux-kernel-rootkit-analysis/</link>
+				<link>https://john-jkar.github.io/myblog/posts/linux-kernel-rootkit-analysis/</link>
 				<pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/myblog/posts/linux-kernel-rootkit-analysis/</guid>
+				<guid>https://john-jkar.github.io/myblog/posts/linux-kernel-rootkit-analysis/</guid>
 				<description>&lt;h1 id=&#34;-linux-kernel-rootkit-analysis--singularity-rootkit-easy-malops-practice-challenge&#34;&gt;🔍 Linux Kernel Rootkit Analysis – Singularity Rootkit easy malops practice challenge&lt;/h1&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Today I kicked off will some malware analysis from malops.io. It was my first time to analyse a rootkit and it was very insightful.&#xA;In this blog Iam going to talk about my experience while analysing the rootkit&#xA;In this analysis, we examine a &lt;strong&gt;Linux kernel rootkit&lt;/strong&gt; recovered during a DFIR investigation.&lt;br&gt;&#xA;The malicious kernel module demonstrates advanced stealth capabilities, including:&lt;/p&gt;</description>
 			</item>
 	</channel>
